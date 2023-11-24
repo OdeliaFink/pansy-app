@@ -19,9 +19,9 @@ const Main = ({ slice }) => {
           className="w-full h-[32rem] mx-auto object-cover"
         />
       </div>
-      <div className="flex  mx-auto text-center lg:left-[27rem] xl:left-[36rem] md:left-[16rem] md:top-[10rem] left-[7rem]  top-[8rem]  absolute">
+      <div className="flex  mx-auto text-center lg:left-[27rem] xl:left-[36rem] 2xl:left-[75rem] md:left-[16rem] md:top-[10rem] left-[7rem]  top-[8rem]  absolute">
         <div className="flex flex-col justify-center">
-          <h1 className="tracking-widest font-display md:text-[5.5rem] text-[3.5rem] text-white">
+          <h1 className="tracking-widest font-display md:text-[5.5rem] text-[3.5rem] text-bg-beige">
             {slice.primary.title}
           </h1>
           <div className="text-center">

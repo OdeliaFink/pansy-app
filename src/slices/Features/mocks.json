@@ -1,0 +1,38 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"title",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "near",
+							"type": "Text"
+						}
+					],
+					[
+						"desc",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "soon",
+							"type": "Text"
+						}
+					],
+					[
+						"icon",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "leaf",
+							"type": "Select"
+						}
+					]
+				]
+			}
+		]
+	}
+]

@@ -27,23 +27,15 @@ export default function RootLayout({ children }) {
     <html
       lang="en"
       className={clsx(
-        'max-w-full overflow-x-hidden',
+        'max-w-full h-full',
         caprasimo.variable,
         workSans.variable
       )}
     >
-      <body className="overflow-x-hidden antialiased">
+      <body className="overflow-x-hidden antialiased bg-bg-beige h-full">
         {/* TODO: Remove the following element once you have read the documentation. */}
         {process.env.NODE_ENV === 'development' && (
-          <div
-            style={{
-              background: '#5163ba',
-              padding: '1rem',
-              textAlign: 'center',
-              fontSize: '0.85rem',
-              color: '#fff',
-            }}
-          >
+          <div className="bg-dark-beige p-1 text-center text-[1rem] text-white font-body font-light">
             <p>
               <strong>Welcome to pansy!</strong>{' '}
             </p>

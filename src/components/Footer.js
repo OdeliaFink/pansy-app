@@ -1,10 +1,10 @@
-import { PrismicText } from "@prismicio/react";
-import { PrismicNextLink } from "@prismicio/next";
-import * as prismic from "@prismicio/client";
+import { PrismicText } from '@prismicio/react';
+import { PrismicNextLink } from '@prismicio/next';
+import * as prismic from '@prismicio/client';
 
-import { Bounded } from "./Bounded";
-import { Heading } from "./Heading";
-import { PrismicRichText } from "./PrismicRichText";
+import { Bounded } from './Bounded';
+import { Heading } from './Heading';
+import { PrismicRichText } from './PrismicRichText';
 
 function SignUpForm({ settings }) {
   return (
@@ -71,12 +71,6 @@ export function Footer({ settings }) {
     <Bounded as="footer" className="bg-gray-800 pb-12 text-slate-300 md:pb-12">
       <div className="grid grid-cols-1 justify-items-center gap-20 md:gap-24">
         <SignUpForm settings={settings} />
-        <div className="mx-auto w-full max-w-3xl text-center text-xs font-semibold tracking-tight">
-          Proudly published using{" "}
-          <PrismicNextLink href="https://prismic.io" className="text-white">
-            Prismic
-          </PrismicNextLink>
-        </div>
       </div>
     </Bounded>
   );
