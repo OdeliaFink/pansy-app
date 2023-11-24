@@ -1,15 +1,23 @@
 module.exports = {
   content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/slices/**/*.{js,ts,jsx,tsx,mdx}",
+    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/slices/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
     fontFamily: {
-      sans: 'Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+      body: ['var(--font-work-sans)'],
+      display: ['var(--font-caprasimo)'],
+    },
+    colors: {
+      'medium-beige': '#DCD0C5',
+      'dark-beige': '#C8BCB2',
+      'bg-beige': '#F5EDE5',
+      'dark-green': '#214F2F',
+      'lighter-green': '#3D8C55',
     },
     extend: {},
   },
-  plugins: [require("@tailwindcss/aspect-ratio")],
+  plugins: [require('@tailwindcss/aspect-ratio')],
 };
