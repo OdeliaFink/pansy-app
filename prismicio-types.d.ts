@@ -62,6 +62,7 @@ export type NavigationDocument<Lang extends string = string> =
   >;
 
 type PageDocumentDataSlicesSlice =
+  | TextImageSlice
   | FeaturesSlice
   | MainSlice
   | HeroSlice
@@ -221,7 +222,7 @@ export interface FeaturesSliceDefaultItem {
    * - **API ID Path**: features.items[].icon
    * - **Documentation**: https://prismic.io/docs/field#select
    */
-  icon: prismic.SelectField<"leaf" | "house" | "globe" | "light">;
+  icon: prismic.SelectField<"house" | "lightbulb" | "globe" | "leaf">;
 
   /**
    * Title field in *Features → Items*
@@ -549,6 +550,169 @@ type MainSliceVariation = MainSliceDefault;
 export type MainSlice = prismic.SharedSlice<"main", MainSliceVariation>;
 
 /**
+ * Primary content in *TextImage → Primary*
+ */
+export interface TextImageSliceDefaultPrimary {
+  /**
+   * Image field in *TextImage → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: text_image.primary.image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+
+  /**
+   * Link field in *TextImage → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: text_image.primary.link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link: prismic.LinkField;
+
+  /**
+   * Label field in *TextImage → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: text_image.primary.label
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  label: prismic.KeyTextField;
+
+  /**
+   * Heading field in *TextImage → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: text_image.primary.heading
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  heading: prismic.KeyTextField;
+
+  /**
+   * Body field in *TextImage → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: text_image.primary.body
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  body: prismic.KeyTextField;
+}
+
+/**
+ * Default variation for TextImage Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type TextImageSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<TextImageSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Primary content in *TextImage → Primary*
+ */
+export interface TextImageSliceImageRightPrimary {
+  /**
+   * Image field in *TextImage → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: text_image.primary.image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+
+  /**
+   * Heading field in *TextImage → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: text_image.primary.heading
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  heading: prismic.RichTextField;
+
+  /**
+   * Body_2 field in *TextImage → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: text_image.primary.body_2
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  body_2: prismic.RichTextField;
+
+  /**
+   * Body field in *TextImage → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: text_image.primary.body
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  body: prismic.RichTextField;
+
+  /**
+   * Link field in *TextImage → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: text_image.primary.link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link: prismic.LinkField;
+
+  /**
+   * Label field in *TextImage → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: text_image.primary.label
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  label: prismic.KeyTextField;
+}
+
+/**
+ * ImageRight variation for TextImage Slice
+ *
+ * - **API ID**: `imageRight`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type TextImageSliceImageRight = prismic.SharedSliceVariation<
+  "imageRight",
+  Simplify<TextImageSliceImageRightPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *TextImage*
+ */
+type TextImageSliceVariation = TextImageSliceDefault | TextImageSliceImageRight;
+
+/**
+ * TextImage Shared Slice
+ *
+ * - **API ID**: `text_image`
+ * - **Description**: TextImage
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type TextImageSlice = prismic.SharedSlice<
+  "text_image",
+  TextImageSliceVariation
+>;
+
+/**
  * Primary content in *TextWithFeatures → Primary*
  */
 export interface TextWithFeaturesSliceDefaultPrimary {
@@ -712,6 +876,12 @@ declare module "@prismicio/client" {
       MainSliceDefaultPrimary,
       MainSliceVariation,
       MainSliceDefault,
+      TextImageSlice,
+      TextImageSliceDefaultPrimary,
+      TextImageSliceImageRightPrimary,
+      TextImageSliceVariation,
+      TextImageSliceDefault,
+      TextImageSliceImageRight,
       TextWithFeaturesSlice,
       TextWithFeaturesSliceDefaultPrimary,
       TextWithFeaturesSliceDefaultItem,

@@ -19,10 +19,10 @@
             "label": "Icon",
             "placeholder": "",
             "options": [
-              "leaf",
               "house",
+              "lightbulb",
               "globe",
-              "light"
+              "leaf"
             ]
           }
         },

@@ -25,7 +25,11 @@ const Features = ({ slice }) => {
             {slice.items.map((item, index) => (
               <div key={index} className="bg-medium-beige py-2 flex flex-col">
                 <div className="justify-center mx-auto pb-1">
-                  {icons[item.icon]}
+                  {item.icon && (
+                    <div className="md:w-[34%] w-[55%] mx-auto pb-1">
+                      {icons[item.icon]}
+                    </div>
+                  )}
                 </div>
 
                 <div className="text-center w-[80%] mx-auto">
@@ -34,7 +38,7 @@ const Features = ({ slice }) => {
                       {item.title}
                     </h3>
                   </div>
-                  <p className="text-body text-[10px] font-body text-center text-slate-600 mx-auto">
+                  <p className="text-body text-[15px] font-body text-center text-slate-600 mx-auto">
                     {item.desc}
                   </p>
                 </div>
