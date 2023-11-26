@@ -79,37 +79,19 @@
 				"thumbnails": {}
 			},
 			"heading": {
-				"__TYPE__": "StructuredTextContent",
-				"value": [
-					{
-						"type": "paragraph",
-						"content": {
-							"text": "Sunt quis exercitation consequat."
-						}
-					}
-				]
+				"__TYPE__": "FieldContent",
+				"value": "palace",
+				"type": "Text"
 			},
 			"body_2": {
-				"__TYPE__": "StructuredTextContent",
-				"value": [
-					{
-						"type": "paragraph",
-						"content": {
-							"text": "Enim eu magna veniam quis."
-						}
-					}
-				]
+				"__TYPE__": "FieldContent",
+				"value": "discover",
+				"type": "Text"
 			},
 			"body": {
-				"__TYPE__": "StructuredTextContent",
-				"value": [
-					{
-						"type": "paragraph",
-						"content": {
-							"text": "Velit occaecat magna et exercitation duis qui ad nulla tempor aliquip eu tempor. Dolore excepteur commodo nisi irure ad laborum irure pariatur labore proident. Quis incididunt deserunt labore aliquip."
-						}
-					}
-				]
+				"__TYPE__": "FieldContent",
+				"value": "said",
+				"type": "Text"
 			},
 			"link": {
 				"__TYPE__": "LinkContent",

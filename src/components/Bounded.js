@@ -2,7 +2,7 @@ import clsx from 'clsx';
 
 export function Bounded({
   as: Comp = 'div',
-  yPadding = 'base',
+  yPadding,
   collapsible = true,
   className,
   children,
@@ -12,7 +12,7 @@ export function Bounded({
       data-collapsible={collapsible}
       className={clsx(
         'px-6',
-        yPadding === undefined && 'py-20 md:py-32',
+        yPadding === undefined && 'py-6 md:py-8',
         yPadding === 'sm' && 'py-4 md:py-6',
         yPadding === 'base' && 'py-20 md:py-32',
         className

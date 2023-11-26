@@ -1,20 +1,28 @@
-import { PrismicNextLink, PrismicNextImage } from "@prismicio/next";
-import * as prismic from "@prismicio/client";
+import { PrismicNextLink, PrismicNextImage } from '@prismicio/next';
+import * as prismic from '@prismicio/client';
 
-import { Bounded } from "@/components/Bounded";
-import { Heading } from "@/components/Heading";
-import { PrismicRichText } from "@/components/PrismicRichText";
+import { Bounded } from '@/components/Bounded';
+import { Heading } from '@/components/Heading';
+import { PrismicRichText } from '@/components/PrismicRichText';
+import clsx from 'clsx';
 
 const Hero = ({ slice }) => {
   return (
-    <Bounded as="section" collapsible={false} className="bg-white pb-0 md:pb-0">
+    // <Bounded as="section" collapsible={false} className="bg-white pb-0 md:pb-0">
+    <section
+      data-slice-type={slice.slice_type}
+      data-slice-variation={slice.variation}
+      className="h-auto relative"
+    >
       <div className="grid grid-cols-1 justify-items-center gap-10">
-        <div className="max-w-2xl text-center leading-relaxed">
+        <div className="max-w-2xl text-center leading-wider">
           <PrismicRichText
             field={slice.primary.text}
             components={{
               heading1: ({ children }) => (
-                <Heading className="mb-6 last:mb-0">{children}</Heading>
+                <Heading className="mb-6 last:mb-0 font-display tracking-[.4rem]">
+                  {children}
+                </Heading>
               ),
               paragraph: ({ children }) => (
                 <p className="mb-6 last:mb-0">{children}</p>
@@ -22,26 +30,18 @@ const Hero = ({ slice }) => {
             }}
           />
         </div>
-        {prismic.isFilled.link(slice.primary.buttonLink) &&
-          prismic.isFilled.keyText(slice.primary.buttonText) && (
-            <PrismicNextLink
-              field={slice.primary.buttonLink}
-              className="rounded bg-slate-800 px-7 py-3 font-bold text-white"
-            >
-              {slice.primary.buttonText}
-            </PrismicNextLink>
-          )}
+
         {prismic.isFilled.image(slice.primary.image) && (
-          <div className="w-full">
+          <div className="h-auto pt-5">
             <PrismicNextImage
               field={slice.primary.image}
-              sizes="100vw"
-              className="w-full"
+              className={clsx('w-full h-[20rem] mx-auto object-cover')}
             />
           </div>
         )}
       </div>
-    </Bounded>
+    </section>
+    // </Bounded>
   );
 };
 

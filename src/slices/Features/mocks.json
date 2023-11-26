@@ -8,26 +8,38 @@
 				"__TYPE__": "GroupItemContent",
 				"value": [
 					[
-						"title",
+						"icon_title",
 						{
-							"__TYPE__": "FieldContent",
-							"value": "near",
-							"type": "Text"
+							"__TYPE__": "StructuredTextContent",
+							"value": [
+								{
+									"type": "paragraph",
+									"content": {
+										"text": "Officia pariatur incididunt ea exercitation duis nulla nulla excepteur velit exercitation dolore sint dolore laborum."
+									}
+								}
+							]
 						}
 					],
 					[
-						"desc",
+						"icon_desc",
 						{
-							"__TYPE__": "FieldContent",
-							"value": "soon",
-							"type": "Text"
+							"__TYPE__": "StructuredTextContent",
+							"value": [
+								{
+									"type": "paragraph",
+									"content": {
+										"text": "Fugiat aliqua sunt amet qui reprehenderit sint in mollit magna deserunt. Duis tempor culpa adipisicing esse adipisicing aliquip dolor fugiat enim magna laboris."
+									}
+								}
+							]
 						}
 					],
 					[
-						"icon",
+						"icon_selection",
 						{
 							"__TYPE__": "FieldContent",
-							"value": "leaf",
+							"value": "lightbulb",
 							"type": "Select"
 						}
 					]

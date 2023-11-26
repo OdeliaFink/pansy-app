@@ -16,6 +16,7 @@ module.exports = {
       'bg-beige': '#F5EDE5',
       'dark-green': '#214F2F',
       'lighter-green': '#3D8C55',
+      'slate-grey': '#8F929F',
     },
     extend: {},
   },

@@ -26,7 +26,10 @@ export function Header({ locales = [], navigation, settings }) {
                 key={prismic.asText(item.label)}
                 className="font-semibold tracking-tight text-slate-800"
               >
-                <PrismicNextLink field={item.link}>
+                <PrismicNextLink
+                  field={item.link}
+                  className="font-body font-light"
+                >
                   <PrismicText field={item.label} />
                 </PrismicNextLink>
               </li>

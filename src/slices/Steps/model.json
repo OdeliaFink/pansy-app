@@ -1,0 +1,54 @@
+{
+  "id": "steps",
+  "type": "SharedSlice",
+  "name": "Steps",
+  "description": "Steps",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "button_text": {
+          "type": "Text",
+          "config": {
+            "label": "Button Text",
+            "placeholder": ""
+          }
+        },
+        "button_link": {
+          "type": "Link",
+          "config": {
+            "label": "Button Link",
+            "placeholder": "",
+            "select": null
+          }
+        }
+      },
+      "items": {
+        "step_desc": {
+          "type": "Text",
+          "config": {
+            "label": "Step desc",
+            "placeholder": ""
+          }
+        },
+        "steps": {
+          "type": "Select",
+          "config": {
+            "label": "Steps",
+            "placeholder": "",
+            "options": [
+              "01 Consult",
+              "02 Design",
+              "03 Maintain"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,9 +1,9 @@
-import { PrismicNextImage } from "@prismicio/next";
-import * as prismic from "@prismicio/client";
+import { PrismicNextImage } from '@prismicio/next';
+import * as prismic from '@prismicio/client';
 
-import { Bounded } from "@/components/Bounded";
-import { Heading } from "@/components/Heading";
-import { PrismicRichText } from "@/components/PrismicRichText";
+import { Bounded } from '@/components/Bounded';
+import { Heading } from '@/components/Heading';
+import { PrismicRichText } from '@/components/PrismicRichText';
 
 const TextWithImage = ({ slice }) => {
   return (
@@ -26,12 +26,20 @@ const TextWithImage = ({ slice }) => {
             field={slice.primary.text}
             components={{
               heading1: ({ children }) => (
-                <Heading as="h2" size="6xl" className="mb-8 last:mb-0">
+                <Heading
+                  as="h2"
+                  size="2xl"
+                  className="mb-8 last:mb-0 font-body"
+                >
                   {children}
                 </Heading>
               ),
               heading2: ({ children }) => (
-                <Heading as="h3" size="2xl" className="mb-2 last:mb-0">
+                <Heading
+                  as="h3"
+                  size="2xl"
+                  className="mb-2 last:mb-0 font-body"
+                >
                   {children}
                 </Heading>
               ),

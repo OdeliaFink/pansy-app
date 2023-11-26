@@ -62,6 +62,7 @@ export type NavigationDocument<Lang extends string = string> =
   >;
 
 type PageDocumentDataSlicesSlice =
+  | StepsSlice
   | TextImageSlice
   | FeaturesSlice
   | MainSlice
@@ -187,6 +188,50 @@ interface SettingsDocumentData {
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
   newsletterDisclaimer: prismic.RichTextField;
+
+  /**
+   * City field in *Settings*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: settings.city
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  city: prismic.KeyTextField;
+
+  /**
+   * Phone number field in *Settings*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: settings.phone_number
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  phone_number: prismic.KeyTextField;
+
+  /**
+   * Email field in *Settings*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: settings.email
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  email: prismic.KeyTextField;
+
+  /**
+   * Serving City field in *Settings*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: settings.serving_city
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  serving_city: prismic.KeyTextField;
 }
 
 /**
@@ -215,34 +260,34 @@ export type AllDocumentTypes =
  */
 export interface FeaturesSliceDefaultItem {
   /**
-   * Icon field in *Features → Items*
+   * Icon Selection field in *Features → Items*
    *
    * - **Field Type**: Select
    * - **Placeholder**: *None*
-   * - **API ID Path**: features.items[].icon
+   * - **API ID Path**: features.items[].icon_selection
    * - **Documentation**: https://prismic.io/docs/field#select
    */
-  icon: prismic.SelectField<"house" | "lightbulb" | "globe" | "leaf">;
+  icon_selection: prismic.SelectField<"house" | "lightbulb" | "globe" | "leaf">;
 
   /**
-   * Title field in *Features → Items*
+   * Icon Title field in *Features → Items*
    *
-   * - **Field Type**: Text
+   * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: features.items[].title
-   * - **Documentation**: https://prismic.io/docs/field#key-text
+   * - **API ID Path**: features.items[].icon_title
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
-  title: prismic.KeyTextField;
+  icon_title: prismic.RichTextField;
 
   /**
-   * Desc field in *Features → Items*
+   * Icon  Desc field in *Features → Items*
    *
-   * - **Field Type**: Text
+   * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: features.items[].desc
-   * - **Documentation**: https://prismic.io/docs/field#key-text
+   * - **API ID Path**: features.items[].icon_desc
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
-  desc: prismic.KeyTextField;
+  icon_desc: prismic.RichTextField;
 }
 
 /**
@@ -550,6 +595,83 @@ type MainSliceVariation = MainSliceDefault;
 export type MainSlice = prismic.SharedSlice<"main", MainSliceVariation>;
 
 /**
+ * Primary content in *Steps → Primary*
+ */
+export interface StepsSliceDefaultPrimary {
+  /**
+   * Button Text field in *Steps → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: steps.primary.button_text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  button_text: prismic.KeyTextField;
+
+  /**
+   * Button Link field in *Steps → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: steps.primary.button_link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  button_link: prismic.LinkField;
+}
+
+/**
+ * Primary content in *Steps → Items*
+ */
+export interface StepsSliceDefaultItem {
+  /**
+   * Step desc field in *Steps → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: steps.items[].step_desc
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  step_desc: prismic.KeyTextField;
+
+  /**
+   * Steps field in *Steps → Items*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **API ID Path**: steps.items[].steps
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  steps: prismic.SelectField<"01 Consult" | "02 Design" | "03 Maintain">;
+}
+
+/**
+ * Default variation for Steps Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type StepsSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<StepsSliceDefaultPrimary>,
+  Simplify<StepsSliceDefaultItem>
+>;
+
+/**
+ * Slice variation for *Steps*
+ */
+type StepsSliceVariation = StepsSliceDefault;
+
+/**
+ * Steps Shared Slice
+ *
+ * - **API ID**: `steps`
+ * - **Description**: Steps
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type StepsSlice = prismic.SharedSlice<"steps", StepsSliceVariation>;
+
+/**
  * Primary content in *TextImage → Primary*
  */
 export interface TextImageSliceDefaultPrimary {
@@ -632,36 +754,6 @@ export interface TextImageSliceImageRightPrimary {
   image: prismic.ImageField<never>;
 
   /**
-   * Heading field in *TextImage → Primary*
-   *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: text_image.primary.heading
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-   */
-  heading: prismic.RichTextField;
-
-  /**
-   * Body_2 field in *TextImage → Primary*
-   *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: text_image.primary.body_2
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-   */
-  body_2: prismic.RichTextField;
-
-  /**
-   * Body field in *TextImage → Primary*
-   *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: text_image.primary.body
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-   */
-  body: prismic.RichTextField;
-
-  /**
    * Link field in *TextImage → Primary*
    *
    * - **Field Type**: Link
@@ -680,6 +772,36 @@ export interface TextImageSliceImageRightPrimary {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   label: prismic.KeyTextField;
+
+  /**
+   * Heading field in *TextImage → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: text_image.primary.heading
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  heading: prismic.KeyTextField;
+
+  /**
+   * Body field in *TextImage → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: text_image.primary.body
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  body: prismic.KeyTextField;
+
+  /**
+   * Body_2 field in *TextImage → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: text_image.primary.body_2
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  body_2: prismic.KeyTextField;
 }
 
 /**
@@ -876,6 +998,11 @@ declare module "@prismicio/client" {
       MainSliceDefaultPrimary,
       MainSliceVariation,
       MainSliceDefault,
+      StepsSlice,
+      StepsSliceDefaultPrimary,
+      StepsSliceDefaultItem,
+      StepsSliceVariation,
+      StepsSliceDefault,
       TextImageSlice,
       TextImageSliceDefaultPrimary,
       TextImageSliceImageRightPrimary,

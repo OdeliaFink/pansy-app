@@ -1,3 +1,6 @@
+// import { PrismicRichText } from '@prismicio/react';
+import { Heading } from '@/components/Heading';
+import { PrismicRichText } from '@/components/PrismicRichText';
 /**
  * @typedef {import("@prismicio/client").Content.FeaturesSlice} FeaturesSlice
  * @typedef {import("@prismicio/react").SliceComponentProps<FeaturesSlice>} FeaturesProps
@@ -13,34 +16,48 @@ const icons = [
   },
 ];
 
+// {icons.map((item) => (
+//   <>
+//     <>{item.globe}</>
+//     <>{item.house}</>
+//     <>{item.lightbulb}</>
+//     <>{item.leaf}</>
+//   </>
+// ))}
+
 const Features = ({ slice }) => {
   return (
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
     >
-      <div className="pt-[3.4rem]">
-        <div className="bg-medium-beige py-1">
-          <div className=" flex flex-row justify-center py-2  mx-auto sm:place-items-start place-items-center">
+      <div className="">
+        <div className="bg-medium-beige py-1 py-4">
+          <div className=" flex flex-row justify-center py-2 gap-[4rem]  mx-auto sm:place-items-start place-items-center">
             {slice.items.map((item, index) => (
-              <div key={index} className="bg-medium-beige py-2 flex flex-col">
-                <div className="justify-center mx-auto pb-1">
-                  {item.icon && (
-                    <div className="md:w-[34%] w-[55%] mx-auto pb-1">
-                      {icons[item.icon]}
-                    </div>
-                  )}
-                </div>
-
-                <div className="text-center w-[80%] mx-auto">
-                  <div className="pb-1">
-                    <h3 className="font-body text-[18px] font-semibold">
-                      {item.title}
-                    </h3>
+              <div key={index} className="bg-medium-beige py-2 flex flex-col ">
+                <div className="justify-center text-center  mx-auto">
+                  <div className="flex flex-row justify-center gap-[5rem]"></div>
+                  <div className="">
+                    <PrismicRichText
+                      components={{
+                        paragraph: ({ children }) => (
+                          <p className="mb-6 font-body text-[1.3rem] font-semibold last:mb-0">
+                            {children}
+                          </p>
+                        ),
+                      }}
+                      field={item.icon_title}
+                    />
                   </div>
-                  <p className="text-body text-[15px] font-body text-center text-slate-600 mx-auto">
-                    {item.desc}
-                  </p>
+                  <PrismicRichText
+                    components={{
+                      paragraph: ({ children }) => (
+                        <p className="mb-6 font-light last:mb-0">{children}</p>
+                      ),
+                    }}
+                    field={item.icon_desc}
+                  />
                 </div>
               </div>
             ))}
@@ -57,8 +74,8 @@ import React from 'react';
 function HouseIcon() {
   return (
     <svg
-      width="60"
-      height="60"
+      width="80"
+      height="80"
       viewBox="0 0 49 49"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -78,7 +95,7 @@ function LightBulbIcon() {
   return (
     <svg
       width="60"
-      height="60"
+      height="80"
       viewBox="0 0 29 46"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -93,8 +110,8 @@ function LightBulbIcon() {
 function GlobeIcon() {
   return (
     <svg
-      width="60"
-      height="60"
+      width="80"
+      height="80"
       viewBox="0 0 44 44"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -109,8 +126,8 @@ function GlobeIcon() {
 function LeafIcon() {
   return (
     <svg
-      width="60"
-      height="60"
+      width="80"
+      height="80"
       viewBox="0 0 47 47"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

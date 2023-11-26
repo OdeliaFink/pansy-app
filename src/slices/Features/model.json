@@ -13,10 +13,10 @@
       "imageUrl": "",
       "primary": {},
       "items": {
-        "icon": {
+        "icon_selection": {
           "type": "Select",
           "config": {
-            "label": "Icon",
+            "label": "Icon Selection",
             "placeholder": "",
             "options": [
               "house",
@@ -26,18 +26,22 @@
             ]
           }
         },
-        "title": {
-          "type": "Text",
+        "icon_title": {
+          "type": "StructuredText",
           "config": {
-            "label": "Title",
-            "placeholder": ""
+            "label": "Icon Title",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
           }
         },
-        "desc": {
-          "type": "Text",
+        "icon_desc": {
+          "type": "StructuredText",
           "config": {
-            "label": "Desc",
-            "placeholder": ""
+            "label": "Icon  Desc",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
           }
         }
       }

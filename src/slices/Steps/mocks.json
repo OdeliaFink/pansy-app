@@ -1,0 +1,43 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"button_text": {
+				"__TYPE__": "FieldContent",
+				"value": "smaller",
+				"type": "Text"
+			},
+			"button_link": {
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "http://google.com"
+				}
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"step_desc",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "port",
+							"type": "Text"
+						}
+					],
+					[
+						"steps",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "03 Maintain",
+							"type": "Select"
+						}
+					]
+				]
+			}
+		]
+	}
+]

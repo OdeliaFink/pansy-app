@@ -40,6 +40,34 @@
           "allowTargetBlank": true,
           "multi": "paragraph,em,strong,hyperlink"
         }
+      },
+      "city": {
+        "type": "Text",
+        "config": {
+          "label": "City",
+          "placeholder": ""
+        }
+      },
+      "phone_number": {
+        "type": "Text",
+        "config": {
+          "label": "Phone number",
+          "placeholder": ""
+        }
+      },
+      "email": {
+        "type": "Text",
+        "config": {
+          "label": "Email",
+          "placeholder": ""
+        }
+      },
+      "serving_city": {
+        "type": "Text",
+        "config": {
+          "label": "Serving City",
+          "placeholder": ""
+        }
       }
     }
   }

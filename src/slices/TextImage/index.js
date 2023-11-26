@@ -6,18 +6,6 @@ import { PrismicNextImage, PrismicNextLink } from '@prismicio/next';
 import { PrismicRichText } from '@/components/PrismicRichText';
 import clsx from 'clsx';
 
-const components = {
-  heading2: ({ children }) => (
-    <Heading as="h2" size="lg">
-      {children}
-    </Heading>
-  ),
-  paragraph: ({ children }) => (
-    <p className="max-w-md text-md md:text-[12px] font-body text-slate-600">
-      {children}
-    </p>
-  ),
-};
 /**
  * @typedef {import("@prismicio/client").Content.TextImageSlice} TextImageSlice
  * @typedef {import("@prismicio/react").SliceComponentProps<TextImageSlice>} TextImageProps
@@ -28,6 +16,7 @@ const TextImage = ({ slice }) => {
     <Bounded
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
+      className="py-1"
     >
       <div className="grid gap-10 md:grid-cols-2 place-items-center">
         <PrismicNextImage
@@ -38,7 +27,7 @@ const TextImage = ({ slice }) => {
           )}
         />
         <div className="grid gap-4">
-          <h2 className="leading-tight tracking-tight font-body text-slate-500 text-[4rem]">
+          <h2 className="leading-tight tracking-tight font-body text-slate-grey text-[4rem]">
             {slice.primary.heading}
           </h2>
           <p className='className="max-w-md text-md md:text-[12px] font-body text-slate-600"'>
@@ -47,7 +36,12 @@ const TextImage = ({ slice }) => {
           <h2>{slice.primary.body_2}</h2>
 
           {slice?.primary?.label && (
-            <Button field={slice.primary.link}>{slice.primary.label}</Button>
+            <PrismicNextLink
+              field={slice.primary.link}
+              className="border-1 rounded-sm border border-black hover:bg-lighter-green max-w-fit px-4 py-1 ease-in-out duration-300 text-left"
+            >
+              {slice.primary.label}
+            </PrismicNextLink>
           )}
         </div>
       </div>
