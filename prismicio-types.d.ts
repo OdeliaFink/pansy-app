@@ -62,6 +62,7 @@ export type NavigationDocument<Lang extends string = string> =
   >;
 
 type PageDocumentDataSlicesSlice =
+  | TextButtonSlice
   | PhotoGallerySlice
   | StepsSlice
   | TextImageSlice
@@ -743,6 +744,81 @@ type StepsSliceVariation = StepsSliceDefault;
 export type StepsSlice = prismic.SharedSlice<"steps", StepsSliceVariation>;
 
 /**
+ * Primary content in *TextButton → Primary*
+ */
+export interface TextButtonSliceDefaultPrimary {
+  /**
+   * Text field in *TextButton → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: text_button.primary.text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  text: prismic.KeyTextField;
+
+  /**
+   * Text2 field in *TextButton → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: text_button.primary.text2
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  text2: prismic.KeyTextField;
+
+  /**
+   * Link field in *TextButton → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: text_button.primary.link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link: prismic.LinkField;
+
+  /**
+   * Label field in *TextButton → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: text_button.primary.label
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  label: prismic.KeyTextField;
+}
+
+/**
+ * Default variation for TextButton Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type TextButtonSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<TextButtonSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *TextButton*
+ */
+type TextButtonSliceVariation = TextButtonSliceDefault;
+
+/**
+ * TextButton Shared Slice
+ *
+ * - **API ID**: `text_button`
+ * - **Description**: TextButton
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type TextButtonSlice = prismic.SharedSlice<
+  "text_button",
+  TextButtonSliceVariation
+>;
+
+/**
  * Primary content in *TextImage → Primary*
  */
 export interface TextImageSliceDefaultPrimary {
@@ -1079,6 +1155,10 @@ declare module "@prismicio/client" {
       StepsSliceDefaultItem,
       StepsSliceVariation,
       StepsSliceDefault,
+      TextButtonSlice,
+      TextButtonSliceDefaultPrimary,
+      TextButtonSliceVariation,
+      TextButtonSliceDefault,
       TextImageSlice,
       TextImageSliceDefaultPrimary,
       TextImageSliceImageRightPrimary,

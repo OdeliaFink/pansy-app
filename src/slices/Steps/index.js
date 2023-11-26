@@ -8,38 +8,37 @@ import Button from '@/components/Button';
 const Steps = ({ slice }) => {
   return (
     <>
-      <section
-        data-slice-type={slice.slice_type}
-        data-slice-variation={slice.variation}
-        className="bg-medium-beige"
-      >
-        <div className="flex md:flex-row flex-col mx-auto md:w-[60%] md:gap-0 gap-3 w-auto py-5 bg-medium-beige ">
-          {slice.items.map((item, index) => (
-            <div
-              key={index}
-              className="border border-solid border-lighter-green md:p-6 p-1 px-0 max-w-[10rem] mx-auto"
-            >
-              <div className="text-center mx-auto">
-                <div className="w-full">
-                  <p className="font-semibold text-dark-green font-body tracking-wide text-[14px] pb-2">
-                    {item.steps}
-                  </p>
-                  <p className="font-light text-dark-green font-body text-[12px]">
-                    {item.step_desc}
-                  </p>
+      <div className="py-2">
+        <section
+          data-slice-type={slice.slice_type}
+          data-slice-variation={slice.variation}
+          className="bg-medium-beige"
+        >
+          <div className="flex md:flex-row flex-col mx-auto md:w-[60%] md:gap-0 gap-3 w-auto py-5 bg-medium-beige ">
+            {slice.items.map((item, index) => (
+              <div
+                key={index}
+                className="border border-solid border-lighter-green md:p-6 p-1 px-0 max-w-[10rem] mx-auto"
+              >
+                <div className="text-center mx-auto">
+                  <div className="w-full">
+                    <p className="font-semibold text-dark-green font-body tracking-wide text-[14px] pb-2">
+                      {item.steps}
+                    </p>
+                    <p className="font-light text-dark-green font-body text-[12px]">
+                      {item.step_desc}
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
+        </section>
+        <div className="flex items-center text-center justify-center pt-6 pb-2">
+          <Button field={slice.primary.button_link}>
+            {slice.primary.button_text}
+          </Button>
         </div>
-      </section>
-      <div className="flex items-center text-center justify-center pt-4 pb-2">
-        <Button field={slice.primary.button_link}>
-          {slice.primary.button_text}
-        </Button>
-      </div>
-      <div className="w-[80%] mx-auto py-3">
-        <div className="border border-solid border-black" />
       </div>
     </>
   );

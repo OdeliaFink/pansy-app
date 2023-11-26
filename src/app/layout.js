@@ -33,11 +33,8 @@ export default function RootLayout({ children }) {
         {process.env.NODE_ENV === 'development' && (
           <div className="bg-dark-beige p-1 text-center text-[1rem] h-[2rem] text-white font-body font-light relative flex overflow-x-hidden">
             <div className="height-[30px] w-[200%] ">
-              <p>
-                <strong>
-                  Welcome to pansy! Scroll down to see how you can transform
-                  your outdoor space
-                </strong>
+              <p className="font-body font-light">
+                Welcome to pansy!
                 <div />
               </p>
             </div>

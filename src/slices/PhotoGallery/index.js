@@ -7,7 +7,7 @@ import { PrismicNextImage } from '@prismicio/next';
 const PhotoGallery = ({ slice }) => {
   return (
     <>
-      <div className="py-2">
+      <div className="py-4">
         <h1 className="font-display text-[2rem] text-center text-slate-700">
           {slice.primary.header}
         </h1>
