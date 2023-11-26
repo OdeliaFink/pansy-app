@@ -16,9 +16,25 @@ module.exports = {
       'bg-beige': '#F5EDE5',
       'dark-green': '#214F2F',
       'lighter-green': '#3D8C55',
-      'slate-grey': '#8F929F',
+      'slate-grey': '#4B4E58',
+      'pansy-white': '#fff',
     },
-    extend: {},
+    extend: {
+      animation: {
+        marquee: 'marquee 25s linear infinite',
+        marquee2: 'marquee2 25s linear infinite',
+      },
+      keyframes: {
+        marquee: {
+          '0%': { transform: 'translateX(0%)' },
+          '100%': { transform: 'translateX(-100%)' },
+        },
+        marquee2: {
+          '0%': { transform: 'translateX(100%)' },
+          '100%': { transform: 'translateX(0%)' },
+        },
+      },
+    },
   },
   plugins: [require('@tailwindcss/aspect-ratio')],
 };

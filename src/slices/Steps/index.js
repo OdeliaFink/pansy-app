@@ -13,13 +13,13 @@ const Steps = ({ slice }) => {
         data-slice-variation={slice.variation}
         className="bg-medium-beige"
       >
-        <div className="flex md:gap-10 gap-1 mx-auto md:w-[70%] w-auto py-4 bg-medium-beige ">
+        <div className="flex md:flex-row flex-col mx-auto md:w-[60%] md:gap-0 gap-3 w-auto py-5 bg-medium-beige ">
           {slice.items.map((item, index) => (
             <div
               key={index}
-              className="border border-solid border-lighter-green md:p-6 p-1 px-0"
+              className="border border-solid border-lighter-green md:p-6 p-1 px-0 max-w-[10rem] mx-auto"
             >
-              <div className="text-center md:w-[70%] w-[80%]  mx-auto">
+              <div className="text-center mx-auto">
                 <div className="w-full">
                   <p className="font-semibold text-dark-green font-body tracking-wide text-[14px] pb-2">
                     {item.steps}

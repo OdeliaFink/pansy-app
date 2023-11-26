@@ -1,0 +1,42 @@
+{
+  "id": "photo_gallery",
+  "type": "SharedSlice",
+  "name": "PhotoGallery",
+  "description": "PhotoGallery",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "header": {
+          "type": "Text",
+          "config": {
+            "label": "Header",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {
+        "image": {
+          "type": "Image",
+          "config": {
+            "label": "Image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "desc": {
+          "type": "Text",
+          "config": {
+            "label": "Desc",
+            "placeholder": ""
+          }
+        }
+      }
+    }
+  ]
+}

@@ -62,6 +62,7 @@ export type NavigationDocument<Lang extends string = string> =
   >;
 
 type PageDocumentDataSlicesSlice =
+  | PhotoGallerySlice
   | StepsSlice
   | TextImageSlice
   | FeaturesSlice
@@ -595,6 +596,76 @@ type MainSliceVariation = MainSliceDefault;
 export type MainSlice = prismic.SharedSlice<"main", MainSliceVariation>;
 
 /**
+ * Primary content in *PhotoGallery → Primary*
+ */
+export interface PhotoGallerySliceDefaultPrimary {
+  /**
+   * Header field in *PhotoGallery → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: photo_gallery.primary.header
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  header: prismic.KeyTextField;
+}
+
+/**
+ * Primary content in *PhotoGallery → Items*
+ */
+export interface PhotoGallerySliceDefaultItem {
+  /**
+   * Image field in *PhotoGallery → Items*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: photo_gallery.items[].image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+
+  /**
+   * Desc field in *PhotoGallery → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: photo_gallery.items[].desc
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  desc: prismic.KeyTextField;
+}
+
+/**
+ * Default variation for PhotoGallery Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type PhotoGallerySliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<PhotoGallerySliceDefaultPrimary>,
+  Simplify<PhotoGallerySliceDefaultItem>
+>;
+
+/**
+ * Slice variation for *PhotoGallery*
+ */
+type PhotoGallerySliceVariation = PhotoGallerySliceDefault;
+
+/**
+ * PhotoGallery Shared Slice
+ *
+ * - **API ID**: `photo_gallery`
+ * - **Description**: PhotoGallery
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type PhotoGallerySlice = prismic.SharedSlice<
+  "photo_gallery",
+  PhotoGallerySliceVariation
+>;
+
+/**
  * Primary content in *Steps → Primary*
  */
 export interface StepsSliceDefaultPrimary {
@@ -998,6 +1069,11 @@ declare module "@prismicio/client" {
       MainSliceDefaultPrimary,
       MainSliceVariation,
       MainSliceDefault,
+      PhotoGallerySlice,
+      PhotoGallerySliceDefaultPrimary,
+      PhotoGallerySliceDefaultItem,
+      PhotoGallerySliceVariation,
+      PhotoGallerySliceDefault,
       StepsSlice,
       StepsSliceDefaultPrimary,
       StepsSliceDefaultItem,

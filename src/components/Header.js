@@ -28,7 +28,7 @@ export function Header({ locales = [], navigation, settings }) {
               >
                 <PrismicNextLink
                   field={item.link}
-                  className="font-body font-light"
+                  className="font-body font-light hover:text-lighter-green"
                 >
                   <PrismicText field={item.label} />
                 </PrismicNextLink>
@@ -38,7 +38,10 @@ export function Header({ locales = [], navigation, settings }) {
           <div className="flex flex-wrap gap-3">
             <ul className="flex flex-wrap gap-3">
               {locales.map((locale) => (
-                <li key={locale.lang} className="first:font-semibold">
+                <li
+                  key={locale.lang}
+                  className="first:font-bold first:text-lighter-green"
+                >
                   <PrismicNextLink
                     href={locale.url}
                     locale={locale.lang}

@@ -69,9 +69,9 @@ import { PrismicRichText } from './PrismicRichText';
 
 export function Footer({ settings, navigation }) {
   return (
-    <div className="h-auto bg-dark-beige pb-2 py-3">
+    <div className="h-auto bg-dark-beige pb-3 py-3">
       <div className="flex w-[95%] mx-auto lg:flex-row justify-between items-center pt-1">
-        <ul className="flex flex-col">
+        <ul className="flex flex-col ">
           <PrismicNextLink href="/">
             <h2 className="font-display text-[2rem]">pansy</h2>
           </PrismicNextLink>
@@ -85,14 +85,17 @@ export function Footer({ settings, navigation }) {
             {settings.data.email}
           </p>
         </ul>
-        <ul className="flex flex-wrap flex-col">
+        <ul className="flex flex-wrap flex-col items-center gap-4 pt-[1.4rem]">
           {navigation.data?.links.map((item) => (
-            <PrismicNextLink field={item.link} className="font-body font-light">
+            <PrismicNextLink
+              field={item.link}
+              className="font-body font-light text-[14px]"
+            >
               <PrismicText field={item.label} />
             </PrismicNextLink>
           ))}
         </ul>
-        <ul className="flex font-body font-light flex-col">
+        <ul className="flex items-center font-body font-light flex-col">
           <div className="w-32">
             <IgIcon />
             <p className="font-body font-light text-right md:text-[12px] text-[10px]">

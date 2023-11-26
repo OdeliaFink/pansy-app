@@ -31,11 +31,27 @@ export default function RootLayout({ children }) {
       <body className="overflow-x-hidden antialiased bg-bg-beige">
         {/* TODO: Remove the following element once you have read the documentation. */}
         {process.env.NODE_ENV === 'development' && (
-          <div className="bg-dark-beige p-1 text-center text-[1rem] text-white font-body font-light">
-            <p>
-              <strong>Welcome to pansy!</strong>{' '}
-            </p>
+          <div className="bg-dark-beige p-1 text-center text-[1rem] h-[2rem] text-white font-body font-light relative flex overflow-x-hidden">
+            <div className="height-[30px] w-[200%] ">
+              <p>
+                <strong>
+                  Welcome to pansy! Scroll down to see how you can transform
+                  your outdoor space
+                </strong>
+                <div />
+              </p>
+            </div>
           </div>
+          // <>
+          //   <div class="relative flex overflow-x-hidden bg-dark-beige">
+          //     <div class="py-2 animate-marquee whitespace-nowrap">
+          //       <span class="">Welcome to pansy</span>
+          //       <span class=" mx-2">
+          //         find out how you can transform your space
+          //       </span>
+          //     </div>
+          //   </div>
+          // </>
         )}
         {children}
         <PrismicPreview repositoryName={repositoryName} />

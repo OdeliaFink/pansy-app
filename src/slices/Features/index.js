@@ -7,14 +7,12 @@ import { PrismicRichText } from '@/components/PrismicRichText';
  * @param {FeaturesProps}
  */
 
-const icons = [
-  {
-    house: <HouseIcon />,
-    lightbulb: <LightBulbIcon />,
-    globe: <GlobeIcon />,
-    leaf: <LeafIcon />,
-  },
-];
+const icons = {
+  house: <HouseIcon />,
+  lightbulb: <LightBulbIcon />,
+  globe: <GlobeIcon />,
+  leaf: <LeafIcon />,
+};
 
 // {icons.map((item) => (
 //   <>
@@ -31,33 +29,40 @@ const Features = ({ slice }) => {
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
     >
-      <div className="">
-        <div className="bg-medium-beige py-1 py-4">
-          <div className=" flex flex-row justify-center py-2 gap-[4rem]  mx-auto sm:place-items-start place-items-center">
+      <div className="bg-medium-beige py-2">
+        <div className="">
+          <div className=" flex md:flex-row flex-col justify-center md:gap-[2rem] gap-0  mx-auto sm:place-items-start place-items-center px-6 ">
             {slice.items.map((item, index) => (
               <div key={index} className="bg-medium-beige py-2 flex flex-col ">
-                <div className="justify-center text-center  mx-auto">
-                  <div className="flex flex-row justify-center gap-[5rem]"></div>
-                  <div className="">
+                <div className="flex flex-col justify-center text-center">
+                  {item.icon_selection && (
+                    <div className="mb-2 flex justify-center">
+                      {icons[item.icon_selection]}
+                    </div>
+                  )}
+
+                  <PrismicRichText
+                    components={{
+                      paragraph: ({ children }) => (
+                        <p className=" font-body text-[1.1rem] font-semibold last:mb-0">
+                          {children}
+                        </p>
+                      ),
+                    }}
+                    field={item.icon_title}
+                  />
+                  <div className="md:w-[80%] w-full mx-auto">
                     <PrismicRichText
                       components={{
                         paragraph: ({ children }) => (
-                          <p className="mb-6 font-body text-[1.3rem] font-semibold last:mb-0">
+                          <p className="font-light md:text-[.9rem] text-[.7rem] last:mb-0">
                             {children}
                           </p>
                         ),
                       }}
-                      field={item.icon_title}
+                      field={item.icon_desc}
                     />
                   </div>
-                  <PrismicRichText
-                    components={{
-                      paragraph: ({ children }) => (
-                        <p className="mb-6 font-light last:mb-0">{children}</p>
-                      ),
-                    }}
-                    field={item.icon_desc}
-                  />
                 </div>
               </div>
             ))}

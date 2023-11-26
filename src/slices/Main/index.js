@@ -12,12 +12,12 @@ const Main = ({ slice }) => {
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
-      className="h-auto relative"
+      className="h-auto relative pb-9"
     >
-      <div className="h-auto pt-5">
+      <div className="h-auto pt-2">
         <PrismicNextImage
           field={slice.primary.image}
-          className={clsx('w-full h-[32rem] mx-auto object-cover')}
+          className={clsx('w-full h-[37rem] mx-auto object-cover')}
         />
       </div>
       <div
@@ -26,7 +26,7 @@ const Main = ({ slice }) => {
         )}
       >
         <div className="flex flex-col justify-center">
-          <h1 className="tracking-widest font-display md:text-[6.5rem] text-[3.5rem] text-bg-beige">
+          <h1 className="tracking-widest font-display md:text-[6.5rem] text-[3.5rem] text-pansy-white">
             {slice.primary.title}
           </h1>
           <div className="text-center">

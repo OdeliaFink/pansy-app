@@ -27,6 +27,9 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
+            "photo_gallery": {
+              "type": "SharedSlice"
+            },
             "steps": {
               "type": "SharedSlice"
             },
