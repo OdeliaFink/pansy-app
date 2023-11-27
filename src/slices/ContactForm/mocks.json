@@ -1,0 +1,44 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"first_name": {
+				"__TYPE__": "FieldContent",
+				"value": "say",
+				"type": "Text"
+			},
+			"last_name": {
+				"__TYPE__": "FieldContent",
+				"value": "throat",
+				"type": "Text"
+			},
+			"email": {
+				"__TYPE__": "FieldContent",
+				"value": "symbol",
+				"type": "Text"
+			},
+			"phone": {
+				"__TYPE__": "FieldContent",
+				"value": "bag",
+				"type": "Text"
+			},
+			"service_options": {
+				"__TYPE__": "FieldContent",
+				"value": "Gardening",
+				"type": "Select"
+			},
+			"postal_code": {
+				"__TYPE__": "FieldContent",
+				"value": "meat",
+				"type": "Text"
+			},
+			"comments": {
+				"__TYPE__": "FieldContent",
+				"value": "team",
+				"type": "Text"
+			}
+		},
+		"items": []
+	}
+]

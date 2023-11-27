@@ -1,0 +1,73 @@
+{
+  "id": "contact_form",
+  "type": "SharedSlice",
+  "name": "ContactForm",
+  "description": "ContactForm",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "first_name": {
+          "type": "Text",
+          "config": {
+            "label": "First name",
+            "placeholder": ""
+          }
+        },
+        "last_name": {
+          "type": "Text",
+          "config": {
+            "label": "Last name",
+            "placeholder": ""
+          }
+        },
+        "email": {
+          "type": "Text",
+          "config": {
+            "label": "Email",
+            "placeholder": ""
+          }
+        },
+        "phone": {
+          "type": "Text",
+          "config": {
+            "label": "Phone",
+            "placeholder": ""
+          }
+        },
+        "service_options": {
+          "type": "Select",
+          "config": {
+            "label": "Service options",
+            "placeholder": "",
+            "options": [
+              "Design & Planning",
+              "Gardening",
+              "Maintenance"
+            ]
+          }
+        },
+        "postal_code": {
+          "type": "Text",
+          "config": {
+            "label": "Postal code",
+            "placeholder": ""
+          }
+        },
+        "comments": {
+          "type": "Text",
+          "config": {
+            "label": "Comments",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

@@ -33,7 +33,7 @@ const TextImage = ({ slice }) => {
           <p className='className="max-w-md text-md md:text-[15px] max-w-[30rem] font-body text-slate-600"'>
             {slice.primary.body}
           </p>
-          <h2>{slice.primary.body_2}</h2>
+          <h2 className="font-semibold font-body">{slice.primary.body_2}</h2>
 
           {slice?.primary?.label && (
             <PrismicNextLink
