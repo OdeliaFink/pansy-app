@@ -16,7 +16,6 @@
 					[
 						"image",
 						{
-							"__TYPE__": "ImageContent",
 							"origin": {
 								"id": "main",
 								"url": "https://images.unsplash.com/photo-1560457079-9a6532ccb118",
@@ -34,6 +33,9 @@
 								},
 								"background": "transparent"
 							},
+							"credits": null,
+							"alt": null,
+							"__TYPE__": "ImageContent",
 							"thumbnails": {}
 						}
 					],
@@ -42,6 +44,14 @@
 						{
 							"__TYPE__": "FieldContent",
 							"value": "uncle",
+							"type": "Text"
+						}
+					],
+					[
+						"desc2",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "growth",
 							"type": "Text"
 						}
 					]

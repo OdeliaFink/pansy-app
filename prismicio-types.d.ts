@@ -634,6 +634,16 @@ export interface PhotoGallerySliceDefaultItem {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   desc: prismic.KeyTextField;
+
+  /**
+   * Desc2 field in *PhotoGallery → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: photo_gallery.items[].desc2
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  desc2: prismic.KeyTextField;
 }
 
 /**
@@ -871,6 +881,16 @@ export interface TextImageSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   body: prismic.KeyTextField;
+
+  /**
+   * Body_2 field in *TextImage → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: text_image.primary.body_2
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  body_2: prismic.KeyTextField;
 }
 
 /**
@@ -1090,9 +1110,49 @@ export type TextWithImageSliceDefault = prismic.SharedSliceVariation<
 >;
 
 /**
+ * Primary content in *TextWithImage → Primary*
+ */
+export interface TextWithImageSliceTextWithImageRightPrimary {
+  /**
+   * Text field in *TextWithImage → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: Text displayed next to image
+   * - **API ID Path**: text_with_image.primary.text
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  text: prismic.RichTextField;
+
+  /**
+   * Image field in *TextWithImage → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: text_with_image.primary.image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+}
+
+/**
+ * TextWithImageRight variation for TextWithImage Slice
+ *
+ * - **API ID**: `textWithImageRight`
+ * - **Description**: TextWithImage
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type TextWithImageSliceTextWithImageRight = prismic.SharedSliceVariation<
+  "textWithImageRight",
+  Simplify<TextWithImageSliceTextWithImageRightPrimary>,
+  never
+>;
+
+/**
  * Slice variation for *TextWithImage*
  */
-type TextWithImageSliceVariation = TextWithImageSliceDefault;
+type TextWithImageSliceVariation =
+  | TextWithImageSliceDefault
+  | TextWithImageSliceTextWithImageRight;
 
 /**
  * TextWithImage Shared Slice
@@ -1172,8 +1232,10 @@ declare module "@prismicio/client" {
       TextWithFeaturesSliceDefault,
       TextWithImageSlice,
       TextWithImageSliceDefaultPrimary,
+      TextWithImageSliceTextWithImageRightPrimary,
       TextWithImageSliceVariation,
       TextWithImageSliceDefault,
+      TextWithImageSliceTextWithImageRight,
     };
   }
 }

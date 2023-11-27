@@ -22,7 +22,7 @@ const Steps = ({ slice }) => {
               >
                 <div className="text-center mx-auto">
                   <div className="w-full">
-                    <p className="font-semibold text-dark-green font-body tracking-wide text-[14px] pb-2">
+                    <p className="font-semibold text-dark-green font-body tracking-wide text-[18px] pb-2">
                       {item.steps}
                     </p>
                     <p className="font-light text-dark-green font-body text-[12px]">
@@ -34,7 +34,7 @@ const Steps = ({ slice }) => {
             ))}
           </div>
         </section>
-        <div className="flex items-center text-center justify-center pt-6 pb-2">
+        <div className="flex items-center text-center justify-center pt-10 pb-4">
           <Button field={slice.primary.button_link}>
             {slice.primary.button_text}
           </Button>

@@ -35,6 +35,13 @@
             "label": "Desc",
             "placeholder": ""
           }
+        },
+        "desc2": {
+          "type": "Text",
+          "config": {
+            "label": "Desc2",
+            "placeholder": ""
+          }
         }
       }
     }

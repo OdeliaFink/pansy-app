@@ -25,14 +25,14 @@ const Hero = ({ slice }) => {
                 </Heading>
               ),
               paragraph: ({ children }) => (
-                <p className="mb-6 last:mb-0">{children}</p>
+                <p className="mb-6 last:mb-10">{children}</p>
               ),
             }}
           />
         </div>
 
         {prismic.isFilled.image(slice.primary.image) && (
-          <div className="h-auto pt-5">
+          <div className="h-auto pt-10">
             <PrismicNextImage
               field={slice.primary.image}
               className={clsx('w-full h-[20rem] mx-auto object-cover')}

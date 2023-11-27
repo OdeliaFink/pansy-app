@@ -34,6 +34,9 @@ module.exports = {
           '100%': { transform: 'translateX(0%)' },
         },
       },
+      zIndex: {
+        999: '999',
+      },
     },
   },
   plugins: [require('@tailwindcss/aspect-ratio')],

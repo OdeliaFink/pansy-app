@@ -48,6 +48,13 @@
             "label": "Body",
             "placeholder": ""
           }
+        },
+        "body_2": {
+          "type": "Text",
+          "config": {
+            "label": "Body_2",
+            "placeholder": ""
+          }
         }
       },
       "items": {}

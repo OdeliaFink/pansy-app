@@ -1,6 +1,6 @@
 import { PrismicNextImage } from '@prismicio/next';
 import * as prismic from '@prismicio/client';
-
+import clsx from 'clsx';
 import { Bounded } from '@/components/Bounded';
 import { Heading } from '@/components/Heading';
 import { PrismicRichText } from '@/components/PrismicRichText';
@@ -17,7 +17,11 @@ const TextWithImage = ({ slice }) => {
             <PrismicNextImage
               field={slice.primary.image}
               sizes="100vw"
-              className="relative w-full"
+              className={clsx(
+                ' rounded-lg object-cover h-[350px] w-[450px]',
+                slice.variation === 'textWithImageRight' && 'md:order-2'
+              )}
+              // className="relative w-full"
             />
           )}
         </div>

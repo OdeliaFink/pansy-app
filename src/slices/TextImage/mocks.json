@@ -47,6 +47,11 @@
 				"__TYPE__": "FieldContent",
 				"value": "round",
 				"type": "Text"
+			},
+			"body_2": {
+				"__TYPE__": "FieldContent",
+				"value": "traffic",
+				"type": "Text"
 			}
 		},
 		"items": []

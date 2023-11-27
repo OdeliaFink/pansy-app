@@ -1,3 +1,5 @@
+'use client';
+import { useState, useEffect } from 'react';
 import * as prismic from '@prismicio/client';
 import { PrismicText } from '@prismicio/react';
 import { PrismicNextImage, PrismicNextLink } from '@prismicio/next';
@@ -10,9 +12,25 @@ const localeLabels = {
 };
 
 export function Header({ locales = [], navigation, settings }) {
+  const [top, setTop] = useState(true);
+
+  useEffect(() => {
+    const scrollHandler = () => {
+      window.scrollY > 10 ? setTop(false) : setTop(true);
+    };
+    window.addEventListener('scroll', scrollHandler);
+    return () => window.removeEventListener('scroll', scrollHandler);
+  }, [top]);
+
   return (
-    <Bounded as="header" yPadding="sm">
-      <div className="flex flex-wrap items-center justify-between gap-x-6 gap-y-3 leading-none sticky top-0">
+    <Bounded
+      as="header"
+      yPadding="sm"
+      className={`sticky top-0 bg-bg-beige z-999 ${
+        !top && `bg-white shadow-lg`
+      }`}
+    >
+      <div className="flex flex-wrap items-center justify-between gap-x-6 gap-y-3 leading-none">
         <PrismicNextLink href="/">
           {/* {prismic.isFilled.image(settings.data.logo) && (
             <PrismicNextImage field={settings.data.logo} alt="" />

@@ -18,7 +18,7 @@ const TextImage = ({ slice }) => {
       data-slice-variation={slice.variation}
       className="py-1"
     >
-      <div className="grid gap-10 md:grid-cols-2 place-items-center py-4">
+      <div className="grid gap-10 md:grid-cols-2 place-items-center py-8 first:pt-10">
         <PrismicNextImage
           field={slice.primary.image}
           className={clsx(
@@ -30,7 +30,7 @@ const TextImage = ({ slice }) => {
           <h2 className="leading-tight tracking-tight font-body text-slate-grey text-[4rem]">
             {slice.primary.heading}
           </h2>
-          <p className='className="max-w-md text-md md:text-[12px] max-w-[30rem] font-body text-slate-600"'>
+          <p className='className="max-w-md text-md md:text-[15px] max-w-[30rem] font-body text-slate-600"'>
             {slice.primary.body}
           </p>
           <h2>{slice.primary.body_2}</h2>
@@ -38,7 +38,7 @@ const TextImage = ({ slice }) => {
           {slice?.primary?.label && (
             <PrismicNextLink
               field={slice.primary.link}
-              className="border-1 rounded-sm border border-black hover:bg-lighter-green max-w-fit px-4 py-1 ease-in-out duration-300 text-left"
+              className="border-1 rounded-sm border text-[13px] border-black hover:bg-lighter-green max-w-fit px-10 py-1 ease-in-out duration-300 text-left"
             >
               {slice.primary.label}
             </PrismicNextLink>

@@ -1,14 +1,14 @@
-import { PrismicNextImage } from "@prismicio/next";
-import * as prismic from "@prismicio/client";
+import { PrismicNextImage } from '@prismicio/next';
+import * as prismic from '@prismicio/client';
 
-import { Bounded } from "@/components/Bounded";
-import { Heading } from "@/components/Heading";
-import { PrismicRichText } from "@/components/PrismicRichText";
+import { Bounded } from '@/components/Bounded';
+import { Heading } from '@/components/Heading';
+import { PrismicRichText } from '@/components/PrismicRichText';
 
 const TextWithFeatures = ({ slice }) => {
   return (
     <Bounded collapsible={false} as="section" className="bg-slate-100">
-      <div className="grid grid-cols-1 items-end gap-10 md:grid-cols-2 md:gap-10 lg:gap-28">
+      <div className="grid grid-cols-1 md:grid-cols-2 md:gap-10 lg:gap-28">
         <div className="grid grid-cols-1 gap-8">
           {prismic.isFilled.image(slice.primary.icon) && (
             <PrismicNextImage field={slice.primary.icon} />
@@ -18,7 +18,7 @@ const TextWithFeatures = ({ slice }) => {
               field={slice.primary.text}
               components={{
                 heading1: ({ children }) => (
-                  <Heading as="h2" size="6xl" className="mb-4 last:mb-0">
+                  <Heading as="h2" size="6xl" className=" last:mb-0">
                     {children}
                   </Heading>
                 ),
