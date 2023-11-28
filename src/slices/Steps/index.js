@@ -14,7 +14,7 @@ const Steps = ({ slice }) => {
           data-slice-variation={slice.variation}
           className="bg-medium-beige"
         >
-          <div className="flex md:flex-row flex-col mx-auto md:w-[60%] md:gap-0 gap-3 w-auto py-5 bg-medium-beige ">
+          <div className="flex md:flex-row flex-col mx-auto md:w-[70%] lg:w-[60%] md:gap-0 gap-3 w-auto py-5 bg-medium-beige ">
             {slice.items.map((item, index) => (
               <div
                 key={index}

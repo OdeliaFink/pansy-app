@@ -1,14 +1,21 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useCookies } from 'react-cookie';
 
 const CookieBanner = () => {
   const [cookies, setCookie] = useCookies(['cookieConsent']);
-  const [showBanner, setShowBanner] = useState(!cookies.cookieConsent);
+  const [showBanner, setShowBanner] = useState(false);
+
+  useEffect(() => {
+    if (!cookies.cookieConsent) {
+      setShowBanner(true);
+    } else {
+      setShowBanner(false);
+    }
+  }, [cookies.cookieConsent]);
 
   const handleAccept = () => {
-    setCookie('cookieConsent', true, { path: '/', maxAge: 31536000 });
-    setShowBanner(false);
+    setCookie('cookieConsent', true, { path: '/', maxAge: 31536000 }); // Set cookie for 1 year (maxAge in seconds)
   };
 
   const handleDecline = () => {
@@ -28,7 +35,10 @@ const CookieBanner = () => {
         <div>
           <button
             className="mr-2 px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:ring-blue-400"
-            onClick={handleAccept}
+            onClick={() => {
+              handleAccept();
+              setShowBanner(false); // Hide banner after accepting
+            }}
           >
             Accept
           </button>

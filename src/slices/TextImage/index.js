@@ -18,7 +18,7 @@ const TextImage = ({ slice }) => {
       data-slice-variation={slice.variation}
       className="py-1"
     >
-      <div className="grid gap-10 md:grid-cols-2 place-items-center py-8 first:pt-10">
+      <div className="grid gap-10 md:grid-cols-2 place-items-center md:py-8 py-3 first:pt-10">
         <PrismicNextImage
           field={slice.primary.image}
           className={clsx(

@@ -22,11 +22,11 @@ const Main = ({ slice }) => {
       </div>
       <div
         className={clsx(
-          'flex  mx-auto text-center lg:left-[27rem] xl:left-[36rem] 2xl:left-[75rem] md:left-[16rem] md:top-[16rem] left-[7rem]  top-[8rem]  absolute'
+          'flex  mx-auto text-center lg:left-[27rem] xl:left-[33rem] 2xl:left-[75rem] md:left-[16rem] md:top-[16rem] left-[7rem]  top-[18rem]  absolute'
         )}
       >
         <div className="flex flex-col justify-center">
-          <h1 className="tracking-widest font-display md:text-[7rem] text-[3.5rem] text-bg-beige">
+          <h1 className="tracking-widest font-display md:text-[7rem] text-[4rem] text-bg-beige">
             {slice.primary.title}
           </h1>
           <div className="text-center">

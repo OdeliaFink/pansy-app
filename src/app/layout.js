@@ -1,5 +1,5 @@
 import './globals.css';
-
+import { createClient } from '@/prismicio';
 import { Caprasimo, Work_Sans } from 'next/font/google';
 import { PrismicPreview } from '@prismicio/next';
 import clsx from 'clsx';
@@ -22,7 +22,10 @@ export const workSans = Work_Sans({
 /**
  * @param {{ children: React.ReactNode }}
  */
-export default function RootLayout({ children }) {
+export default async function RootLayout({ children }) {
+  const client = createClient();
+  const homePage = await client.getByUID('page', 'home');
+  console.log('🚀 ~ file: layout.js:28 ~ RootLayout ~ homePage:', homePage.uid);
   return (
     <html
       lang="en"
@@ -30,7 +33,7 @@ export default function RootLayout({ children }) {
     >
       <body className="overflow-x-hidden antialiased bg-bg-beige w-full">
         {/* TODO: Remove the following element once you have read the documentation. */}
-        {process.env.NODE_ENV === 'development' && (
+        {/* {homePage.uid === 'home' && (
           <div className="bg-dark-beige p-1 text-center text-[1rem] h-[2rem] text-white font-body font-light relative flex overflow-x-hidden">
             <div className="height-[30px] w-[200%] ">
               <p className="font-body font-light">
@@ -39,17 +42,7 @@ export default function RootLayout({ children }) {
               </p>
             </div>
           </div>
-          // <>
-          //   <div class="relative flex overflow-x-hidden bg-dark-beige">
-          //     <div class="py-2 animate-marquee whitespace-nowrap">
-          //       <span class="">Welcome to pansy</span>
-          //       <span class=" mx-2">
-          //         find out how you can transform your space
-          //       </span>
-          //     </div>
-          //   </div>
-          // </>
-        )}
+        )} */}
         {children}
         <PrismicPreview repositoryName={repositoryName} />
       </body>
