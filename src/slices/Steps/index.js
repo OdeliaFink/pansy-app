@@ -34,7 +34,7 @@ const Steps = ({ slice }) => {
             ))}
           </div>
         </section>
-        <div className="flex items-center text-center justify-center pt-10 pb-4">
+        <div className="flex items-center text-center justify-center pt-10">
           <Button field={slice.primary.button_link}>
             {slice.primary.button_text}
           </Button>

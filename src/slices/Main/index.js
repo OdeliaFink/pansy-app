@@ -17,7 +17,7 @@ const Main = ({ slice }) => {
       <div className="h-auto pt-2">
         <PrismicNextImage
           field={slice.primary.image}
-          className={clsx('w-full h-[40rem] mx-auto object-cover')}
+          className={clsx('w-full h-[38rem] mx-auto object-cover')}
         />
       </div>
       <div
@@ -26,7 +26,7 @@ const Main = ({ slice }) => {
         )}
       >
         <div className="flex flex-col justify-center">
-          <h1 className="tracking-widest font-display md:text-[6.5rem] text-[3.5rem] text-pansy-white">
+          <h1 className="tracking-widest font-display md:text-[7rem] text-[3.5rem] text-bg-beige">
             {slice.primary.title}
           </h1>
           <div className="text-center">
