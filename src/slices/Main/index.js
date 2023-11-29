@@ -22,7 +22,7 @@ const Main = ({ slice }) => {
       </div>
       <div
         className={clsx(
-          'flex  mx-auto text-center lg:left-[27rem] xl:left-[33rem] 2xl:left-[75rem] md:left-[16rem] md:top-[16rem] left-[7rem]  top-[18rem]  absolute'
+          'flex  mx-auto text-center lg:left-[27rem] xl:left-[33rem] 2xl:left-[75rem] md:left-[14rem] md:top-[13rem] left-[7rem]  top-[18rem]  absolute'
         )}
       >
         <div className="flex flex-col justify-center">
@@ -32,7 +32,7 @@ const Main = ({ slice }) => {
           <div className="text-center">
             <PrismicNextLink
               field={slice.primary.button_link}
-              className="display-block w-fit border-solid px-8 py-[.8rem] rounded-sm text-bg-beige font-body border-dark-deen bg-dark-green hover:bg-lighter-green transition-color duration-200 ease-in-out  mb-8 md:mb-0 "
+              className="display-block w-fit border-solid px-8 py-[.8rem] rounded-xl text-bg-beige font-body border-dark-deen bg-mossy-green hover:bg-sage-green transition-color duration-200 ease-in-out  mb-8 md:mb-0 "
             >
               {slice.primary.button_text}
             </PrismicNextLink>

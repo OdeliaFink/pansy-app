@@ -6,7 +6,7 @@ export default function Button({ className, ...restProps }) {
     <>
       <PrismicNextLink
         className={clsx(
-          'display-block w-fit border-solid px-7 py-[.5rem] rounded-sm border border-1 font-body border-dark-deen bg-transparent hover:bg-lighter-green transition-color duration-300 ease-in-out mb-8 md:mb-0 ',
+          'display-block w-fit border-solid px-8 py-[.8rem] rounded-xl text-bg-beige font-body border-dark-deen bg-mossy-green hover:bg-sage-green transition-color duration-200 ease-in-out  mb-8 md:mb-0 ',
           className
         )}
         {...restProps}

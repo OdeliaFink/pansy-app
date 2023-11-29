@@ -98,7 +98,7 @@ const ContactForm = ({ slice }) => {
             >
               {({ isSubmitting }) => (
                 <Form>
-                  <div className="md:grid md:grid-cols-2 md:gap-4 mx-[-14px] grid-cols-1 md:pr-[18rem]">
+                  <div className="md:grid md:grid-cols-2 md:gap-4 mx-[-14px] grid-cols-1 md:pr-[10rem] lg:pr-[13rem] xl:pr-[19rem]">
                     {formInputs.map((input) => (
                       <div
                         key={input.name}
@@ -130,29 +130,35 @@ const ContactForm = ({ slice }) => {
                         className=" border-black rounded-sm p-2 font-body  h-[40%] md:h-auto font-light text-[12px] focus:bg-white flex-1 focus:outline-none"
                         name="selectedOption"
                         id="selectedOption"
+                        defaultValue=""
                       >
-                        <option value="Design-and-Planning">
+                        <option value="" disabled hidden>
+                          Select an option
+                        </option>
+                        <option value="design_and_planning">
                           Design & Planning
                         </option>
-                        <option value="option2">Gardening</option>
-                        <option value="option3">Consulting</option>
+                        <option value="gardening">Gardening</option>
+                        <option value="consulting">Consulting</option>
                       </Field>
                     </div>
                   </div>
 
-                  <div className="flex flex-row py-1 bg-dark-beige my-[2rem] py-[3rem]">
-                    <label
-                      className="pt-4 text-[14px] font-body font-light center w-[29%] md:pl-[9rem] pl-4 text-left"
-                      htmlFor="comments"
-                    >
-                      {slice.primary.comments}
-                    </label>
-                    <Field
-                      as="textarea"
-                      className="focus:bg-white border-black rounded-sm font-body font-light text-[12px]  p-2 focus:bg-white focus:outline-none md:w-[54%] w-[60%] max-h-[60%] ml-[25px] mx-auto"
-                      name="comments"
-                      id="comments"
-                    />
+                  <div className=" bg-dark-beige my-8">
+                    <div className="flex flex-col my-[2rem]">
+                      <label
+                        className="pt-4 pb-1 text-[14px] font-body font-light center pl-4 text-center"
+                        htmlFor="comments"
+                      >
+                        {slice.primary.comments}
+                      </label>
+                      <Field
+                        as="textarea"
+                        className="focus:bg-white border-black rounded-sm font-body w-[40%] mx-auto font-light text-[14px]  py-[3rem] focus:bg-white focus:outline-none resize-none"
+                        name="comments"
+                        id="comments"
+                      />
+                    </div>
                   </div>
 
                   <div className="w-full text-left text-center">

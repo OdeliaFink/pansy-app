@@ -26,7 +26,7 @@ export function Header({ locales = [], navigation, settings }) {
     <Bounded
       as="header"
       yPadding="sm"
-      className={`sticky md:top-0 top-8 bg-bg-beige z-999 ${
+      className={`sticky md:top-0 bg-bg-beige z-999 ${
         !top && `bg-white shadow-lg`
       }`}
     >
@@ -58,7 +58,7 @@ export function Header({ locales = [], navigation, settings }) {
               {locales.map((locale) => (
                 <li
                   key={locale.lang}
-                  className="first:font-bold first:text-lighter-green"
+                  className="first:font-bold first:text-sage-green text-lg font-light"
                 >
                   <PrismicNextLink
                     href={locale.url}

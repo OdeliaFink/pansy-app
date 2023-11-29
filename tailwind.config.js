@@ -16,6 +16,8 @@ module.exports = {
       'bg-beige': '#F5EDE5',
       'dark-green': '#214F2F',
       'lighter-green': '#3D8C55',
+      'sage-green': '#BAB86C',
+      'mossy-green': '#737F51',
       'slate-grey': '#4B4E58',
       'pansy-white': '#fff',
     },

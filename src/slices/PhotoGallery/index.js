@@ -23,7 +23,7 @@ const PhotoGallery = ({ slice }) => {
             <div key={index} className="">
               <div className="grid-cols-3 grid-rows-1 relative">
                 <div className="group ">
-                  <div className="gap-4">
+                  <div className="gap-4 border border-mossy-green rounded">
                     <PrismicNextImage
                       field={item.image}
                       className="hover:border hover:border-2 opacity-100 hover:opacity-20 ease-in-out duration-300 hover:cursor-pointer max-w-[100%] rounded"
