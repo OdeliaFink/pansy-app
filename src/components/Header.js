@@ -27,7 +27,7 @@ export function Header({ locales = [], navigation, settings }) {
     <Bounded
       as="header"
       yPadding="sm"
-      className={`sticky md:top-0 bg-bg-beige z-999 ${
+      className={`sticky top-0 bg-bg-beige z-999 ${
         !top && `bg-white shadow-lg`
       }`}
     >

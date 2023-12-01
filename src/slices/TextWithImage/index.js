@@ -25,27 +25,30 @@ const TextWithImage = ({ slice }) => {
               )}
             </div>
           )}
-          <div className="w-full max-w-[25rem] leading-relaxed text-left md:pl-[2rem]">
+          <div className="w-full max-w-[25rem]  text-left lg:pl-[2rem] md:pl-0">
             <PrismicRichText
               field={slice.primary.text}
               components={{
                 heading1: ({ children }) => (
-                  <Heading
-                    as="h2"
-                    size="2xl"
-                    className="mb-8 last:mb-0 font-body"
-                  >
+                  <h1 className="mb-4 last:mb-0 font-body font-bold text-[1.7rem]">
                     {children}
-                  </Heading>
+                  </h1>
+                  //   as="h4"
+                  //   size="2xl"
+                  //   className="mb-8 last:mb-0 font-body"
+                  // >
+                  // </Heading>
                 ),
                 heading2: ({ children }) => (
-                  <Heading
-                    as="h3"
-                    size="2xl"
-                    className="mb-2 last:mb-0 font-body"
-                  >
+                  // <Heading
+                  //   as="h2"
+                  //   size="2xl"
+                  //   className="mb-2 last:mb-0 font-body"
+                  // >
+                  <h2 className="mb-3 last:mb-0 font-body font-semibold text-[1.4rem]">
                     {children}
-                  </Heading>
+                  </h2>
+                  // </Heading>
                 ),
               }}
             />

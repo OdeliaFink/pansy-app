@@ -42,12 +42,14 @@ const TextImage = ({ slice }) => {
           <h2 className="font-semibold font-body">{slice.primary.body_2}</h2>
 
           {slice?.primary?.label && (
-            <PrismicNextLink
-              field={slice.primary.link}
-              className="border-1 rounded-sm border text-[13px] border-black rounded-xl hover:bg-mossy-green hover:text-pansy-white max-w-fit px-10 py-2 ease-in-out duration-300 text-left"
-            >
-              {slice.primary.label}
-            </PrismicNextLink>
+            <div className="pt-4">
+              <PrismicNextLink
+                field={slice.primary.link}
+                className="border-1 rounded-sm border text-[13px] border-black rounded-xl hover:bg-mossy-green hover:text-pansy-white max-w-fit px-10 py-2 ease-in-out duration-300 text-left"
+              >
+                {slice.primary.label}
+              </PrismicNextLink>
+            </div>
           )}
         </div>
       </div>

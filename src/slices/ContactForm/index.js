@@ -145,19 +145,21 @@ const ContactForm = ({ slice }) => {
                   </div>
 
                   <div className=" bg-dark-beige my-8">
-                    <div className="flex flex-col my-[2rem]">
+                    <div className="flex flex-col">
                       <label
-                        className="pt-4 pb-1 text-[14px] font-body font-light center pl-4 text-center"
+                        className="py-4 text-[14px] font-body font-light text-center pl-4"
                         htmlFor="comments"
                       >
                         {slice.primary.comments}
                       </label>
-                      <Field
-                        as="textarea"
-                        className="focus:bg-white border-black rounded-sm font-body w-[40%] mx-auto font-light text-[14px]  py-[3rem] focus:bg-white focus:outline-none resize-none"
-                        name="comments"
-                        id="comments"
-                      />
+                      <div className="flex justify-center pb-8">
+                        <Field
+                          as="textarea"
+                          className="focus:bg-white border-black rounded-sm font-body w-[40%] mx-auto font-light text-[14px]  py-[3rem] focus:bg-white focus:outline-none resize-none"
+                          name="comments"
+                          id="comments"
+                        />
+                      </div>
                     </div>
                   </div>
 
