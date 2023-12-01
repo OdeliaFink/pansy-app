@@ -28,7 +28,7 @@ const Features = ({ slice }) => {
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
-      className="py-6"
+      className="py-8"
     >
       <div className="bg-medium-beige py-2">
         <div className="">

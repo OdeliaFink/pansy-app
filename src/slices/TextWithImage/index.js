@@ -11,9 +11,9 @@ const TextWithImage = ({ slice }) => {
   return (
     <Bounded as="section" className="bg-white">
       <div className="bg-white flex justify-center items-center py-5">
-        <div className="max-w-[90%] flex flex-col md:flex-row items-center justify-center">
+        <div className="max-w-[90%] flex lg:flex-row flex-col items-center justify-center">
           {!isImageOnRight && (
-            <div className="w-full md:w-auto md:flex-shrink-0 md:ml-10">
+            <div className="w-full md:w-auto md:flex-shrink-0 md:ml-10 md:mr-[4rem]">
               {prismic.isFilled.image(slice.primary.image) && (
                 <PrismicNextImage
                   field={slice.primary.image}
@@ -51,7 +51,7 @@ const TextWithImage = ({ slice }) => {
             />
           </div>
           {isImageOnRight && (
-            <div className="w-full md:w-auto md:flex-shrink-0">
+            <div className="w-full md:w-auto md:flex-shrink-0 md:ml-[4rem]">
               {prismic.isFilled.image(slice.primary.image) && (
                 <PrismicNextImage
                   field={slice.primary.image}

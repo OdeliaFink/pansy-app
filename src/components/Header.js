@@ -8,7 +8,8 @@ import { Bounded } from './Bounded';
 
 const localeLabels = {
   'en-us': 'EN',
-  'fr-fr': 'FR',
+  'fr-ca': 'FR',
+  // 'fr-fr': 'FRR',
 };
 
 export function Header({ locales = [], navigation, settings }) {
@@ -69,6 +70,7 @@ export function Header({ locales = [], navigation, settings }) {
                   </PrismicNextLink>
                 </li>
               ))}
+              {console.log(locales, 'LOCALES')}
             </ul>
           </div>
         </nav>
