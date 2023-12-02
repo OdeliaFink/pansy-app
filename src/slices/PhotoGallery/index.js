@@ -17,26 +17,26 @@ const PhotoGallery = ({ slice }) => {
         <section
           data-slice-type={slice.slice_type}
           data-slice-variation={slice.variation}
-          className="grid grid-cols-3 gap-8"
+          className="flex flex-wrap gap-8 justify-between"
         >
           {slice.items.map((item, index) => (
-            <div key={index} className="">
-              <div className="grid-cols-3 grid-rows-1 relative">
-                <div className="group ">
-                  <div className="gap-4 border border-mossy-green rounded">
-                    <PrismicNextImage
-                      field={item.image}
-                      className="hover:border hover:border-2 opacity-100 hover:opacity-20 ease-in-out duration-300 hover:cursor-pointer max-w-[100%] rounded"
-                    />
-                  </div>
-                  <p className="font-semibold text-dark-green text-[1.5rem] font-body  font-[16px]  opacity-0 transition-opacity duration-300 group-hover:opacity-100 absolute top-[6rem] right-15 left-12">
-                    {item.desc}
-                  </p>
-
-                  <p className="font-regular text-dark-green text-[1rem] font-body max-w-[14rem]  font-[16px] absolute top-[8rem] right-15 left-12 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                    {item.desc2}
-                  </p>
+            <div key={index} className="lg:w-[30%] relative">
+              <div className="group flex flex-col">
+                {/* <div className="gap-4 border border-mossy-green rounded"> */}
+                <div className="gap-4 border border-mossy-green rounded">
+                  <PrismicNextImage
+                    field={item.image}
+                    className="hover:border hover:border-2 opacity-100 hover:opacity-20 ease-in-out duration-300 hover:cursor-pointer max-w-[100%] rounded"
+                  />
                 </div>
+                <p className="font-semibold text-dark-green text-[1.5rem] font-body  font-[16px]  opacity-0 transition-opacity duration-300 group-hover:opacity-100 absolute top-[6rem] right-15 left-12">
+                  {item.desc}
+                </p>
+
+                <p className="font-regular text-dark-green text-[1rem] font-body max-w-[14rem]  font-[16px] absolute top-[8rem] right-15 left-12 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                  {item.desc2}
+                </p>
+                {/* </div> */}
               </div>
             </div>
           ))}

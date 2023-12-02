@@ -33,28 +33,17 @@ const TextWithImage = ({ slice }) => {
                   <h1 className="mb-4 last:mb-0 font-body font-bold text-[1.7rem]">
                     {children}
                   </h1>
-                  //   as="h4"
-                  //   size="2xl"
-                  //   className="mb-8 last:mb-0 font-body"
-                  // >
-                  // </Heading>
                 ),
                 heading2: ({ children }) => (
-                  // <Heading
-                  //   as="h2"
-                  //   size="2xl"
-                  //   className="mb-2 last:mb-0 font-body"
-                  // >
-                  <h2 className="mb-3 last:mb-0 font-body font-semibold text-[1.4rem]">
+                  <h2 className="mb-3 last:mb-[20px] font-body font-semibold text-[1.4rem]">
                     {children}
                   </h2>
-                  // </Heading>
                 ),
               }}
             />
           </div>
           {isImageOnRight && (
-            <div className="w-full md:w-auto md:flex-shrink-0 md:ml-[4rem]">
+            <div className="w-full md:w-auto md:flex-shrink-0 lg:ml-[4rem] ml-[0rem]">
               {prismic.isFilled.image(slice.primary.image) && (
                 <PrismicNextImage
                   field={slice.primary.image}

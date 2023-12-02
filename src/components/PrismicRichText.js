@@ -1,9 +1,9 @@
-import { PrismicNextLink } from "@prismicio/next";
-import { PrismicRichText as BasePrismicRichText } from "@prismicio/react";
+import { PrismicNextLink } from '@prismicio/next';
+import { PrismicRichText as BasePrismicRichText } from '@prismicio/react';
 
 /** @type {import("@prismicio/react").JSXMapSerializer} */
 const defaultComponents = {
-  paragraph: ({ children }) => <p className="mb-7 last:mb-0">{children}</p>,
+  paragraph: ({ children }) => <p className="mb-7 last:mb-8">{children}</p>,
   oList: ({ children }) => (
     <ol className="mb-7 pl-4 last:mb-0 md:pl-6">{children}</ol>
   ),

@@ -24,7 +24,7 @@ const TextImage = ({ slice }) => {
           className={clsx(
             'rounded-lg object-cover h-[350px] w-[450px]',
             slice.variation === 'imageRight' && 'md:order-2',
-            slice.variation === 'default' ? 'md:mr-[5rem]' : 'md:ml-[5rem]'
+            slice.variation === 'default' ? 'xl:mr-[5rem]' : 'xl:ml-[5rem]'
           )}
         />
         <div

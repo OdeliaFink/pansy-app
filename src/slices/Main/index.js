@@ -22,7 +22,7 @@ const Main = ({ slice }) => {
       </div>
       <div
         className={clsx(
-          'flex  mx-auto text-center lg:left-[27rem] xl:left-[33rem] 2xl:left-[75rem] md:left-[14rem] md:top-[11rem] left-[7rem]  top-[18rem]  absolute'
+          'flex  mx-auto text-center lg:left-[20rem] xl:left-[33rem] 2xl:left-[45rem] md:left-[14rem] md:top-[11rem] xs:left-[5rem] left-[6rem]  top-[18rem]  absolute'
         )}
       >
         <div className="flex flex-col justify-center">
