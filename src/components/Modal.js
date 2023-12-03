@@ -1,4 +1,4 @@
-const Modal = ({ title, image, desc, closeModal }) => {
+const Modal = ({ title, desc, closeModal }) => {
   return (
     <div className="fixed inset-0 z-50 overflow-auto bg-black bg-opacity-50 flex justify-center items-center">
       <div className="bg-bg-beige p-4 rounded-lg max-w-md w-full">

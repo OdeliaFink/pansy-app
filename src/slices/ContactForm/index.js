@@ -130,7 +130,7 @@ const ContactForm = ({ slice }) => {
                         id="selectedOption"
                         defaultValue=""
                       >
-                        <option value="" disabled hidden>
+                        <option value="" disabled>
                           Select an option
                         </option>
                         <option value="design_and_planning">
@@ -182,7 +182,6 @@ const ContactForm = ({ slice }) => {
         <Modal
           closeModal={closeModal}
           title="Form submitted!"
-          image={''}
           desc={
             'Someone from pansy will reach out to you to get started on your gardening project.'
           }

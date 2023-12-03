@@ -33,7 +33,7 @@ const TextImage = ({ slice }) => {
             slice.variation === 'imageRight' ? 'text-left' : 'text-right'
           )}
         >
-          <h2 className="leading-tight tracking-tight font-body text-slate-grey text-[4rem]">
+          <h2 className="leading-tight tracking-tight font-body text-mossy-green text-[4rem]">
             {slice.primary.heading}
           </h2>
           <p className='className="text-md md:text-[15px] font-body text-slate-600"'>
