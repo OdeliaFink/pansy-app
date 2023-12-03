@@ -166,7 +166,7 @@ const ContactForm = ({ slice }) => {
                       type="submit"
                       disabled={isSubmitting}
                       className={clsx(
-                        'display-block w-fit border-solid border bg-transparent border-dark-green hover:bg-lighter-green hover:text-white  transition-color duration-200 ease-in-out px-9 py-1 rounded-sm font-body text-sm font-light text-base md:mb-0'
+                        'border-1 rounded-sm border text-[13px] border-black rounded-xl hover:bg-mossy-green hover:text-pansy-white max-w-fit px-10 py-2 ease-in-out duration-300'
                       )}
                     >
                       send
