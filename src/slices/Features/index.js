@@ -31,7 +31,7 @@ const Features = ({ slice }) => {
       className="py-8"
     >
       <div className="bg-medium-beige py-2">
-        <div className="">
+        <div className="py-[1rem]">
           <div className=" flex md:flex-row flex-col justify-center md:gap-[2rem] gap-0  mx-auto sm:place-items-start place-items-center px-6 ">
             {slice.items.map((item, index) => (
               <div key={index} className="bg-medium-beige py-2 flex flex-col ">

@@ -1,3 +1,4 @@
+import { Bounded } from '@/components/Bounded';
 import Button from '@/components/Button';
 
 /**
@@ -8,24 +9,27 @@ import Button from '@/components/Button';
 const Steps = ({ slice }) => {
   return (
     <>
-      <div className="py-2">
-        <section
+      <div className="py-4">
+        <Bounded
           data-slice-type={slice.slice_type}
           data-slice-variation={slice.variation}
           className="bg-medium-beige"
         >
-          <div className="flex md:flex-row flex-col mx-auto md:w-[70%] lg:w-[60%] md:gap-0 gap-3 w-auto py-5 bg-medium-beige ">
+          <h1 className="leading-tight tracking-tight text-center font-body text-slate-grey text-[4rem]">
+            {slice.primary.heading}
+          </h1>
+          <div className="flex md:flex-row flex-col mx-auto md:w-[70%] md:gap-0 gap-3 w-auto py-[2rem] bg-medium-beige ">
             {slice.items.map((item, index) => (
               <div
                 key={index}
-                className="border border-solid border-lighter-green md:p-6 p-1 px-0 max-w-[10rem] mx-auto"
+                className="border border-solid rounded border-mossy-green md:p-6 p-1 px-0 max-w-[10rem] mx-auto"
               >
                 <div className="text-center mx-auto">
                   <div className="w-full">
-                    <p className="font-semibold text-dark-green font-body tracking-wide text-[18px] pb-2">
+                    <p className="font-semibold text-mossy-green font-body tracking-wide text-[18px] pb-2">
                       {item.steps}
                     </p>
-                    <p className="font-light text-dark-green font-body text-[12px]">
+                    <p className="font-light text-mossy-green font-body text-[12px]">
                       {item.step_desc}
                     </p>
                   </div>
@@ -33,12 +37,12 @@ const Steps = ({ slice }) => {
               </div>
             ))}
           </div>
-        </section>
-        <div className="flex items-center text-center justify-center pt-10">
-          <Button field={slice.primary.button_link}>
-            {slice.primary.button_text}
-          </Button>
-        </div>
+          <div className="flex items-center text-center justify-center py-5">
+            <Button field={slice.primary.button_link}>
+              {slice.primary.button_text}
+            </Button>
+          </div>
+        </Bounded>
       </div>
     </>
   );

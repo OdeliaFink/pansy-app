@@ -12,7 +12,7 @@ const TextButton = ({ slice }) => {
       data-slice-variation={slice.variation}
       className="flex flex-row items-center justify-center bg-medium-beige py-4"
     >
-      <div className=" border-solid lg:w-[30%] w-1/2 inline-block p-5 ">
+      <div className=" border-solid lg:w-[30%] text-center w-1/2 inline-block p-5 ">
         <p className="font-body text-[16px] font-light text-black">
           {slice.primary.text}
         </p>

@@ -789,6 +789,16 @@ export type PhotoGallerySlice = prismic.SharedSlice<
  */
 export interface StepsSliceDefaultPrimary {
   /**
+   * Heading field in *Steps → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: steps.primary.heading
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  heading: prismic.KeyTextField;
+
+  /**
    * Button Text field in *Steps → Primary*
    *
    * - **Field Type**: Text

@@ -47,7 +47,7 @@ export function Header({ locales = [], navigation, settings }) {
               >
                 <PrismicNextLink
                   field={item.link}
-                  className="font-body font-light hover:text-lighter-green"
+                  className="font-body font-light hover:text-sage-green"
                 >
                   <PrismicText field={item.label} />
                 </PrismicNextLink>
@@ -59,7 +59,7 @@ export function Header({ locales = [], navigation, settings }) {
               {locales.map((locale) => (
                 <li
                   key={locale.lang}
-                  className="first:font-bold first:text-sage-green text-lg font-light"
+                  className="first:font-bold first:text-mossy-green text-lg font-light"
                 >
                   <PrismicNextLink
                     href={locale.url}

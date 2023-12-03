@@ -55,8 +55,6 @@ const ContactForm = ({ slice }) => {
       console.error(error);
       alert('Something went wrong. Please try again later!');
     }
-
-    // actions.setSubmitting(false);
     actions.resetForm();
   };
 
@@ -183,9 +181,11 @@ const ContactForm = ({ slice }) => {
       {showModal && (
         <Modal
           closeModal={closeModal}
-          title="Congrats!"
+          title="Form submitted!"
           image={''}
-          desc={'Someone from Pansy will reach out to you!'}
+          desc={
+            'Someone from pansy will reach out to you to get started on your gardening project.'
+          }
         />
       )}
     </>

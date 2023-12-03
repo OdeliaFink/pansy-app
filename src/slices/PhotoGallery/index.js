@@ -10,7 +10,7 @@ const PhotoGallery = ({ slice }) => {
     <>
       <Bounded>
         <div className="pt-10 pb-4">
-          <h1 className="font-body text-[3rem] text-left text-slate-grey">
+          <h1 className="font-body text-[3rem] text-center text-slate-grey">
             {slice.primary.header}
           </h1>
         </div>

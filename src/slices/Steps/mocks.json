@@ -14,6 +14,11 @@
 					"__TYPE__": "ExternalLink",
 					"url": "http://google.com"
 				}
+			},
+			"heading": {
+				"__TYPE__": "FieldContent",
+				"value": "arrow",
+				"type": "Text"
 			}
 		},
 		"items": [
