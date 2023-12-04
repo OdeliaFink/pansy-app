@@ -86,8 +86,9 @@ export function Footer({ settings, navigation }) {
           </p>
         </ul>
         <ul className="flex flex-wrap flex-col items-center gap-4 pt-[1.4rem]">
-          {navigation.data?.links.map((item) => (
+          {navigation.data?.links.map((item, index) => (
             <PrismicNextLink
+              key={index}
               field={item.link}
               className="font-body font-light text-[14px]"
             >
