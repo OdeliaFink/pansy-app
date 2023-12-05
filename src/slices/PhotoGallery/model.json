@@ -29,6 +29,22 @@
             "thumbnails": []
           }
         },
+        "image2": {
+          "type": "Image",
+          "config": {
+            "label": "Image2",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "horizontalimage": {
+          "type": "Image",
+          "config": {
+            "label": "HorizontalImage",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
         "desc": {
           "type": "Text",
           "config": {

@@ -734,6 +734,26 @@ export interface PhotoGallerySliceDefaultItem {
   image: prismic.ImageField<never>;
 
   /**
+   * Image2 field in *PhotoGallery → Items*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: photo_gallery.items[].image2
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image2: prismic.ImageField<never>;
+
+  /**
+   * HorizontalImage field in *PhotoGallery → Items*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: photo_gallery.items[].horizontalimage
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  horizontalimage: prismic.ImageField<never>;
+
+  /**
    * Desc field in *PhotoGallery → Items*
    *
    * - **Field Type**: Text
