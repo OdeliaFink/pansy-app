@@ -1,47 +1,62 @@
 import { Bounded } from '@/components/Bounded';
 import { PrismicNextImage } from '@prismicio/next';
+// import '../../app/globals.css';
+import Marquee from 'react-fast-marquee';
 /**
  * @typedef {import("@prismicio/client").Content.PhotoGallerySlice} PhotoGallerySlice
  * @typedef {import("@prismicio/react").SliceComponentProps<PhotoGallerySlice>} PhotoGalleryProps
  * @param {PhotoGalleryProps}
  */
+{
+}
 const PhotoGallery = ({ slice }) => {
+  console.log(slice.items, 'photo info');
   return (
     <>
-      <Bounded>
-        <div className="pt-10 pb-4">
-          <h1 className="font-body text-[3rem] text-center text-slate-grey">
-            {slice.primary.header}
-          </h1>
-        </div>
-        <section
-          data-slice-type={slice.slice_type}
-          data-slice-variation={slice.variation}
-          className="flex flex-wrap gap-8 justify-between"
-        >
-          {slice.items.map((item, index) => (
-            <div key={index} className="lg:w-[30%] relative">
-              <div className="group flex flex-col">
-                {/* <div className="gap-4 border border-mossy-green rounded"> */}
-                <div className="gap-4 border border-mossy-green rounded">
+      {/* <Bounded> */}
+      <div className="pt-10 pb-4">
+        <h1 className="font-body text-[3rem] text-center text-slate-grey">
+          {slice.primary.header}
+        </h1>
+      </div>
+      <section
+        data-slice-type={slice.slice_type}
+        data-slice-variation={slice.variation}
+        className="flex flex-row flex-wrap gap-8 justify-between"
+      >
+        <div className="flex overflow-y-hidden">
+          <Marquee>
+            {slice.items.map((item, index) => (
+              <div
+                key={index}
+                className="flex relative left-16 w-100vw  overflow-y-hidden h-auto"
+              >
+                <div className="h-200 flex">
                   <PrismicNextImage
-                    field={item.image}
-                    className="hover:border hover:border-2 opacity-100 hover:opacity-20 ease-in-out duration-300 hover:cursor-pointer max-w-[100%] rounded"
+                    field={item.horizontalimage}
+                    className="inline-block rounded-[3rem] w-[65%] flex-col h-[35rem] object-contain flex items-cent"
                   />
                 </div>
-                <p className="font-semibold text-dark-green text-[1.5rem] font-body  font-[16px]  opacity-0 transition-opacity duration-300 group-hover:opacity-100 absolute top-[6rem] right-15 left-12">
-                  {item.desc}
-                </p>
-
-                <p className="font-regular text-dark-green text-[1rem] font-body max-w-[14rem]  font-[16px] absolute top-[8rem] right-15 left-12 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                  {item.desc2}
-                </p>
-                {/* </div> */}
+                <div className="flex flex-col">
+                  <div className="h-[13rem] flex">
+                    <PrismicNextImage
+                      field={item.image}
+                      className="inline-block rounded-[3rem]  w-[65%] items-center object-contain"
+                    />
+                  </div>
+                  <div className="h-[30rem] flex">
+                    <PrismicNextImage
+                      field={item.image2}
+                      className="inline-block  w-1/2 flex-col h-[35rem] object-contain rounded-[3rem]flex items-cent"
+                    />
+                  </div>
+                </div>
               </div>
-            </div>
-          ))}
-        </section>
-      </Bounded>
+            ))}
+          </Marquee>
+        </div>
+      </section>
+      {/* </Bounded> */}
     </>
   );
 };
