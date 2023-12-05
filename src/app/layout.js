@@ -25,7 +25,7 @@ export const workSans = Work_Sans({
 export default async function RootLayout({ children }) {
   const client = createClient();
   const homePage = await client.getByUID('page', 'home');
-  console.log('🚀 ~ file: layout.js:28 ~ RootLayout ~ homePage:', homePage.uid);
+
   return (
     <html
       lang="en"
