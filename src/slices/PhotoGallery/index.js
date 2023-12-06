@@ -25,16 +25,16 @@ const PhotoGallery = ({ slice }) => {
         className="flex flex-row flex-wrap gap-8 justify-between py-5"
       >
         <div className="flex overflow-y-hidden">
-          <Marquee pauseOnHover>
+          <Marquee>
             {slice.items.map((item, index) => (
               <div
                 key={index}
                 className="flex relative left-16 w-100vw  overflow-y-hidden h-auto gap-2"
               >
-                <div className="flex gap-5 px-2">
+                <div className="flex gap-2 px-2">
                   <PrismicNextImage
                     field={item.horizontalimage}
-                    className="inline-block rounded-[3rem] w-full flex-col h-[20rem] object-contain flex items-center"
+                    className="inline-block rounded-[3rem] w-full flex-col h-[25rem] object-contain flex items-center"
                   />
                 </div>
                 <div className="flex flex-col gap-5">
@@ -44,7 +44,7 @@ const PhotoGallery = ({ slice }) => {
                       className="inline-block rounded-[3rem]  w-full items-center object-contain"
                     />
                   </div>
-                  <div className="flex gap-10">
+                  <div className="flex gap-4">
                     <PrismicNextImage
                       field={item.image2}
                       className="inline-block  w-full flex-col h-[17rem] object-contain rounded-[3rem] flex items-center"
