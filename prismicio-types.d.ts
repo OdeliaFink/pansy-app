@@ -1123,9 +1123,90 @@ export type TextImageSliceImageRight = prismic.SharedSliceVariation<
 >;
 
 /**
+ * Primary content in *TextImage → Primary*
+ */
+export interface TextImageSliceLongImagePrimary {
+  /**
+   * Image field in *TextImage → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: text_image.primary.image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+
+  /**
+   * Link field in *TextImage → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: text_image.primary.link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link: prismic.LinkField;
+
+  /**
+   * Label field in *TextImage → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: text_image.primary.label
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  label: prismic.KeyTextField;
+
+  /**
+   * Heading field in *TextImage → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: text_image.primary.heading
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  heading: prismic.KeyTextField;
+
+  /**
+   * Body field in *TextImage → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: text_image.primary.body
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  body: prismic.KeyTextField;
+
+  /**
+   * Body_2 field in *TextImage → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: text_image.primary.body_2
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  body_2: prismic.KeyTextField;
+}
+
+/**
+ * LongImage variation for TextImage Slice
+ *
+ * - **API ID**: `longImage`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type TextImageSliceLongImage = prismic.SharedSliceVariation<
+  "longImage",
+  Simplify<TextImageSliceLongImagePrimary>,
+  never
+>;
+
+/**
  * Slice variation for *TextImage*
  */
-type TextImageSliceVariation = TextImageSliceDefault | TextImageSliceImageRight;
+type TextImageSliceVariation =
+  | TextImageSliceDefault
+  | TextImageSliceImageRight
+  | TextImageSliceLongImage;
 
 /**
  * TextImage Shared Slice
@@ -1364,9 +1445,11 @@ declare module "@prismicio/client" {
       TextImageSlice,
       TextImageSliceDefaultPrimary,
       TextImageSliceImageRightPrimary,
+      TextImageSliceLongImagePrimary,
       TextImageSliceVariation,
       TextImageSliceDefault,
       TextImageSliceImageRight,
+      TextImageSliceLongImage,
       TextWithFeaturesSlice,
       TextWithFeaturesSliceDefaultPrimary,
       TextWithFeaturesSliceDefaultItem,

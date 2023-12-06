@@ -31,7 +31,7 @@ export default async function RootLayout({ children }) {
       lang="en"
       className={clsx('max-w-full', caprasimo.variable, workSans.variable)}
     >
-      <body className="overflow-x-hidden antialiased bg-bg-beige w-full">
+      <body className="overflow-x-hidden antialiased bg-bg-beige max-w-full">
         {/* TODO: Remove the following element once you have read the documentation. */}
         {/* {homePage.uid === 'home' && (
           <div className="bg-dark-beige p-1 text-center text-[1rem] h-[2rem] text-white font-body font-light relative flex overflow-x-hidden">

@@ -24,7 +24,7 @@ const Steps = ({ slice }) => {
                 key={index}
                 className="border border-solid rounded border-mossy-green md:p-6 p-1 px-0 max-w-[10rem] mx-auto"
               >
-                <div className="text-center mx-auto">
+                <div className="text-center mx-auto p-2 md:p-0">
                   <div className="w-full">
                     <p className="font-semibold text-mossy-green font-body tracking-wide text-[18px] pb-2">
                       {item.steps}

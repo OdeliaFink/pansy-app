@@ -100,7 +100,7 @@ const ContactForm = ({ slice }) => {
                     {formInputs.map((input) => (
                       <div
                         key={input.name}
-                        className="flex md:flex-row items-center flex-col gap-4 "
+                        className="flex md:flex-row items-center flex-col gap-2"
                       >
                         <label
                           className="md:pt-2 pt-4 md:text-[14px] text-[12px] flex-1 font-body font-light  text-right"
@@ -118,14 +118,14 @@ const ContactForm = ({ slice }) => {
                     ))}
                     <div className="flex md:flex-row items-center flex-col gap-4">
                       <label
-                        className="md:pt-2 pt-4 md:text-[14px] flex-1 text-[12px] font-body font-light text-right"
+                        className="md:pt-2 pt-4 text-[14px] flex-1 font-body font-light text-right"
                         htmlFor="selectedOption"
                       >
                         Services:
                       </label>
                       <Field
                         as="select"
-                        className=" border-black rounded-sm p-2 font-body  h-[40%] md:h-auto font-light text-[12px] focus:bg-white flex-1 focus:outline-none"
+                        className=" border-black rounded-sm p-4 font-body  h-[40%] md:h-auto font-light text-[12px] focus:bg-white flex-1 focus:outline-none"
                         name="selectedOption"
                         id="selectedOption"
                         defaultValue=""
@@ -153,7 +153,7 @@ const ContactForm = ({ slice }) => {
                       <div className="flex justify-center pb-8">
                         <Field
                           as="textarea"
-                          className="focus:bg-white border-black rounded-sm font-body w-[40%] mx-auto font-light text-[14px]  py-[3rem] focus:bg-white focus:outline-none resize-none"
+                          className="focus:bg-white border-black rounded-sm font-body md:w-[40%] w-[97%] mx-auto font-light text-[14px]  py-[3rem] focus:bg-white focus:outline-none resize-none"
                           name="comments"
                           id="comments"
                         />

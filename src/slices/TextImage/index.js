@@ -18,13 +18,14 @@ const TextImage = ({ slice }) => {
       data-slice-variation={slice.variation}
       className="py-1"
     >
-      <div className="grid gap-10 md:grid-cols-2 place-items-center md:py-8 py-6 first:pt-0">
+      <div className="grid gap-15 md:grid-cols-2 place-items-center md:py-8 py-6 first:pt-0">
         <PrismicNextImage
           field={slice.primary.image}
           className={clsx(
-            'rounded-lg object-cover h-[350px] w-[450px]',
+            'rounded-lg object-cover  w-[450px]',
+            slice.variation === 'longImage' ? 'h-[500px]' : 'h-[350px]',
             slice.variation === 'imageRight' && 'md:order-2',
-            slice.variation === 'default' ? 'xl:mr-[5rem]' : 'xl:ml-[5rem]'
+            slice.variation === 'default' ? 'xl:mr-[5rem]' : 'xl:ml-[-6rem]'
           )}
         />
         <div

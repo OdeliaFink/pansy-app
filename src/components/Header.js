@@ -31,7 +31,7 @@ export function Header({ locales = [], navigation, settings }) {
         !top && `bg-white shadow-lg`
       }`}
     >
-      <div className="flex flex-wrap items-center justify-between gap-x-6 gap-y-3 leading-none">
+      <div className="flex flex-wrap items-center md:justify-between justify-center gap-x-6 gap-y-3 leading-none">
         <PrismicNextLink href="/">
           {/* {prismic.isFilled.image(settings.data.logo) && (
             <PrismicNextImage field={settings.data.logo} alt="" />
