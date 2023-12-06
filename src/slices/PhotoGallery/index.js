@@ -29,7 +29,7 @@ const PhotoGallery = ({ slice }) => {
             {slice.items.map((item, index) => (
               <div
                 key={index}
-                className="flex relative left-16 w-100vw  overflow-y-hidden h-auto gap-5"
+                className="flex relative left-16 w-100vw  overflow-y-hidden h-auto gap-2"
               >
                 <div className="flex gap-5 px-2">
                   <PrismicNextImage
