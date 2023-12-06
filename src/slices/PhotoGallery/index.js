@@ -22,7 +22,7 @@ const PhotoGallery = ({ slice }) => {
       <section
         data-slice-type={slice.slice_type}
         data-slice-variation={slice.variation}
-        className="flex flex-row flex-wrap gap-8 justify-between py-5"
+        className="flex flex-row flex-wrap gap-8 justify-between py-8"
       >
         <div className="flex overflow-y-hidden">
           <Marquee>
@@ -34,20 +34,20 @@ const PhotoGallery = ({ slice }) => {
                 <div className="flex gap-2 px-2">
                   <PrismicNextImage
                     field={item.horizontalimage}
-                    className="inline-block rounded-[3rem] w-full flex-col h-[25rem] object-contain flex items-center"
+                    className="inline-block rounded-p-lg w-full flex-col h-[25rem] object-contain flex items-center"
                   />
                 </div>
-                <div className="flex flex-col gap-5">
-                  <div className="h-[18rem] px-4 flex">
+                <div className="flex flex-col gap-10">
+                  <div className="h-[8rem] px-4 flex">
                     <PrismicNextImage
                       field={item.image}
-                      className="inline-block rounded-[3rem]  w-full items-center object-contain"
+                      className="inline-block rounded-p-lg  w-full items-center object-contain"
                     />
                   </div>
-                  <div className="flex gap-4">
+                  <div className="flex gap-4 h-[5rem]">
                     <PrismicNextImage
                       field={item.image2}
-                      className="inline-block  w-full flex-col h-[17rem] object-contain rounded-[3rem] flex items-center"
+                      className="inline-block  w-full flex-col h-[17rem] object-contain rounded-p-lg flex items-center"
                     />
                   </div>
                 </div>

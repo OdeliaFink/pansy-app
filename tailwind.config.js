@@ -21,6 +21,11 @@ module.exports = {
       'slate-grey': '#4B4E58',
       'pansy-white': '#fff',
     },
+
+    borderRadius: {
+      'p-md': '1rem',
+      'p-lg': '3rem',
+    },
     extend: {
       animation: {
         marquee: 'marquee 25s linear infinite',
