@@ -17,12 +17,14 @@ const Main = ({ slice }) => {
       <div className="h-auto pt-2">
         <PrismicNextImage
           field={slice.primary.image}
-          className={clsx('w-full h-[38rem] mx-auto object-cover')}
+          className={clsx(
+            'w-full h-[38rem] 2xl:h-[50rem] mx-auto object-cover'
+          )}
         />
       </div>
       <div
         className={clsx(
-          'flex  mx-auto text-center lg:left-[20rem] xl:left-[33rem] 2xl:left-[45rem] md:left-[14rem] md:top-[11rem] xs:left-[5rem] left-[6rem]  top-[18rem]  absolute'
+          'flex flex-col items-center justify-center absolute inset-0 xl:mb-[10rem]'
         )}
       >
         <div className="flex flex-col justify-center">
@@ -32,7 +34,7 @@ const Main = ({ slice }) => {
           <div className="text-center">
             <PrismicNextLink
               field={slice.primary.button_link}
-              className="display-block w-fit border-solid px-8 py-[.8rem] rounded-xl text-bg-beige font-body border-dark-deen bg-mossy-green hover:bg-sage-green transition-color duration-200 ease-in-out  mb-8 md:mb-0 "
+              className="display-block w-fit border-solid px-8 py-[.8rem] rounded-p-sm text-bg-beige font-body border-dark-deen bg-mossy-green hover:bg-sage-green transition-color duration-200 ease-in-out  mb-8 md:mb-0 "
             >
               {slice.primary.button_text}
             </PrismicNextLink>

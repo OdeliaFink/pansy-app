@@ -23,6 +23,7 @@ module.exports = {
     },
 
     borderRadius: {
+      'p-sm': '.5rem',
       'p-md': '1rem',
       'p-lg': '3rem',
     },

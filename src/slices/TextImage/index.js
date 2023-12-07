@@ -46,7 +46,7 @@ const TextImage = ({ slice }) => {
             <div className="pt-4">
               <PrismicNextLink
                 field={slice.primary.link}
-                className="border-1 rounded-sm border text-[13px] border-black rounded-xl hover:bg-mossy-green hover:text-pansy-white max-w-fit px-10 py-2 ease-in-out duration-300 text-left"
+                className="border-1 rounded-sm border text-[13px] border-black rounded-p-md hover:bg-mossy-green hover:text-pansy-white max-w-fit px-10 py-2 ease-in-out duration-300 text-left"
               >
                 {slice.primary.label}
               </PrismicNextLink>
