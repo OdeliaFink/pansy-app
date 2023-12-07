@@ -22,7 +22,7 @@ const TextImage = ({ slice }) => {
         <PrismicNextImage
           field={slice.primary.image}
           className={clsx(
-            'rounded-lg object-cover  w-[450px]',
+            'rounded-p-md object-cover  w-[450px]',
             slice.variation === 'longImage' ? 'h-[500px]' : 'h-[350px]',
             slice.variation === 'imageRight' && 'md:order-2',
             slice.variation === 'default' ? 'xl:mr-[5rem]' : 'xl:ml-[-6rem]'

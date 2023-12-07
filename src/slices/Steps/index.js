@@ -22,7 +22,7 @@ const Steps = ({ slice }) => {
             {slice.items.map((item, index) => (
               <div
                 key={index}
-                className="border border-solid rounded border-mossy-green md:p-6 p-1 px-0 max-w-[10rem] mx-auto"
+                className="border border-solid rounded-p-sm border-mossy-green md:p-6 p-1 px-0 max-w-[10rem] mx-auto"
               >
                 <div className="text-center mx-auto p-2 md:p-0">
                   <div className="w-full">
@@ -37,7 +37,7 @@ const Steps = ({ slice }) => {
               </div>
             ))}
           </div>
-          <div className="flex items-center text-center justify-center py-5">
+          <div className="flex items-center text-center justify-center py-2">
             <Button field={slice.primary.button_link}>
               {slice.primary.button_text}
             </Button>
