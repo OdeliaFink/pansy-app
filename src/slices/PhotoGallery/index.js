@@ -38,20 +38,20 @@ const PhotoGallery = ({ slice }) => {
                 <div className="flex gap-2 px-2">
                   <PrismicNextImage
                     field={item.horizontalimage}
-                    className="inline-block rounded-p-lg w-full flex-col h-[25rem] object-contain flex items-center mx-12"
+                    className="inline-block rounded-p-lg w-full flex-col h-[25rem] w-[20rem] object-contain flex items-center mx-8"
                   />
                 </div>
-                <div className="flex flex-col gap-10">
-                  <div className="h-[15rem] px-4 flex">
+                <div className="flex md:flex-col flex-row gap-10">
+                  <div className="px-4 flex py-2">
                     <PrismicNextImage
                       field={item.image}
-                      className="inline-block rounded-p-lg  w-full items-center object-contain mx-12"
+                      className="inline-block rounded-p-lg h-[12rem] w-[15rem] w-full items-center object-contain mx-8"
                     />
                   </div>
-                  <div className="flex gap-10 h-[20rem]">
+                  <div className="flex gap-10 py-2">
                     <PrismicNextImage
                       field={item.image2}
-                      className="inline-block  w-full flex-col h-[17rem] object-contain rounded-p-lg flex items-center mx-12"
+                      className="inline-block  w-full flex-col h-[17rem] w-[20rem] object-contain rounded-p-lg flex items-center mx-8"
                     />
                   </div>
                 </div>
