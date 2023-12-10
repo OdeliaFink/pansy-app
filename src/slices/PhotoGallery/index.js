@@ -19,11 +19,11 @@ const PhotoGallery = ({ slice }) => {
         data-slice-variation={slice.variation}
         className="flex flex-row flex-wrap gap-8 justify-between py-6 px-8"
       >
-        <div className="pt-10 pb-4 flex flex-row items-center px-10 gap-12">
-          <h1 className="font-body text-[3rem] text-left text-slate-grey">
+        <div className="pt-10 pb-4 flex md:flex-row flex-col items-center px-10 gap-12">
+          <h1 className="font-body text-[3rem] md:text-left text-center text-slate-grey">
             {slice.primary.header}
           </h1>
-          <div className="flex flex-col">
+          <div className="flex flex-col md:text-left text-center">
             <p>{slice.primary.desc}</p>
             <p>{slice.primary.desc2}</p>
           </div>
@@ -38,20 +38,20 @@ const PhotoGallery = ({ slice }) => {
                 <div className="flex gap-2 px-2">
                   <PrismicNextImage
                     field={item.horizontalimage}
-                    className="inline-block rounded-p-lg w-full flex-col h-[25rem] object-contain flex items-center"
+                    className="inline-block rounded-p-lg w-full flex-col h-[25rem] object-contain flex items-center mx-12"
                   />
                 </div>
                 <div className="flex flex-col gap-10">
                   <div className="h-[15rem] px-4 flex">
                     <PrismicNextImage
                       field={item.image}
-                      className="inline-block rounded-p-lg  w-full items-center object-contain"
+                      className="inline-block rounded-p-lg  w-full items-center object-contain mx-12"
                     />
                   </div>
                   <div className="flex gap-10 h-[20rem]">
                     <PrismicNextImage
                       field={item.image2}
-                      className="inline-block  w-full flex-col h-[17rem] object-contain rounded-p-lg flex items-center"
+                      className="inline-block  w-full flex-col h-[17rem] object-contain rounded-p-lg flex items-center mx-12"
                     />
                   </div>
                 </div>
