@@ -14,16 +14,20 @@ const PhotoGallery = ({ slice }) => {
   return (
     <>
       {/* <Bounded> */}
-      <div className="pt-10 pb-4">
-        <h1 className="font-body text-[3rem] text-center text-slate-grey">
-          {slice.primary.header}
-        </h1>
-      </div>
       <section
         data-slice-type={slice.slice_type}
         data-slice-variation={slice.variation}
-        className="flex flex-row flex-wrap gap-8 justify-between py-8"
+        className="flex flex-row flex-wrap gap-8 justify-between py-6 px-8"
       >
+        <div className="pt-10 pb-4 flex flex-row items-center px-10 gap-12">
+          <h1 className="font-body text-[3rem] text-left text-slate-grey">
+            {slice.primary.header}
+          </h1>
+          <div className="flex flex-col">
+            <p>{slice.primary.desc}</p>
+            <p>{slice.primary.desc2}</p>
+          </div>
+        </div>
         <div className="flex overflow-y-hidden">
           <Marquee>
             {slice.items.map((item, index) => (

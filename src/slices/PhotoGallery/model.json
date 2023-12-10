@@ -18,6 +18,20 @@
             "label": "Header",
             "placeholder": ""
           }
+        },
+        "desc": {
+          "type": "Text",
+          "config": {
+            "label": "Desc",
+            "placeholder": ""
+          }
+        },
+        "desc2": {
+          "type": "Text",
+          "config": {
+            "label": "Desc2",
+            "placeholder": ""
+          }
         }
       },
       "items": {
@@ -43,20 +57,6 @@
             "label": "HorizontalImage",
             "constraint": {},
             "thumbnails": []
-          }
-        },
-        "desc": {
-          "type": "Text",
-          "config": {
-            "label": "Desc",
-            "placeholder": ""
-          }
-        },
-        "desc2": {
-          "type": "Text",
-          "config": {
-            "label": "Desc2",
-            "placeholder": ""
           }
         }
       }

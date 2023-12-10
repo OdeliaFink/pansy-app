@@ -717,6 +717,26 @@ export interface PhotoGallerySliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   header: prismic.KeyTextField;
+
+  /**
+   * Desc field in *PhotoGallery → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: photo_gallery.primary.desc
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  desc: prismic.KeyTextField;
+
+  /**
+   * Desc2 field in *PhotoGallery → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: photo_gallery.primary.desc2
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  desc2: prismic.KeyTextField;
 }
 
 /**
@@ -752,26 +772,6 @@ export interface PhotoGallerySliceDefaultItem {
    * - **Documentation**: https://prismic.io/docs/field#image
    */
   horizontalimage: prismic.ImageField<never>;
-
-  /**
-   * Desc field in *PhotoGallery → Items*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: photo_gallery.items[].desc
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  desc: prismic.KeyTextField;
-
-  /**
-   * Desc2 field in *PhotoGallery → Items*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: photo_gallery.items[].desc2
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  desc2: prismic.KeyTextField;
 }
 
 /**
