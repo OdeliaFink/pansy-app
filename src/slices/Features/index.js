@@ -32,12 +32,12 @@ const Features = ({ slice }) => {
     >
       <div className="bg-medium-beige py-2">
         <div className="py-[1rem]">
-          <div className=" flex md:flex-row flex-col justify-center md:gap-[2rem] gap-0  mx-auto sm:place-items-start place-items-center px-6 ">
+          <div className=" flex md:flex-row flex-col justify-center md:gap-[2rem] gap-10  mx-auto sm:place-items-start place-items-center px-6 ">
             {slice.items.map((item, index) => (
               <div key={index} className="bg-medium-beige py-2 flex flex-col ">
                 <div className="flex flex-col justify-center text-center">
                   {item.icon_selection && (
-                    <div className="mb-2 flex justify-center">
+                    <div className="mb-3 flex justify-center">
                       {icons[item.icon_selection]}
                     </div>
                   )}
@@ -45,14 +45,14 @@ const Features = ({ slice }) => {
                   <PrismicRichText
                     components={{
                       paragraph: ({ children }) => (
-                        <p className=" font-body text-[1.1rem] font-semibold last:mb-0">
+                        <p className=" font-body text-[1.1rem] font-light last:mb-0">
                           {children}
                         </p>
                       ),
                     }}
                     field={item.icon_title}
                   />
-                  <div className="md:w-[80%] w-full mx-auto">
+                  {/* <div className="md:w-[80%] w-full mx-auto">
                     <PrismicRichText
                       components={{
                         paragraph: ({ children }) => (
@@ -63,7 +63,7 @@ const Features = ({ slice }) => {
                       }}
                       field={item.icon_desc}
                     />
-                  </div>
+                  </div> */}
                 </div>
               </div>
             ))}

@@ -10,7 +10,6 @@ import Marquee from 'react-fast-marquee';
 {
 }
 const PhotoGallery = ({ slice }) => {
-  console.log(slice.items, 'photo info');
   return (
     <>
       {/* <Bounded> */}
@@ -20,7 +19,7 @@ const PhotoGallery = ({ slice }) => {
         className="flex flex-row flex-wrap gap-8 justify-between py-6 px-8"
       >
         <div className="pt-10 pb-4 flex md:flex-row flex-col items-center px-10 gap-12">
-          <h1 className="font-body text-[3rem] md:text-left text-center text-slate-grey">
+          <h1 className="font-body text-[3rem] md:text-left leading-none text-center text-slate-grey">
             {slice.primary.header}
           </h1>
           <div className="flex flex-col md:text-left text-center">

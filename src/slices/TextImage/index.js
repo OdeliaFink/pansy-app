@@ -25,16 +25,17 @@ const TextImage = ({ slice }) => {
             'rounded-p-md object-cover  w-[450px]',
             slice.variation === 'longImage' ? 'h-[500px]' : 'h-[350px]',
             slice.variation === 'imageRight' && 'md:order-2',
-            slice.variation === 'default' ? 'xl:mr-[5rem]' : 'xl:ml-[-6rem]'
+            slice.variation === 'default' && 'md:mr-[5rem]',
+            slice.variation === 'imageRight' && 'md:ml-[5rem]'
           )}
         />
         <div
           className={clsx(
-            'grid gap-4',
+            'grid gap-1',
             slice.variation === 'imageRight' ? 'text-left' : 'text-right'
           )}
         >
-          <h2 className="leading-tight tracking-tight font-body text-mossy-green text-[4rem]">
+          <h2 className="leading-tight tracking-tight font-body text-mossy-green md:text-[4rem] text-[2rem] pt-6">
             {slice.primary.heading}
           </h2>
           <p className='className="text-md md:text-[15px] font-body text-slate-600"'>
