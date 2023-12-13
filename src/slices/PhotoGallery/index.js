@@ -40,7 +40,7 @@ const PhotoGallery = ({ slice }) => {
                     className="inline-block rounded-p-lg w-full flex-col h-[25rem] w-[20rem] object-contain flex items-center mx-8"
                   />
                 </div>
-                <div className="flex md:flex-col flex-row gap-10">
+                {/* <div className="flex md:flex-col flex-row gap-10">
                   <div className="px-4 flex py-2">
                     <PrismicNextImage
                       field={item.image}
@@ -53,7 +53,7 @@ const PhotoGallery = ({ slice }) => {
                       className="inline-block  w-full flex-col h-[17rem] w-[20rem] object-contain rounded-p-lg flex items-center mx-8"
                     />
                   </div>
-                </div>
+                </div> */}
               </div>
             ))}
           </Marquee>
