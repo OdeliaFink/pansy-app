@@ -25,7 +25,7 @@ const Image = ({ slice }) => {
             <PrismicNextImage
               field={slice.primary.image}
               sizes="50vw"
-              className="w-full h-[32rem] mx-auto object-cover"
+              className="w-full h-[10rem] mx-auto object-cover"
             />
           </div>
         )}

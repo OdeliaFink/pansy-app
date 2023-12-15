@@ -70,7 +70,6 @@ export function Header({ locales = [], navigation, settings }) {
                   </PrismicNextLink>
                 </li>
               ))}
-              {console.log(locales, 'LOCALES')}
             </ul>
           </div>
         </nav>

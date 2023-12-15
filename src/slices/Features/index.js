@@ -45,14 +45,14 @@ const Features = ({ slice }) => {
                   <PrismicRichText
                     components={{
                       paragraph: ({ children }) => (
-                        <p className=" font-body text-[1.1rem] font-light last:mb-0">
+                        <p className=" font-body text-[1.1rem] font-semibold last:mb-0">
                           {children}
                         </p>
                       ),
                     }}
                     field={item.icon_title}
                   />
-                  {/* <div className="md:w-[80%] w-full mx-auto">
+                  <div className="md:w-[80%] w-full mx-auto">
                     <PrismicRichText
                       components={{
                         paragraph: ({ children }) => (
@@ -63,7 +63,7 @@ const Features = ({ slice }) => {
                       }}
                       field={item.icon_desc}
                     />
-                  </div> */}
+                  </div>
                 </div>
               </div>
             ))}

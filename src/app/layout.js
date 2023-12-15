@@ -5,6 +5,7 @@ import { PrismicPreview } from '@prismicio/next';
 import clsx from 'clsx';
 
 import { repositoryName } from '@/prismicio';
+import Banner from '@/slices/Banner';
 
 export const caprasimo = Caprasimo({
   subsets: ['latin'],
@@ -25,6 +26,7 @@ export const workSans = Work_Sans({
 export default async function RootLayout({ children }) {
   const client = createClient();
   const homePage = await client.getByUID('page', 'home');
+  console.log('🚀 ~ file: layout.js:28 ~ RootLayout ~ homePage:', homePage.uid);
 
   return (
     <html
@@ -43,6 +45,7 @@ export default async function RootLayout({ children }) {
             </div>
           </div>
         )} */}
+        {/* {homePage === 'home' && <Banner />} */}
         {children}
         <PrismicPreview repositoryName={repositoryName} />
       </body>

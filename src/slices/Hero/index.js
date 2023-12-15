@@ -35,7 +35,7 @@ const Hero = ({ slice }) => {
           <div className="h-auto pt-10">
             <PrismicNextImage
               field={slice.primary.image}
-              className={clsx('w-full h-[20rem] mx-auto object-cover')}
+              className={clsx('w-full h-[10rem] mx-auto object-cover')}
             />
           </div>
         )}
