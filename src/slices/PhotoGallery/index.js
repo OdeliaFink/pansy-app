@@ -12,7 +12,6 @@ import Marquee from 'react-fast-marquee';
 const PhotoGallery = ({ slice }) => {
   return (
     <>
-      {/* <Bounded> */}
       <section
         data-slice-type={slice.slice_type}
         data-slice-variation={slice.variation}
@@ -37,20 +36,14 @@ const PhotoGallery = ({ slice }) => {
                 <div className="flex gap-2 px-2">
                   <PrismicNextImage
                     field={item.horizontalimage}
-                    className="inline-block rounded-p-lg w-full flex-col h-[25rem] w-[20rem] object-contain flex items-center mx-8"
+                    className="inline-block rounded-p-lg w-full flex-col h-[25rem] w-[20rem] object-contain flex items-center"
                   />
                 </div>
 
                 <div className="px-4 flex py-2">
                   <PrismicNextImage
                     field={item.image}
-                    className="inline-block rounded-p-lg h-[15rem] w-[15rem] w-full items-center object-contain mx-8"
-                  />
-                </div>
-                <div className="flex  py-2">
-                  <PrismicNextImage
-                    field={item.image2}
-                    className="inline-block  w-full flex-col h-[15rem] w-[20rem] object-contain rounded-p-lg flex items-center mx-8"
+                    className="inline-block rounded-p-lg h-[15rem] w-[15rem] w-full items-center object-contain "
                   />
                 </div>
               </div>
@@ -58,7 +51,6 @@ const PhotoGallery = ({ slice }) => {
           </Marquee>
         </div>
       </section>
-      {/* </Bounded> */}
     </>
   );
 };

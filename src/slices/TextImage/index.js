@@ -26,7 +26,7 @@ const TextImage = ({ slice }) => {
             slice.variation === 'longImage' ? 'h-[500px]' : 'h-[350px]',
             slice.variation === 'imageRight' && 'md:order-2',
             slice.variation === 'default' && 'md:mr-[5rem]',
-            slice.variation === 'imageRight' && 'md:ml-[5rem]'
+            slice.variation === 'imageRight' && 'md:ml-[2rem] ml-[5rem]'
           )}
         />
         <div
@@ -35,7 +35,7 @@ const TextImage = ({ slice }) => {
             slice.variation === 'imageRight' ? 'text-left' : 'text-right'
           )}
         >
-          <h2 className="leading-tight tracking-tight font-body text-mossy-green md:text-[4rem] text-[2rem] pt-6">
+          <h2 className="leading-tight tracking-tight font-body text-mossy-green md:text-[4rem] text-[3rem] pt-6">
             {slice.primary.heading}
           </h2>
           <p className='className="text-md md:text-[15px] font-body text-slate-600"'>
