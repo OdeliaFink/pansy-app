@@ -80,7 +80,7 @@ const ContactForm = ({ slice }) => {
         className="bg-medium-beige mt-[1rem] mb-[3rem] px-6 md:px-0"
       >
         <div className="">
-          <div className="flex flex-col  md:w-90% md:mx-auto py-7 ">
+          <div className="flex flex-col  md:w-90% w-[70%] mx-auto py-7 ">
             <Formik
               initialValues={{
                 firstName: '',
@@ -96,7 +96,7 @@ const ContactForm = ({ slice }) => {
             >
               {({ isSubmitting }) => (
                 <Form>
-                  <div className="md:grid md:grid-cols-2 md:gap-4 mx-[-14px] grid-cols-1 md:pr-[10rem] lg:pr-[13rem] xl:pr-[19rem]">
+                  <div className="md:grid md:grid-cols-2 md:gap-4 md:mx-[-14px] mx-[0px] grid-cols-1 md:pr-[10rem] lg:pr-[13rem] xl:pr-[19rem]">
                     {formInputs.map((input) => (
                       <div
                         key={input.name}
@@ -109,7 +109,7 @@ const ContactForm = ({ slice }) => {
                           {input.label}
                         </label>
                         <Field
-                          className=" border-black rounded-sm p-2 w-full flex-1  h-[40%] md:h-auto font-body font-light focus:bg-white focus:border-f4bfdb focus:outline-none"
+                          className=" border-black rounded-p-sm p-2 w-full flex-1 md:text-left text-center h-[40%] md:h-auto font-body font-light focus:bg-white focus:border-f4bfdb focus:outline-none"
                           type={input.type}
                           name={input.name}
                           id={input.name}
@@ -125,7 +125,7 @@ const ContactForm = ({ slice }) => {
                       </label>
                       <Field
                         as="select"
-                        className=" border-black rounded-sm p-4 font-body  h-[40%] md:h-auto font-light text-[12px] focus:bg-white flex-1 focus:outline-none"
+                        className=" border-black rounded-p-sm p-4 font-body  h-[40%] md:h-auto font-light text-[12px] focus:bg-white flex-1 focus:outline-none"
                         name="selectedOption"
                         id="selectedOption"
                         defaultValue=""
@@ -153,7 +153,7 @@ const ContactForm = ({ slice }) => {
                       <div className="flex justify-center pb-8">
                         <Field
                           as="textarea"
-                          className="focus:bg-white border-black rounded-sm font-body md:w-[40%] w-[97%] mx-auto font-light text-[14px]  py-[3rem] focus:bg-white focus:outline-none resize-none"
+                          className="focus:bg-white border-black rounded-p-sm md:text-left text-center font-body px-[1rem] md:w-[40%] w-[97%] mx-auto font-light text-[14px]  py-[3rem] focus:bg-white focus:outline-none resize-none"
                           name="comments"
                           id="comments"
                         />
@@ -166,7 +166,7 @@ const ContactForm = ({ slice }) => {
                       type="submit"
                       disabled={isSubmitting}
                       className={clsx(
-                        'border-1 rounded-sm border text-[13px] border-black rounded-xl hover:bg-mossy-green hover:text-pansy-white max-w-fit px-10 py-2 ease-in-out duration-300'
+                        'border-1 rounded-p-sm border text-[13px] border-black rounded-xl hover:bg-mossy-green hover:text-pansy-white max-w-fit px-10 py-2 ease-in-out duration-300'
                       )}
                     >
                       send
