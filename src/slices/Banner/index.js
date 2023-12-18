@@ -15,7 +15,7 @@ const Banner = ({ slice, onClose }) => {
         <div>
           <p className="text-sm">{slice.primary.text}</p>
         </div>
-        <Button field={slice.primary.link} onClose={onClose}>
+        {/* <Button field={slice.primary.link} onClose={onClose}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-3 w-2"
@@ -30,7 +30,7 @@ const Banner = ({ slice, onClose }) => {
               d="M6 18L18 6M6 6l12 12"
             />
           </svg>
-        </Button>
+        </Button> */}
       </div>
     </section>
   );

@@ -9,10 +9,9 @@ import { Bounded } from './Bounded';
 const localeLabels = {
   'en-us': 'EN',
   'fr-ca': 'FR',
-  // 'fr-fr': 'FRR',
 };
 
-export function Header({ locales = [], navigation, settings }) {
+export function Header({ locales = [], navigation }) {
   const [top, setTop] = useState(true);
 
   useEffect(() => {
@@ -33,12 +32,9 @@ export function Header({ locales = [], navigation, settings }) {
     >
       <div className="flex flex-wrap items-center md:justify-between justify-center gap-x-6 gap-y-3 leading-none">
         <PrismicNextLink href="/">
-          {/* {prismic.isFilled.image(settings.data.logo) && (
-            <PrismicNextImage field={settings.data.logo} alt="" />
-          )} */}
           <h2 className="font-display text-[3rem]">pansy</h2>
         </PrismicNextLink>
-        <nav className="flex flex-wrap items-center gap-x-6 gap-y-3 md:gap-x-10">
+        <nav className="flex flex-wrap items-center gap-x-3 gap-y-3 md:gap-x-10">
           <ul className="flex flex-wrap gap-6 md:gap-10">
             {navigation.data?.links.map((item) => (
               <li

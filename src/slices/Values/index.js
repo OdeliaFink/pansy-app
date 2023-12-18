@@ -13,9 +13,8 @@ const Values = ({ slice }) => {
       className="bg-medium-beige"
     >
       <div className=" flex md:flex-row flex-col md:items-center">
-        <div className="max-w-[25rem]">
-          <div className="border-t mt-4 mb-4 border-gray-300 w-[60%] ml-auto " />
-          <h1 className="text-[2rem] font-body font-semibold">
+        <div className="max-w-[25rem] md:text-left text-center">
+          <h1 className="text-[2rem]  font-body font-semibold">
             {slice.primary.heading}
           </h1>
           <p className="text-[1rem] font-body font-light">
@@ -26,7 +25,7 @@ const Values = ({ slice }) => {
           {slice.items.map((item, index) => (
             <div
               key={index}
-              className="flex flex-col flex-2 w-[60%] ml-auto mr-[4rem]"
+              className="flex flex-col flex-2 md:w-[60%] md:text-left text-center ml-auto md:mr-[4rem] mr-[0rem]"
             >
               {index !== slice.items.length && ( // Add line divider if it's not the last item
                 <div className="border-t mt-4 mb-4 border-gray-300" />

@@ -1,8 +1,10 @@
 'use client';
 import React, { useState, useEffect } from 'react';
+import * as prismic from '@prismicio/client';
 import { useCookies } from 'react-cookie';
 
-const CookieBanner = () => {
+const CookieBanner = ({ cookie }) => {
+  console.log('🚀 ~ file: CookieBanner.js:7 ~ CookieBanner ~ cookie:', cookie);
   const [cookies, setCookie] = useCookies(['cookieConsent']);
   const [showBanner, setShowBanner] = useState(false);
 
@@ -14,8 +16,10 @@ const CookieBanner = () => {
     }
   }, [cookies.cookieConsent]);
 
-  const handleAccept = () => {
-    setCookie('cookieConsent', true, { path: '/', maxAge: 31536000 }); // Set cookie for 1 year (maxAge in seconds)
+  const handleAccept = (language) => {
+    setCookie('cookieConsent', true, { path: '/', maxAge: 31536000 });
+    setCookie('languagePreference', language, { path: '/', maxAge: 31536000 });
+    setShowBanner(false);
   };
 
   const handleDecline = () => {
@@ -29,15 +33,12 @@ const CookieBanner = () => {
   return (
     <div className="fixed bottom-0 left-0 right-0 bg-white p-4 border-t border-gray-300 shadow-md z-10 bg-mossy-green">
       <div className="max-w-screen-md mx-auto flex justify-between items-center">
-        <p className="text-sm font-body">
-          This website uses cookies to enhance user experience.
-        </p>
+        <p className="text-sm font-body">{cookie?.data.header}</p>
         <div>
           <button
             className="mr-2 px-4 py-2 text-bg-beige font-body"
             onClick={() => {
-              handleAccept();
-              setShowBanner(false); // Hide banner after accepting
+              handleAccept('en-us');
             }}
           >
             Accept
