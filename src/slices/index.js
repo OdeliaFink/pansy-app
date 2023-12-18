@@ -15,4 +15,5 @@ export const components = {
   text_image: dynamic(() => import("./TextImage")),
   text_with_features: dynamic(() => import("./TextWithFeatures")),
   text_with_image: dynamic(() => import("./TextWithImage")),
+  values: dynamic(() => import("./Values")),
 };

@@ -1438,6 +1438,83 @@ export type TextWithImageSlice = prismic.SharedSlice<
   TextWithImageSliceVariation
 >;
 
+/**
+ * Primary content in *Values → Primary*
+ */
+export interface ValuesSliceDefaultPrimary {
+  /**
+   * Heading field in *Values → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: values.primary.heading
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  heading: prismic.KeyTextField;
+
+  /**
+   * Subheading field in *Values → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: values.primary.subheading
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  subheading: prismic.KeyTextField;
+}
+
+/**
+ * Primary content in *Values → Items*
+ */
+export interface ValuesSliceDefaultItem {
+  /**
+   * Value field in *Values → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: values.items[].value
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  value: prismic.KeyTextField;
+
+  /**
+   * Value Desc field in *Values → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: values.items[].value_desc
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  value_desc: prismic.KeyTextField;
+}
+
+/**
+ * Default variation for Values Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ValuesSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<ValuesSliceDefaultPrimary>,
+  Simplify<ValuesSliceDefaultItem>
+>;
+
+/**
+ * Slice variation for *Values*
+ */
+type ValuesSliceVariation = ValuesSliceDefault;
+
+/**
+ * Values Shared Slice
+ *
+ * - **API ID**: `values`
+ * - **Description**: Values
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ValuesSlice = prismic.SharedSlice<"values", ValuesSliceVariation>;
+
 declare module "@prismicio/client" {
   interface CreateClient {
     (
@@ -1518,6 +1595,11 @@ declare module "@prismicio/client" {
       TextWithImageSliceVariation,
       TextWithImageSliceDefault,
       TextWithImageSliceTextWithImageRight,
+      ValuesSlice,
+      ValuesSliceDefaultPrimary,
+      ValuesSliceDefaultItem,
+      ValuesSliceVariation,
+      ValuesSliceDefault,
     };
   }
 }

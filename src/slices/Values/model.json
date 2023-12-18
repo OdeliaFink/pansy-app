@@ -1,0 +1,48 @@
+{
+  "id": "values",
+  "type": "SharedSlice",
+  "name": "Values",
+  "description": "Values",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "heading": {
+          "type": "Text",
+          "config": {
+            "label": "Heading",
+            "placeholder": ""
+          }
+        },
+        "subheading": {
+          "type": "Text",
+          "config": {
+            "label": "Subheading",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {
+        "value": {
+          "type": "Text",
+          "config": {
+            "label": "Value",
+            "placeholder": ""
+          }
+        },
+        "value_desc": {
+          "type": "Text",
+          "config": {
+            "label": "Value Desc",
+            "placeholder": ""
+          }
+        }
+      }
+    }
+  ]
+}

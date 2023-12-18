@@ -1,0 +1,41 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"heading": {
+				"__TYPE__": "FieldContent",
+				"value": "ranch",
+				"type": "Text"
+			},
+			"subheading": {
+				"__TYPE__": "FieldContent",
+				"value": "which",
+				"type": "Text"
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"value",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "sold",
+							"type": "Text"
+						}
+					],
+					[
+						"value_desc",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "pitch",
+							"type": "Text"
+						}
+					]
+				]
+			}
+		]
+	}
+]
