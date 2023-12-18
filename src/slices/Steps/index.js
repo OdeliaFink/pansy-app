@@ -18,18 +18,18 @@ const Steps = ({ slice }) => {
           <h1 className="leading-tight tracking-tight text-center font-body text-slate-grey md:text-[4rem] text-[2rem]">
             {slice.primary.heading}
           </h1>
-          <div className="flex md:flex-row flex-col mx-auto  md:gap-0 gap-3 w-auto py-[2rem]">
+          <div className="flex md:flex-row flex-col mx-auto  md:gap-0 gap-4 w-auto py-[2rem]">
             {slice.items.map((item, index) => (
               <div
                 key={index}
-                className="border border-solid rounded-p-md bg-dark-beige border-mossy-green md:p-8 p-1 px-0 max-w-[14rem] mx-auto"
+                className="border border-solid rounded-p-md bg-dark-beige border-mossy-green md:p-8 p-3 px-0 max-w-[14rem] mx-auto"
               >
                 <div className="text-center mx-auto p-2 md:p-0">
                   <div className="w-full">
-                    <p className="font-semibold leading-none text-mossy-green font-body tracking-wide text-[33px] pb-2">
+                    <p className="font-semibold leading-none text-mossy-green font-body tracking-wide md:text-[33px] text-[25px] pb-2">
                       {item.steps}
                     </p>
-                    <p className="font-light text-mossy-green font-body text-[16px]">
+                    <p className="font-light text-mossy-green font-body md:text-[16px] text-[14px]">
                       {item.step_desc}
                     </p>
                   </div>

@@ -32,7 +32,9 @@ const TextImage = ({ slice }) => {
         <div
           className={clsx(
             'grid gap-1',
-            slice.variation === 'imageRight' ? 'text-left' : 'text-right'
+            slice.variation === 'imageRight'
+              ? 'md:text-left text-center'
+              : 'md:text-right text-center'
           )}
         >
           <h2 className="leading-tight tracking-tight font-body text-mossy-green md:text-[4rem] text-[3rem] pt-6">

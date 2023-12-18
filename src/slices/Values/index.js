@@ -12,7 +12,7 @@ const Values = ({ slice }) => {
       data-slice-variation={slice.variation}
       className="bg-medium-beige"
     >
-      <div className=" flex md:flex-row sm:flex-col md:items-center">
+      <div className=" flex md:flex-row flex-col md:items-center">
         <div className="max-w-[25rem]">
           <div className="border-t mt-4 mb-4 border-gray-300 w-[60%] ml-auto " />
           <h1 className="text-[2rem] font-body font-semibold">
