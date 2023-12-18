@@ -26,7 +26,7 @@ const TextImage = ({ slice }) => {
             slice.variation === 'longImage' ? 'h-[500px]' : 'h-[350px]',
             slice.variation === 'imageRight' && 'md:order-2',
             slice.variation === 'default' && 'md:mr-[5rem]',
-            slice.variation === 'imageRight' && 'md:ml-[2rem] ml-[5rem]'
+            slice.variation === 'imageRight' && 'md:ml-[2rem] ml-[0rem]'
           )}
         />
         <div
