@@ -25,7 +25,7 @@ const Hero = ({ slice }) => {
                 </Heading>
               ),
               paragraph: ({ children }) => (
-                <p className="mb-6 last:mb-10 px-4">{children}</p>
+                <p className="mb-6 font-body  last:mb-10 px-4">{children}</p>
               ),
             }}
           />

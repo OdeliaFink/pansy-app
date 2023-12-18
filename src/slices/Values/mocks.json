@@ -35,6 +35,31 @@
 						}
 					]
 				]
+			},
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"value",
+						{
+							"__TYPE__": "FieldContent",
+							"type": "Text",
+							"value": "fff"
+						}
+					],
+					[
+						"value_desc",
+						{
+							"__TYPE__": "FieldContent",
+							"type": "Text",
+							"value": "ffff"
+						}
+					]
+				]
+			},
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": []
 			}
 		]
 	}
