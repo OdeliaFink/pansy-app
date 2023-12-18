@@ -12,8 +12,9 @@ const Values = ({ slice }) => {
       data-slice-variation={slice.variation}
       className="bg-medium-beige"
     >
-      <div className=" flex md:flex-row sm:flex-col md:items-center max-w-full mx-auto">
-        <div className="max-w-[20rem] mr-[4rem]">
+      <div className=" flex md:flex-row sm:flex-col md:items-center">
+        <div className="max-w-[25rem]">
+          <div className="border-t mt-4 mb-4 border-gray-300 w-[60%] ml-auto " />
           <h1 className="text-[2rem] font-body font-semibold">
             {slice.primary.heading}
           </h1>
@@ -23,22 +24,25 @@ const Values = ({ slice }) => {
         </div>
         <div className="flex flex-col">
           {slice.items.map((item, index) => (
-            <div key={index} className="flex flex-col flex-2 w-[60%] mx-auto">
+            <div
+              key={index}
+              className="flex flex-col flex-2 w-[60%] ml-auto mr-[4rem]"
+            >
               {index !== slice.items.length && ( // Add line divider if it's not the last item
                 <div className="border-t mt-4 mb-4 border-gray-300" />
               )}
               <div className=" flex flex-col">
-                <p className="font-semibold leading-none font-body font-semibold">
+                <p className="font-semibold text-[2rem] text-mossy-green pb-2 leading-none font-body font-semibold">
                   {item.value}
                 </p>
-                <p className="font-light text-mossy-green font-body font-light">
+                <p className="font-light font-body font-light break-words hyphens-auto ">
                   {item.value_desc}
                 </p>
               </div>
             </div>
           ))}
           {slice.items.length - 1 && ( // Add line divider if it's not the last item
-            <div className="border-t mt-4 mb-4 border-gray-300 w-[60%] mx-auto" />
+            <div className="border-t mt-4 mb-4 border-gray-300 w-[60%] ml-auto mr-[4rem]" />
           )}
         </div>
       </div>
