@@ -25,25 +25,27 @@ const TextImage = ({ slice }) => {
             'rounded-p-md object-cover  w-[450px]',
             slice.variation === 'longImage' ? 'h-[500px]' : 'h-[350px]',
             slice.variation === 'imageRight' && 'md:order-2',
-            slice.variation === 'default' && 'md:mr-[5rem]',
-            slice.variation === 'imageRight' && 'md:ml-[2rem] ml-[0rem]'
+            slice.variation === 'default' && 'xl:mr-[5rem]',
+            slice.variation === 'imageRight' && 'sm:ml-[0rem] xl:ml-[10rem]'
           )}
         />
         <div
           className={clsx(
-            'grid gap-1',
+            'grid gap-3',
             slice.variation === 'imageRight'
               ? 'md:text-left text-center'
               : 'md:text-right text-center'
           )}
         >
-          <h2 className="leading-tight tracking-tight font-body text-mossy-green md:text-[4rem] text-[3rem] pt-6">
+          <h2 className="leading-tight tracking-tight font-body text-mossy-green lg:text-[4rem] text-[3rem] pt-6">
             {slice.primary.heading}
           </h2>
-          <p className='className="text-md md:text-[15px] font-body text-slate-600"'>
+          <p className='className="lg:text-[15px] text-[13px] font-body text-slate-600"'>
             {slice.primary.body}
           </p>
-          <h2 className="font-semibold font-body">{slice.primary.body_2}</h2>
+          <h2 className="font-semibold font-body lg:text-[15px] text-[13px]">
+            {slice.primary.body_2}
+          </h2>
 
           {slice?.primary?.label && (
             <div className="pt-4">

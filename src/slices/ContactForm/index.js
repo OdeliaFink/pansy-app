@@ -80,7 +80,7 @@ const ContactForm = ({ slice }) => {
         className="bg-medium-beige mt-[1rem] mb-[3rem] px-6 md:px-0"
       >
         <div className="">
-          <div className="flex flex-col  md:w-90% w-[70%] mx-auto py-7 ">
+          <div className="flex flex-col  md:w-90%  mx-auto py-7 ">
             <Formik
               initialValues={{
                 firstName: '',
@@ -96,11 +96,11 @@ const ContactForm = ({ slice }) => {
             >
               {({ isSubmitting }) => (
                 <Form>
-                  <div className="md:grid md:grid-cols-2 md:gap-4 md:mx-[-14px] mx-[0px] grid-cols-1 md:pr-[10rem] lg:pr-[13rem] xl:pr-[19rem]">
+                  <div className="md:grid md:grid-cols-2 md:gap-4 lg:max-w-[65rem] md:max-w-[40rem] mx-auto grid-cols-1 ">
                     {formInputs.map((input) => (
                       <div
                         key={input.name}
-                        className="flex md:flex-row items-center flex-col gap-2"
+                        className="flex md:flex-col items-center flex-col gap-2"
                       >
                         <label
                           className="md:pt-2 pt-4 md:text-[14px] text-[12px] flex-1 font-body font-light  text-right"
@@ -116,7 +116,7 @@ const ContactForm = ({ slice }) => {
                         />
                       </div>
                     ))}
-                    <div className="flex md:flex-row items-center flex-col gap-4">
+                    <div className="flex flex-col items-center gap-4">
                       <label
                         className="md:pt-2 pt-4 text-[14px] flex-1 font-body font-light text-right"
                         htmlFor="selectedOption"
@@ -125,7 +125,7 @@ const ContactForm = ({ slice }) => {
                       </label>
                       <Field
                         as="select"
-                        className=" border-black rounded-p-sm p-4 font-body  h-[40%] md:h-auto font-light text-[12px] focus:bg-white flex-1 focus:outline-none"
+                        className=" border-black rounded-p-sm p-4 font-body w-full  h-[40%] md:h-auto font-light text-[12px] focus:bg-white flex-1 focus:outline-none"
                         name="selectedOption"
                         id="selectedOption"
                         defaultValue=""

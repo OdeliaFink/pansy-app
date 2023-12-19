@@ -28,7 +28,7 @@ const Main = ({ slice }) => {
         )}
       >
         <div className="flex flex-col justify-center">
-          <h1 className="tracking-widest font-display md:text-[7rem] text-[4rem] text-bg-beige">
+          <h1 className="tracking-widest font-display md:text-[7rem] pb-2 text-[5rem] text-bg-beige">
             {slice.primary.title}
           </h1>
           <div className="text-center">
