@@ -98,7 +98,9 @@ export function Footer({ settings, navigation }) {
         </ul>
         <ul className="flex items-center font-body font-light flex-col">
           <div className="w-32">
-            <IgIcon />
+            <a href="https://www.instagram.com/pansy.gardens/" target="_blank">
+              <IgIcon />
+            </a>
             <p className="font-body font-light text-right md:text-[12px] text-[10px]">
               {settings.data.serving_city}
             </p>

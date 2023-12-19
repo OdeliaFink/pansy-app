@@ -77,7 +77,7 @@ const ContactForm = ({ slice }) => {
       <section
         data-slice-type={slice.slice_type}
         data-slice-variation={slice.variation}
-        className="bg-medium-beige mt-[1rem] mb-[3rem] px-6 md:px-0"
+        className="bg-medium-beige mt-[1rem] mb-[3rem] md:px-0"
       >
         <div className="">
           <div className="flex flex-col  md:w-90%  mx-auto py-7 ">
@@ -96,7 +96,7 @@ const ContactForm = ({ slice }) => {
             >
               {({ isSubmitting }) => (
                 <Form>
-                  <div className="md:grid md:grid-cols-2 md:gap-4 lg:max-w-[65rem] md:max-w-[40rem] mx-auto grid-cols-1 ">
+                  <div className="md:grid md:grid-cols-2 md:gap-4 lg:max-w-[65rem] px-6  md:max-w-[40rem] mx-auto grid-cols-1 ">
                     {formInputs.map((input) => (
                       <div
                         key={input.name}
