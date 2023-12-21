@@ -83,6 +83,41 @@ export interface NavigationDocumentDataLinksItem {
   link: prismic.LinkField;
 }
 
+/**
+ * Item in *Navigation → Welcome Banner*
+ */
+export interface NavigationDocumentDataWelcomeBannerItem {
+  /**
+   * Header field in *Navigation → Welcome Banner*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: navigation.welcome_banner[].header
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  header: prismic.KeyTextField;
+
+  /**
+   * Button Link field in *Navigation → Welcome Banner*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: navigation.welcome_banner[].button_link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  button_link: prismic.LinkField;
+
+  /**
+   * Button Label field in *Navigation → Welcome Banner*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: navigation.welcome_banner[].button_label
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  button_label: prismic.KeyTextField;
+}
+
 type NavigationDocumentDataSlicesSlice = BannerSlice;
 
 /**
@@ -99,6 +134,19 @@ interface NavigationDocumentData {
    * - **Documentation**: https://prismic.io/docs/field#group
    */
   links: prismic.GroupField<Simplify<NavigationDocumentDataLinksItem>>;
+
+  /**
+   * Welcome Banner field in *Navigation*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: navigation.welcome_banner[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  welcome_banner: prismic.GroupField<
+    Simplify<NavigationDocumentDataWelcomeBannerItem>
+  >;
 
   /**
    * Slice Zone field in *Navigation*
@@ -468,6 +516,61 @@ export interface ContactFormSliceDefaultPrimary {
 }
 
 /**
+ * Primary content in *ContactForm → Items*
+ */
+export interface ContactFormSliceDefaultItem {
+  /**
+   * Select Heading field in *ContactForm → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact_form.items[].select_heading
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  select_heading: prismic.KeyTextField;
+
+  /**
+   * Heading1 field in *ContactForm → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact_form.items[].heading1
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  heading1: prismic.KeyTextField;
+
+  /**
+   * Heading2 field in *ContactForm → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact_form.items[].heading2
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  heading2: prismic.KeyTextField;
+
+  /**
+   * Heading3 field in *ContactForm → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact_form.items[].heading3
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  heading3: prismic.KeyTextField;
+
+  /**
+   * Heading4 field in *ContactForm → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact_form.items[].heading4
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  heading4: prismic.KeyTextField;
+}
+
+/**
  * Default variation for ContactForm Slice
  *
  * - **API ID**: `default`
@@ -477,7 +580,7 @@ export interface ContactFormSliceDefaultPrimary {
 export type ContactFormSliceDefault = prismic.SharedSliceVariation<
   "default",
   Simplify<ContactFormSliceDefaultPrimary>,
-  never
+  Simplify<ContactFormSliceDefaultItem>
 >;
 
 /**
@@ -1599,6 +1702,7 @@ declare module "@prismicio/client" {
       NavigationDocument,
       NavigationDocumentData,
       NavigationDocumentDataLinksItem,
+      NavigationDocumentDataWelcomeBannerItem,
       NavigationDocumentDataSlicesSlice,
       PageDocument,
       PageDocumentData,
@@ -1612,6 +1716,7 @@ declare module "@prismicio/client" {
       BannerSliceDefault,
       ContactFormSlice,
       ContactFormSliceDefaultPrimary,
+      ContactFormSliceDefaultItem,
       ContactFormSliceVariation,
       ContactFormSliceDefault,
       FeaturesSlice,
