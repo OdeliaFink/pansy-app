@@ -26,7 +26,6 @@ const ContactForm = ({ slice }) => {
   ];
 
   const handleSubmit = async (values, actions) => {
-    console.log('🚀 ~ file: index.tsx:63 ~ handleSubmit ~ values:', values);
     const data = {
       firstName: values.firstName,
       lastName: values.lastName,
@@ -36,7 +35,7 @@ const ContactForm = ({ slice }) => {
       comments: values.comments,
       selectedOption: values.selectedOption,
     };
-    console.log(data); // for debugging purposes only
+    // for debugging purposes only
 
     try {
       const response = await axios.post(
@@ -45,7 +44,6 @@ const ContactForm = ({ slice }) => {
       );
 
       if (response.status === 200) {
-        console.log('form submitted', response.data);
         setShowModal(true);
         window.location.href = '/';
       } else {
@@ -128,16 +126,23 @@ const ContactForm = ({ slice }) => {
                         className=" border-black rounded-p-sm p-4 font-body w-full  h-[40%] md:h-auto font-light text-[12px] focus:bg-white flex-1 focus:outline-none"
                         name="selectedOption"
                         id="selectedOption"
-                        defaultValue=""
                       >
                         <option value="" disabled>
-                          Select an option
+                          {slice.items[0].select_heading}
                         </option>
-                        <option value="design_and_planning">
-                          Design & Planning
+                        {console.log(slice.items[0], 'items')}
+                        <option value="gardening">
+                          {slice.items[0].heading1}
                         </option>
-                        <option value="gardening">Gardening</option>
-                        <option value="consulting">Consulting</option>
+                        <option value="garden_design">
+                          {slice.items[0].heading2}
+                        </option>
+                        <option value="maintenance">
+                          {slice.items[0].heading3}
+                        </option>
+                        <option value="complete package">
+                          {slice.items[0].heading4}
+                        </option>
                       </Field>
                     </div>
                   </div>

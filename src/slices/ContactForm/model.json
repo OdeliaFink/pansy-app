@@ -67,7 +67,43 @@
           }
         }
       },
-      "items": {}
+      "items": {
+        "select_heading": {
+          "type": "Text",
+          "config": {
+            "label": "Select Heading",
+            "placeholder": ""
+          }
+        },
+        "heading1": {
+          "type": "Text",
+          "config": {
+            "label": "Heading1",
+            "placeholder": ""
+          }
+        },
+        "heading2": {
+          "type": "Text",
+          "config": {
+            "label": "Heading2",
+            "placeholder": ""
+          }
+        },
+        "heading3": {
+          "type": "Text",
+          "config": {
+            "label": "Heading3",
+            "placeholder": ""
+          }
+        },
+        "heading4": {
+          "type": "Text",
+          "config": {
+            "label": "Heading4",
+            "placeholder": ""
+          }
+        }
+      }
     }
   ]
 }

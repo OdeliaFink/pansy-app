@@ -25,11 +25,17 @@ export default async function Page({ params: { lang } }) {
   const page = await client.getByUID('page', 'home', { lang });
   const navigation = await client.getSingle('navigation', { lang });
   const settings = await client.getSingle('settings', { lang });
+  const cookie = await client.getSingle('cookie', { lang });
 
   const locales = await getLocales(page, client);
 
   return (
-    <Layout locales={locales} navigation={navigation} settings={settings}>
+    <Layout
+      locales={locales}
+      navigation={navigation}
+      settings={settings}
+      cookie={cookie}
+    >
       <SliceZone slices={page.data.slices} components={components} />
     </Layout>
   );

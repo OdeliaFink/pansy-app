@@ -39,6 +39,52 @@
 				"type": "Text"
 			}
 		},
-		"items": []
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"heading1",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "bus",
+							"type": "Text"
+						}
+					],
+					[
+						"heading2",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "kill",
+							"type": "Text"
+						}
+					],
+					[
+						"heading3",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "useful",
+							"type": "Text"
+						}
+					],
+					[
+						"heading4",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "instance",
+							"type": "Text"
+						}
+					],
+					[
+						"select_heading",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "for",
+							"type": "Text"
+						}
+					]
+				]
+			}
+		]
 	}
 ]
