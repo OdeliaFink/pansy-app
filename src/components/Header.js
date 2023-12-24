@@ -23,7 +23,7 @@ export function Header({ locales = [], navigation }) {
   }, [top]);
 
   return (
-    <div>
+    <>
       <div className="bg-medium-beige flex items-center justify-center font-light py-2">
         <p className="font-body mr-1">
           {navigation?.data.welcome_banner[0].header}
@@ -85,6 +85,6 @@ export function Header({ locales = [], navigation }) {
           </nav>
         </div>
       </Bounded>
-    </div>
+    </>
   );
 }
