@@ -26,10 +26,10 @@ const Steps = ({ slice }) => {
               >
                 <div className="text-center mx-auto md:p-0 p-10">
                   <div className="w-full">
-                    <p className="font-semibold leading-none text-mossy-green font-body tracking-wide md:text-[33px] text-[25px] pb-2">
+                    <p className="font-semibold leading-none  font-body tracking-wide md:text-[33px] text-[25px] pb-2">
                       {item.steps}
                     </p>
-                    <p className="font-light text-mossy-green font-body md:text-[16px] text-[14px]">
+                    <p className="font-light  font-body md:text-[16px] text-[14px]">
                       {item.step_desc}
                     </p>
                   </div>
