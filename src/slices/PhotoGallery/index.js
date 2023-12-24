@@ -15,9 +15,9 @@ const PhotoGallery = ({ slice }) => {
       <section
         data-slice-type={slice.slice_type}
         data-slice-variation={slice.variation}
-        className="flex flex-row flex-wrap gap-8 justify-between py-6 px-8"
+        className="flex justify-center flex-row flex-wrap gap-8 py-6 "
       >
-        <div className="pt-10 pb-4 flex md:flex-row flex-col items-center px-10 gap-12">
+        {/* <div className="pt-10 pb-4 flex md:flex-row flex-col items-center px-10 gap-12">
           <h1 className="font-body text-[3rem] md:text-left leading-none text-center text-slate-grey">
             {slice.primary.header}
           </h1>
@@ -25,30 +25,38 @@ const PhotoGallery = ({ slice }) => {
             <p>{slice.primary.desc}</p>
             <p>{slice.primary.desc2}</p>
           </div>
-        </div>
-        <div className="flex overflow-y-hidden">
+        </div> */}
+        <div className="flex">
           <Marquee>
             {slice.items.map((item, index) => (
               <div
                 key={index}
-                className="flex relative left-16 w-100vw  overflow-y-hidden h-auto gap-2"
+                className="flex 
+               h-auto gap-2"
               >
-                <div className="flex gap-2 px-2">
+                <div className="flex justify-center md:flex-row flex-col gap-2 px-2">
                   <PrismicNextImage
                     field={item.horizontalimage}
                     className="inline-block rounded-p-lg w-full flex-col h-[25rem] w-[20rem] object-contain flex items-center"
                   />
                 </div>
-
-                <div className="px-4 flex py-2">
-                  <PrismicNextImage
-                    field={item.image}
-                    className="inline-block rounded-p-lg h-[15rem] w-[15rem] w-full items-center object-contain "
-                  />
-                </div>
               </div>
             ))}
           </Marquee>
+          {/* {slice.items.map((item, index) => (
+            <div
+              key={index}
+              className="flex 
+               h-auto gap-2"
+            >
+              <div className="flex justify-center md:flex-row flex-col gap-2 px-2">
+                <PrismicNextImage
+                  field={item.horizontalimage}
+                  className="inline-block rounded-p-lg w-full flex-col h-[25rem] w-[20rem] object-contain flex items-center"
+                />
+              </div>
+            </div>
+          ))} */}
         </div>
       </section>
     </>
