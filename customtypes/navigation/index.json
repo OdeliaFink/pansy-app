@@ -31,6 +31,36 @@
           }
         }
       },
+      "welcome_banner": {
+        "type": "Group",
+        "config": {
+          "label": "Welcome Banner",
+          "fields": {
+            "header": {
+              "type": "Text",
+              "config": {
+                "label": "Header",
+                "placeholder": ""
+              }
+            },
+            "button_link": {
+              "type": "Link",
+              "config": {
+                "label": "Button Link",
+                "placeholder": "",
+                "select": null
+              }
+            },
+            "button_label": {
+              "type": "Text",
+              "config": {
+                "label": "Button Label",
+                "placeholder": ""
+              }
+            }
+          }
+        }
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",
