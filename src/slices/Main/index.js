@@ -24,7 +24,7 @@ const Main = ({ slice }) => {
       </div>
       <div
         className={clsx(
-          'flex flex-col items-center justify-center absolute inset-0 xl:mb-[10rem]'
+          'flex flex-col items-center justify-center absolute inset-0 xl:mb-[5rem]'
         )}
       >
         <div className="flex flex-col justify-center">

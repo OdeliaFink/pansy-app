@@ -11,7 +11,7 @@ module.exports = {
       display: ['var(--font-caprasimo)'],
     },
     animation: {
-      'loop-scroll': 'loop-scroll 70s linear infinite',
+      'loop-scroll': 'loop-scroll 100s linear infinite',
     },
     keyframes: {
       'loop-scroll': {

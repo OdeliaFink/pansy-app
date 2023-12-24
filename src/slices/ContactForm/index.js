@@ -123,7 +123,7 @@ const ContactForm = ({ slice }) => {
                       </label>
                       <Field
                         as="select"
-                        className=" border-black rounded-p-sm p-4 font-body w-full  h-[40%] md:h-auto font-light text-[12px] focus:bg-white flex-1 focus:outline-none"
+                        className=" border-black rounded-p-sm p-4 font-body w-full  h-[50%] md:h-auto font-light text-[12px] focus:bg-white flex-1 focus:outline-none"
                         name="selectedOption"
                         id="selectedOption"
                       >
@@ -158,7 +158,7 @@ const ContactForm = ({ slice }) => {
                       <div className="flex justify-center pb-8">
                         <Field
                           as="textarea"
-                          className="focus:bg-white border-black rounded-p-sm md:text-left text-center font-body px-[1rem] md:w-[40%] w-[97%] mx-auto font-light text-[14px]  py-[3rem] focus:bg-white focus:outline-none resize-none"
+                          className="focus:bg-white border-black rounded-p-sm text-left font-body px-[1rem] md:w-[40%] w-[97%] mx-auto font-light text-[14px]  py-[3rem] focus:bg-white focus:outline-none resize-none"
                           name="comments"
                           id="comments"
                         />
