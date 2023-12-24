@@ -23,18 +23,18 @@ const Main = ({ slice }) => {
         />
       </div>
       <div
-        className={clsx(
-          'flex flex-col items-center justify-center absolute inset-0 xl:mb-[5rem]'
-        )}
+        className={clsx('flex flex-col items-center justify-center inset-0 ')}
       >
-        <div className="flex flex-col justify-center">
+        <div className="mt-[-50rem]">
+          {' '}
+          {/* Adjust margin to position title and button */}
           <h1 className="tracking-widest font-display md:text-[7rem] pb-2 text-[5rem] text-bg-beige">
             {slice.primary.title}
           </h1>
           <div className="text-center">
             <PrismicNextLink
               field={slice.primary.button_link}
-              className="display-block w-fit border-solid px-8 py-[.8rem] rounded-p-sm text-bg-beige font-body border-dark-deen bg-mossy-green hover:bg-sage-green transition-color duration-200 ease-in-out  mb-8 md:mb-0 "
+              className="display-block w-fit border-solid px-8 py-[.8rem] rounded-p-sm text-bg-beige font-body border-dark-deen bg-mossy-green hover:bg-sage-green ease-in-out duration-500  mb-8 md:mb-0 "
             >
               {slice.primary.button_text}
             </PrismicNextLink>
