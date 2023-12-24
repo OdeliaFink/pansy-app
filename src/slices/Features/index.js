@@ -56,7 +56,7 @@ const Features = ({ slice }) => {
                     <PrismicRichText
                       components={{
                         paragraph: ({ children }) => (
-                          <p className="font-light md:text-[.9rem] text-[.7rem] last:mb-0">
+                          <p className="font-light text-[.9rem] last:mb-0">
                             {children}
                           </p>
                         ),

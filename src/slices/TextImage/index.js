@@ -40,7 +40,7 @@ const TextImage = ({ slice }) => {
           <h2 className="leading-tight tracking-tight font-body text-mossy-green lg:text-[4rem] text-[3rem] pt-6">
             {slice.primary.heading}
           </h2>
-          <p className='className="lg:text-[15px] text-[13px] font-body text-slate-600"'>
+          <p className='className="lg:text-[15px] font-body text-slate-600"'>
             {slice.primary.body}
           </p>
           <h2 className="font-semibold font-body lg:text-[15px] text-[13px]">

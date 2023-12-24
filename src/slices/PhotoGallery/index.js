@@ -17,7 +17,7 @@ const PhotoGallery = ({ slice }) => {
         data-slice-variation={slice.variation}
         className="flex justify-center flex-row flex-wrap gap-8 py-6 "
       >
-        {/* <div className="pt-10 pb-4 flex md:flex-row flex-col items-center px-10 gap-12">
+        <div className="pt-10 pb-4 flex md:flex-row flex-col items-center px-10 gap-12">
           <h1 className="font-body text-[3rem] md:text-left leading-none text-center text-slate-grey">
             {slice.primary.header}
           </h1>
@@ -25,7 +25,7 @@ const PhotoGallery = ({ slice }) => {
             <p>{slice.primary.desc}</p>
             <p>{slice.primary.desc2}</p>
           </div>
-        </div> */}
+        </div>
         <div className="flex">
           <Marquee>
             {slice.items.map((item, index) => (
