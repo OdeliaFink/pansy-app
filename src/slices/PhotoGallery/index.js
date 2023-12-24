@@ -26,7 +26,7 @@ const PhotoGallery = ({ slice }) => {
             <p>{slice.primary.desc2}</p>
           </div>
         </div>
-        <div className="flex overflow-hidden space-x-16 group px-4">
+        <div className="flex overflow-hidden space-x-16 md:mx-0 ml-[-14rem] mr-[-2rem] group px-4">
           <div className="flex space-x-16 animate-loop-scroll">
             {slice.items.map((item, index) => (
               <div key={index} className="flex h-auto">

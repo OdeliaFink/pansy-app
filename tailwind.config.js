@@ -10,6 +10,15 @@ module.exports = {
       body: ['var(--font-work-sans)'],
       display: ['var(--font-caprasimo)'],
     },
+    animation: {
+      'loop-scroll': 'loop-scroll 70s linear infinite',
+    },
+    keyframes: {
+      'loop-scroll': {
+        from: { transform: 'translateX(0)' },
+        to: { transform: 'translateX(-100%)' },
+      },
+    },
     colors: {
       'medium-beige': '#DCD0C5',
       'dark-beige': '#C8BCB2',
