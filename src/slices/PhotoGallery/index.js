@@ -1,7 +1,14 @@
+'use client';
+import React, { useRef } from 'react';
 import { Bounded } from '@/components/Bounded';
 import { PrismicNextImage } from '@prismicio/next';
-// import '../../app/globals.css';
-import Marquee from 'react-fast-marquee';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Virtual } from 'swiper/modules';
+import 'swiper/css/bundle';
+import { register } from 'swiper/element/bundle';
+import Flower from '@/components/Flower';
+
+register();
 /**
  * @typedef {import("@prismicio/client").Content.PhotoGallerySlice} PhotoGallerySlice
  * @typedef {import("@prismicio/react").SliceComponentProps<PhotoGallerySlice>} PhotoGalleryProps
@@ -9,7 +16,10 @@ import Marquee from 'react-fast-marquee';
  */
 {
 }
+
 const PhotoGallery = ({ slice }) => {
+  const swiperElRef = useRef(null);
+
   return (
     <>
       <section
@@ -26,20 +36,28 @@ const PhotoGallery = ({ slice }) => {
             <p>{slice.primary.desc2}</p>
           </div>
         </div>
-        <div className="flex overflow-hidden space-x-16 md:mx-0 ml-[-14rem] mr-[-2rem] group px-4">
-          <div className="flex space-x-16 animate-loop-scroll">
-            {slice.items.map((item, index) => (
-              <div key={index} className="flex h-auto">
-                <div className="flex justify-center md:flex-row flex-col px-2">
-                  <PrismicNextImage
-                    field={item.horizontalimage}
-                    className="inline-block rounded-p-lg w-full max-h-fit md:w-[20rem] object-cover max-w-fit"
-                  />
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
+        <Swiper
+          slidesPerView={4}
+          navigation
+          scrollbar={{ draggable: true }}
+          spaceBetween={50}
+        >
+          <SwiperSlide>
+            <PrismicNextImage field={slice.primary.image1} />
+          </SwiperSlide>
+          <SwiperSlide>
+            <PrismicNextImage field={slice.primary.image2} />
+          </SwiperSlide>
+          <SwiperSlide>
+            <PrismicNextImage field={slice.primary.image3} />
+          </SwiperSlide>
+          <SwiperSlide>
+            <PrismicNextImage field={slice.primary.image4} />
+          </SwiperSlide>
+          <SwiperSlide>
+            <PrismicNextImage field={slice.primary.image5} />
+          </SwiperSlide>
+        </Swiper>
       </section>
     </>
   );

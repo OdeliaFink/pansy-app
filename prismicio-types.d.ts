@@ -982,21 +982,86 @@ export interface PhotoGallerySliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   desc2: prismic.KeyTextField;
-}
 
-/**
- * Primary content in *PhotoGallery → Items*
- */
-export interface PhotoGallerySliceDefaultItem {
   /**
-   * HorizontalImage field in *PhotoGallery → Items*
+   * Image1 field in *PhotoGallery → Primary*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
-   * - **API ID Path**: photo_gallery.items[].horizontalimage
+   * - **API ID Path**: photo_gallery.primary.image1
    * - **Documentation**: https://prismic.io/docs/field#image
    */
-  horizontalimage: prismic.ImageField<never>;
+  image1: prismic.ImageField<never>;
+
+  /**
+   * Image2 field in *PhotoGallery → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: photo_gallery.primary.image2
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image2: prismic.ImageField<never>;
+
+  /**
+   * Image3 field in *PhotoGallery → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: photo_gallery.primary.image3
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image3: prismic.ImageField<never>;
+
+  /**
+   * Image4 field in *PhotoGallery → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: photo_gallery.primary.image4
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image4: prismic.ImageField<never>;
+
+  /**
+   * Image5 field in *PhotoGallery → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: photo_gallery.primary.image5
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image5: prismic.ImageField<never>;
+
+  /**
+   * Image6 field in *PhotoGallery → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: photo_gallery.primary.image6
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image6: prismic.ImageField<never>;
+
+  /**
+   * Image7 field in *PhotoGallery → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: photo_gallery.primary.image7
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image7: prismic.ImageField<never>;
+
+  /**
+   * Image8 field in *PhotoGallery → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: photo_gallery.primary.image8
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image8: prismic.ImageField<never>;
 }
 
 /**
@@ -1009,7 +1074,7 @@ export interface PhotoGallerySliceDefaultItem {
 export type PhotoGallerySliceDefault = prismic.SharedSliceVariation<
   "default",
   Simplify<PhotoGallerySliceDefaultPrimary>,
-  Simplify<PhotoGallerySliceDefaultItem>
+  never
 >;
 
 /**
@@ -1741,7 +1806,6 @@ declare module "@prismicio/client" {
       MainSliceDefault,
       PhotoGallerySlice,
       PhotoGallerySliceDefaultPrimary,
-      PhotoGallerySliceDefaultItem,
       PhotoGallerySliceVariation,
       PhotoGallerySliceDefault,
       StepsSlice,
