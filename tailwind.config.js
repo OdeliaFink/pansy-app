@@ -47,6 +47,18 @@ module.exports = {
       },
     },
   },
+  options: {
+    // Add the classes or patterns to ignore
+    safelist: [
+      // Example classes/patterns from SwiperJS (adjust as needed)
+      'swiper',
+      'swiper-container',
+      'swiper-slide',
+      /^swiper/,
+      /^slide/,
+      // Add other classes or patterns used by SwiperJS here
+    ],
+  },
   plugins: [
     require('@tailwindcss/aspect-ratio'),
     function ({ addUtilities }) {
