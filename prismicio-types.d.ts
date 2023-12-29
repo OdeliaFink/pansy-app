@@ -513,6 +513,16 @@ export interface ContactFormSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   comments: prismic.KeyTextField;
+
+  /**
+   * Image field in *ContactForm → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact_form.primary.image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
 }
 
 /**
