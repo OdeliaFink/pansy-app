@@ -79,7 +79,17 @@ const ContactForm = ({ slice }) => {
         data-slice-variation={slice.variation}
         className="bg-medium-beige mt-[1rem] mb-[3rem]"
       >
-        <div className="flex md:flex-row flex-col md:px-0 px-4 md:items-center justify-between gap-[15rem]">
+        <div className="flex md:flex-row flex-col md:px-0 px-4 justify-between md:gap-[8rem] lg:gap-[15rem] gap-[2rem]">
+          <div className="flex flex-1 flex-col text-left gap-3 pb-10 leading-tight">
+            <div className="font-body font-regular text-[4rem] text-mossy-green max-w-[15rem]">
+              <h2>{slice.primary.where}</h2>
+            </div>
+            <div className="font-body font-light text-[1rem]">
+              <h6>{slice.primary.address}</h6>
+              <h6>{slice.primary.inquiries}</h6>
+              <h6>{slice.primary.ouremail}</h6>
+            </div>
+          </div>
           <div className="flex-1">
             <Formik
               initialValues={{
@@ -99,9 +109,9 @@ const ContactForm = ({ slice }) => {
                   {formInputs.map((input) => (
                     <div
                       key={input.name}
-                      className="flex md:flex-col items-center flex-col gap-2"
+                      className="flex md:flex-col items-center flex-col gap-2 pt-2"
                     >
-                      <div className="md:text-left text-center w-full pt-3">
+                      <div className="md:text-left text-center w-full">
                         <label
                           className="md:pt-2 pt-4 md:text-[14px] text-[12px] flex-1 font-body font-light"
                           htmlFor={input.name}
@@ -150,9 +160,9 @@ const ContactForm = ({ slice }) => {
                       </option>
                     </Field>
                   </div>
-                  <div className="flex flex-col py-3 ">
+                  <div className="flex flex-col pt-3">
                     <label
-                      className="py-2 text-[14px] font-body font-light md:text-left text-center pl-4"
+                      className="text-[14px] font-body font-light md:text-left text-center pb-4"
                       htmlFor="comments"
                     >
                       {slice.primary.comments}
@@ -166,12 +176,12 @@ const ContactForm = ({ slice }) => {
                     />
                   </div>
 
-                  <div className="w-full text-left text-center">
+                  <div className="w-full text-left text-center pt-3">
                     <button
                       type="submit"
                       disabled={isSubmitting}
                       className={clsx(
-                        'border-1 rounded-p-sm border text-[13px] border-black rounded-xl hover:bg-mossy-green hover:text-pansy-white max-w-fit px-10 py-2 ease-in-out duration-300'
+                        'border-1 rounded-p-sm border text-[13px] rounded-xl hover:bg-mossy-green hover:text-pansy-white max-w-fit px-10 py-2 ease-in-out duration-300'
                       )}
                     >
                       send
@@ -180,12 +190,6 @@ const ContactForm = ({ slice }) => {
                 </Form>
               )}
             </Formik>
-          </div>
-          <div className="flex-1 md:block hidden ">
-            <PrismicNextImage
-              field={slice.primary.image}
-              className="rounded-p-lg"
-            />
           </div>
         </div>
       </Bounded>

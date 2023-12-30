@@ -39,7 +39,6 @@
 				"type": "Text"
 			},
 			"image": {
-				"__TYPE__": "ImageContent",
 				"origin": {
 					"id": "main",
 					"url": "https://images.unsplash.com/photo-1607582278043-57198ac8da43",
@@ -57,7 +56,30 @@
 					},
 					"background": "transparent"
 				},
+				"credits": null,
+				"alt": null,
+				"__TYPE__": "ImageContent",
 				"thumbnails": {}
+			},
+			"where": {
+				"__TYPE__": "FieldContent",
+				"value": "interior",
+				"type": "Text"
+			},
+			"address": {
+				"__TYPE__": "FieldContent",
+				"value": "contain",
+				"type": "Text"
+			},
+			"inquiries": {
+				"__TYPE__": "FieldContent",
+				"value": "wear",
+				"type": "Text"
+			},
+			"ouremail": {
+				"__TYPE__": "FieldContent",
+				"value": "sunlight",
+				"type": "Text"
 			}
 		},
 		"items": [

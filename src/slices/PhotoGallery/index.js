@@ -25,19 +25,26 @@ const PhotoGallery = ({ slice }) => {
       <section
         data-slice-type={slice.slice_type}
         data-slice-variation={slice.variation}
-        className="flex justify-center flex-row flex-wrap gap-8 py-6 pl-10"
+        className="flex justify-center flex-row flex-wrap gap-8 py-6 pl-[.5rem]"
       >
         <div className="pt-10 pb-4 flex md:flex-row flex-col items-center px-10 gap-12">
-          <h1 className="font-body text-[3rem] md:text-left leading-none text-center text-slate-grey">
+          <h1 className="font-body text-[3rem] text-left leading-none text-slate-grey">
             {slice.primary.header}
           </h1>
-          <div className="flex flex-col md:text-left text-center">
+          <div className="flex flex-col text-left">
             <p>{slice.primary.desc}</p>
             <p>{slice.primary.desc2}</p>
           </div>
         </div>
         <Swiper
           slidesPerView={3.5}
+          showsButtons={false}
+          pagination={{
+            clickable: true,
+            renderBullet: (index, className) => {
+              return `<span class="${className}" style="background-color: #737F51;"></span>`; // Change bullet color to mossy green
+            },
+          }}
           breakpoints={{
             // when window width is >= 320px
             370: {
@@ -51,18 +58,17 @@ const PhotoGallery = ({ slice }) => {
               slidesPerView: 3.5,
             },
           }}
-          navigation
-          // scrollbar={{ draggable: true }}
           spaceBetween={50}
+          className="lg:min-h-[26rem] md:min-h-[44rem] xs:min-h-[25rem]"
         >
           <div>
-            <SwiperSlide>
+            <SwiperSlide lazy={true}>
               <PrismicNextImage
                 field={slice.primary.image1}
                 className="rounded-p-md"
               />
             </SwiperSlide>
-            <SwiperSlide>
+            <SwiperSlide lazy={true}>
               <PrismicNextImage
                 field={slice.primary.image2}
                 className="rounded-p-md"

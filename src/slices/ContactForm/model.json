@@ -73,6 +73,34 @@
             "constraint": {},
             "thumbnails": []
           }
+        },
+        "where": {
+          "type": "Text",
+          "config": {
+            "label": "Where",
+            "placeholder": ""
+          }
+        },
+        "address": {
+          "type": "Text",
+          "config": {
+            "label": "Address",
+            "placeholder": ""
+          }
+        },
+        "inquiries": {
+          "type": "Text",
+          "config": {
+            "label": "Inquiries",
+            "placeholder": ""
+          }
+        },
+        "ouremail": {
+          "type": "Text",
+          "config": {
+            "label": "OurEmail",
+            "placeholder": ""
+          }
         }
       },
       "items": {
