@@ -12,7 +12,7 @@ const Main = ({ slice }) => {
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
-      className="h-auto static pb-9"
+      className="h-auto static pb-10"
     >
       <div className="h-auto pt-2">
         <PrismicNextImage
