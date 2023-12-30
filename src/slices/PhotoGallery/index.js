@@ -62,13 +62,13 @@ const PhotoGallery = ({ slice }) => {
           className="lg:min-h-[26rem] md:min-h-[44rem] xs:min-h-[25rem]"
         >
           <div>
-            <SwiperSlide lazy={true}>
+            <SwiperSlide>
               <PrismicNextImage
                 field={slice.primary.image1}
                 className="rounded-p-md"
               />
             </SwiperSlide>
-            <SwiperSlide lazy={true}>
+            <SwiperSlide>
               <PrismicNextImage
                 field={slice.primary.image2}
                 className="rounded-p-md"

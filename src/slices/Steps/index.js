@@ -1,6 +1,5 @@
 import { Bounded } from '@/components/Bounded';
 import Button from '@/components/Button';
-import wave from '../../assets/wavy.png';
 
 /**
  * @typedef {import("@prismicio/client").Content.StepsSlice} StepsSlice
@@ -21,7 +20,8 @@ export const SquigglyLineSVG = (
       d="M10 20 
        C 30 5, 50 35, 70 20
        C 90 5, 110 35, 130 20
-       C 150 5, 170 35, 190 20"
+       C 150 5, 170 35, 190 20 
+       "
       stroke="#737F51"
       strokeWidth="2"
       fill="none"
