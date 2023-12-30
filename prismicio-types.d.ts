@@ -523,6 +523,46 @@ export interface ContactFormSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#image
    */
   image: prismic.ImageField<never>;
+
+  /**
+   * Where field in *ContactForm → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact_form.primary.where
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  where: prismic.KeyTextField;
+
+  /**
+   * Address field in *ContactForm → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact_form.primary.address
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  address: prismic.KeyTextField;
+
+  /**
+   * Inquiries field in *ContactForm → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact_form.primary.inquiries
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  inquiries: prismic.KeyTextField;
+
+  /**
+   * OurEmail field in *ContactForm → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact_form.primary.ouremail
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  ouremail: prismic.KeyTextField;
 }
 
 /**
