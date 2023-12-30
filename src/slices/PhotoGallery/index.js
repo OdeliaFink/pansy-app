@@ -25,7 +25,7 @@ const PhotoGallery = ({ slice }) => {
       <section
         data-slice-type={slice.slice_type}
         data-slice-variation={slice.variation}
-        className="flex justify-center flex-row flex-wrap gap-8 py-6 pl-[.5rem]"
+        className="flex justify-center flex-row flex-wrap gap-8 py-6 pl-[1rem] overflow-x-hidden"
       >
         <div className="pt-10 pb-4 flex md:flex-row flex-col items-center px-10 gap-12">
           <h1 className="font-body text-[3rem] text-left leading-none text-slate-grey">
@@ -42,7 +42,7 @@ const PhotoGallery = ({ slice }) => {
           pagination={{
             clickable: true,
             renderBullet: (index, className) => {
-              return `<span class="${className}" style="background-color: #737F51;"></span>`; // Change bullet color to mossy green
+              return `<span class="${className}" style="background-color: #737F51;"></span>`;
             },
           }}
           breakpoints={{
@@ -59,7 +59,7 @@ const PhotoGallery = ({ slice }) => {
             },
           }}
           spaceBetween={50}
-          className="lg:min-h-[26rem] md:min-h-[44rem] xs:min-h-[25rem]"
+          className="xl:min-h-[36rem] lg:min-h-[26rem] md:min-h-[44rem]  min-h-[25rem]"
         >
           <div>
             <SwiperSlide>
