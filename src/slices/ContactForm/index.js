@@ -80,11 +80,11 @@ const ContactForm = ({ slice }) => {
         className="bg-medium-beige mt-[1rem] mb-[3rem]"
       >
         <div className="flex md:flex-row flex-col md:px-0 px-4 justify-between md:gap-[8rem] lg:gap-[15rem] gap-[2rem]">
-          <div className="flex flex-1 flex-col text-left gap-3 pb-10 leading-tight">
-            <div className="font-body font-regular text-[4rem] text-mossy-green max-w-[15rem]">
+          <div className="flex flex-1 flex-col text-left gap-3 pb-10">
+            <div className="font-body font-regular text-[4.5rem] text-mossy-green max-w-[16rem] leading-tight">
               <h2>{slice.primary.where}</h2>
             </div>
-            <div className="font-body font-light text-[1rem]">
+            <div className="font-body font-light text-[1.3rem] max-w-[22rem]">
               <h6>{slice.primary.address}</h6>
               <h6>{slice.primary.inquiries}</h6>
               <h6>{slice.primary.ouremail}</h6>

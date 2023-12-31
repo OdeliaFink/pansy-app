@@ -12,7 +12,7 @@ const Hero = ({ slice }) => {
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
-      className="h-auto relative pb-10"
+      className="h-auto relative"
     >
       <div className="grid grid-cols-1 justify-items-center gap-10">
         <div className="max-w-2xl text-center leading-wider">
