@@ -61,6 +61,21 @@
           }
         }
       },
+      "home_label": {
+        "type": "Text",
+        "config": {
+          "label": "Home Label",
+          "placeholder": ""
+        }
+      },
+      "home_link": {
+        "type": "Link",
+        "config": {
+          "label": "Home Link",
+          "placeholder": "",
+          "select": null
+        }
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",

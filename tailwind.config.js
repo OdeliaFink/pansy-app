@@ -29,6 +29,8 @@ module.exports = {
       'mossy-green': '#737F51',
       'slate-grey': '#4B4E58',
       'pansy-white': '#fff',
+      'pansy-mauve': '#D1AEFF',
+      'pansy-lavender': '#B782FC',
     },
 
     borderRadius: {

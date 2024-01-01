@@ -21,13 +21,13 @@ const PhotoGallery = ({ slice }) => {
   const swiperElRef = useRef(null);
 
   return (
-    <>
+    <div>
       <section
         data-slice-type={slice.slice_type}
         data-slice-variation={slice.variation}
         className="flex justify-center flex-row flex-wrap gap-8 py-6 pl-[1rem] overflow-x-hidden"
       >
-        <div className="pt-10 pb-4 flex md:flex-row flex-col items-center px-10 gap-12">
+        <div className="pt-10 pb-4 flex md:flex-row flex-col items-center lg:px-[7.5rem] px-2 gap-12">
           <h1 className="font-body text-[3rem] text-left leading-none text-slate-grey">
             {slice.primary.header}
           </h1>
@@ -46,7 +46,6 @@ const PhotoGallery = ({ slice }) => {
             },
           }}
           breakpoints={{
-            // when window width is >= 320px
             370: {
               slidesPerView: 1.5,
               spaceBetween: 24,
@@ -92,10 +91,16 @@ const PhotoGallery = ({ slice }) => {
                 className="rounded-p-md"
               />
             </SwiperSlide>
+            <SwiperSlide>
+              <PrismicNextImage
+                field={slice.primary.image6}
+                className="rounded-p-md"
+              />
+            </SwiperSlide>
           </div>
         </Swiper>
       </section>
-    </>
+    </div>
   );
 };
 

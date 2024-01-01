@@ -37,7 +37,10 @@
           "type": "Image",
           "config": {
             "label": "Image1",
-            "constraint": {},
+            "constraint": {
+              "width": 675,
+              "height": 900
+            },
             "thumbnails": []
           }
         },
@@ -45,7 +48,10 @@
           "type": "Image",
           "config": {
             "label": "Image2",
-            "constraint": {},
+            "constraint": {
+              "width": 675,
+              "height": 900
+            },
             "thumbnails": []
           }
         },
@@ -53,7 +59,10 @@
           "type": "Image",
           "config": {
             "label": "Image3",
-            "constraint": {},
+            "constraint": {
+              "width": 675,
+              "height": 900
+            },
             "thumbnails": []
           }
         },

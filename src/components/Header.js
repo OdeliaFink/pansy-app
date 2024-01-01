@@ -32,7 +32,7 @@ export function Header({ locales = [], navigation }) {
           field={navigation?.data.welcome_banner[0].button_link}
           className=" decoration-1 font-semibold"
         >
-          <p className="hover:text-sage-green">
+          <p className="hover:text-sage-green hover:ease-in-out duration-500">
             {navigation?.data.welcome_banner[0].button_label}
           </p>
         </PrismicNextLink>
@@ -45,7 +45,7 @@ export function Header({ locales = [], navigation }) {
         }`}
       >
         <div className="flex flex-wrap items-center md:justify-between justify-center gap-x-6 gap-y-3 leading-none">
-          <PrismicNextLink href="/">
+          <PrismicNextLink field={navigation?.data.home_link}>
             <h2 className="font-display text-[3rem]">pansy</h2>
           </PrismicNextLink>
           <nav className="flex flex-wrap items-center gap-x-3 gap-y-3 md:gap-x-10">

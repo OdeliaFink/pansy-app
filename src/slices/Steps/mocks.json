@@ -40,6 +40,22 @@
 							"value": "03 Maintain",
 							"type": "Select"
 						}
+					],
+					[
+						"number",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "heard",
+							"type": "Text"
+						}
+					],
+					[
+						"step_name",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "old",
+							"type": "Text"
+						}
 					]
 				]
 			}

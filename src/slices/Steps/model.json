@@ -43,6 +43,20 @@
             "placeholder": ""
           }
         },
+        "number": {
+          "type": "Text",
+          "config": {
+            "label": "Number",
+            "placeholder": ""
+          }
+        },
+        "step_name": {
+          "type": "Text",
+          "config": {
+            "label": "Step name",
+            "placeholder": ""
+          }
+        },
         "steps": {
           "type": "Select",
           "config": {

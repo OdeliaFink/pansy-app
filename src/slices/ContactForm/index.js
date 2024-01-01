@@ -8,6 +8,7 @@ import * as Yup from 'yup';
 import { PrismicNextImage } from '@prismicio/next';
 import Modal from '@/components/Modal';
 import { Bounded } from '@/components/Bounded';
+import Button from '@/components/Button';
 
 /**
  * @typedef {import("@prismicio/client").Content.ContactFormSlice} ContactFormSlice
@@ -178,13 +179,14 @@ const ContactForm = ({ slice }) => {
 
                   <div className="w-full text-left text-center pt-3">
                     <button
+                      field={slice.primary.link}
                       type="submit"
                       disabled={isSubmitting}
                       className={clsx(
-                        'border-1 rounded-p-sm border text-[13px] rounded-xl hover:bg-mossy-green hover:text-pansy-white max-w-fit px-10 py-2 ease-in-out duration-300'
+                        'border-1 border text-[13px] rounded-p-sm hover:bg-sage-green max-w-fit px-10 py-2 ease-in-out duration-300'
                       )}
                     >
-                      send
+                      {slice.primary.label}
                     </button>
                   </div>
                 </Form>
