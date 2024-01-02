@@ -25,7 +25,7 @@ export function Layout({ locales, navigation, settings, children, cookie }) {
             settings={settings}
           />
           <main>{children}</main>
-          <CookieBanner cookie={cookie} />
+          {/* <CookieBanner cookie={cookie} /> */}
           <Footer settings={settings} navigation={navigation} />
         </div>
       </motion.div>

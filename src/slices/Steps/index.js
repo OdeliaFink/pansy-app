@@ -47,7 +47,7 @@ const Steps = ({ slice }) => {
           <h1 className="leading-tight tracking-tight text-left font-body text-mossy-green md:text-[4rem] text-[3rem]">
             {slice.primary.heading}
           </h1>
-          <div className="flex lg:flex-row flex-col mx-auto  md:gap-0 gap-4 w-auto pt-[3rem] pb-[2rem]">
+          <div className="flex lg:flex-row flex-col mx-auto  md:gap-2 gap-4 w-auto pt-[3rem] pb-[2rem]">
             {slice.items.map((item, index) => (
               <>
                 <div
@@ -60,10 +60,10 @@ const Steps = ({ slice }) => {
                         {item.number}
                         {/* {SquigglyLineSVG} */}
                       </p>
-                      <p className="font-semibold  font-body md:text-[25px] text-[14px]">
+                      <p className="font-semibold  font-body md:text-[25px] text-[25px]">
                         {item.step_name}
                       </p>
-                      <p className="font-light  font-body md:text-[16px] text-[14px]">
+                      <p className="font-light  font-body md:text-[16px] text-[15px]">
                         {item.step_desc}
                       </p>
                     </div>
