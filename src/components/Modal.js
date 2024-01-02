@@ -1,15 +1,18 @@
-const Modal = ({ title, desc, closeModal }) => {
+import clsx from 'clsx';
+
+const Modal = ({ closeModal }) => {
   return (
     <div className="fixed inset-0 z-50 overflow-auto bg-black bg-opacity-50 flex justify-center items-center">
-      <div className="bg-bg-beige p-4 rounded-lg max-w-md w-full">
-        <h2 className="font-display text-center text-[2rem]">{title}</h2>
-        <p className="text-center mt-2 font-body">{desc}</p>
+      <div className="bg-bg-beige p-4 border border-solid border-1 border-black rounded-p-sm max-w-md w-full flex flex-row justify-between">
+        <h2 className="font-display text-center text-[2rem]">hoorah!</h2>
         <div className="text-center py-2">
           <button
             onClick={closeModal}
-            className="display-block w-fit border-solid px-7 py-[.5rem] rounded-sm text-white font-body border-dark-deen bg-dark-green hover:bg-lighter-green transition-color duration-200 ease-in-out  mb-8 md:mb-0 "
+            className={clsx(
+              'border-1 border text-[13px] rounded-p-sm hover:bg-sage-green max-w-fit px-10 py-2 ease-in-out duration-300'
+            )}
           >
-            Close
+            X
           </button>
         </div>
       </div>

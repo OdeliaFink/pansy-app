@@ -30,7 +30,7 @@ const CookieBanner = ({ cookie }) => {
   }
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 bg-white p-4 border-t border-gray-300 shadow-md z-10 bg-mossy-green">
+    <div className="fixed bottom-0 left-0 right-0 bg-white p-4 border-gray-300 shadow-md z-10 bg-mossy-green">
       <div className="max-w-screen-md mx-auto flex justify-between items-center">
         <p className="text-sm font-body">{cookie?.data.heading}</p>
         <div>

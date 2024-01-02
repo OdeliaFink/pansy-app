@@ -48,7 +48,6 @@ const ContactForm = ({ slice }) => {
 
       if (response.status === 200) {
         setShowModal(true);
-        window.location.href = '/';
       } else {
         console.error('form fail', response.data);
       }
@@ -61,6 +60,7 @@ const ContactForm = ({ slice }) => {
 
   const closeModal = () => {
     setShowModal(false);
+    window.location.href = '/';
   };
 
   const validationSchema = Yup.object().shape({
@@ -195,15 +195,7 @@ const ContactForm = ({ slice }) => {
           </div>
         </div>
       </Bounded>
-      {showModal && (
-        <Modal
-          closeModal={closeModal}
-          title="Form submitted!"
-          desc={
-            'Someone from pansy will reach out to you to get started on your gardening project.'
-          }
-        />
-      )}
+      {showModal && <Modal closeModal={closeModal} />}
     </>
   );
 };
