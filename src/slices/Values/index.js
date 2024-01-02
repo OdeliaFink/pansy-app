@@ -46,7 +46,7 @@ const Values = ({ slice }) => {
                   </div>
                 </div>
                 <div
-                  className={`font-light text-[.8rem] md:text-[1rem] w-full mx-auto font-body font-light break-words hyphens-auto transition-all ${
+                  className={`font-light text-[.8rem] md:text-[1rem] w-full mx-auto font-body font-light break-words hyphens-none transition-all ${
                     activeItem === index
                       ? 'h-auto opacity-100'
                       : 'h-0 opacity-0'
