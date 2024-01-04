@@ -56,11 +56,10 @@ const Steps = ({ slice }) => {
                 >
                   <div className="text-center mx-auto md:p-0 p-10">
                     <div className="w-full">
-                      <p className="font-regular leading-none  font-body tracking-wide md:text-[40px] text-[25px] pb-2">
+                      <p className="font-regular leading-none  font-body tracking-wide">
                         {item.number}
-                        {/* {SquigglyLineSVG} */}
                       </p>
-                      <p className="font-semibold  font-body md:text-[25px] text-[25px]">
+                      <p className="font-semibold  font-body text-[33px]">
                         {item.step_name}
                       </p>
                       <p className="font-light  font-body md:text-[16px] text-[15px]">

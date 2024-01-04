@@ -374,6 +374,28 @@ interface SettingsDocumentData {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   serving_city: prismic.KeyTextField;
+
+  /**
+   * Confirmation field in *Settings*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: settings.confirmation
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  confirmation: prismic.KeyTextField;
+
+  /**
+   * Confirmation Desc field in *Settings*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: settings.confirmation_desc
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  confirmation_desc: prismic.KeyTextField;
 }
 
 /**

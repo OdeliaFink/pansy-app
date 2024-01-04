@@ -81,7 +81,7 @@ const ContactForm = ({ slice }) => {
         className="bg-medium-beige mt-[1rem] mb-[3rem]"
       >
         <div className="flex md:flex-row flex-col md:px-0 px-4 justify-between md:gap-[8rem] lg:gap-[15rem] gap-[2rem]">
-          <div className="flex flex-1 flex-col text-left gap-3 pb-10">
+          <div className="flex flex-1 flex-col text-left gap-3">
             <div className="font-body font-regular text-[4.5rem] text-mossy-green max-w-[16rem] leading-tight">
               <h2>{slice.primary.where}</h2>
             </div>
@@ -177,13 +177,13 @@ const ContactForm = ({ slice }) => {
                     />
                   </div>
 
-                  <div className="w-full text-left text-center pt-3">
+                  <div className="w-full md:text-left text-center pt-3">
                     <button
                       field={slice.primary.link}
                       type="submit"
                       disabled={isSubmitting}
                       className={clsx(
-                        'border-1 border text-[13px] rounded-p-sm hover:bg-sage-green max-w-fit px-10 py-2 ease-in-out duration-300'
+                        'text-[13px] rounded-p-sm border-dark-deen bg-mossy-green hover:bg-sage-green max-w-fit px-10 py-2 ease-in-out duration-300'
                       )}
                     >
                       {slice.primary.label}

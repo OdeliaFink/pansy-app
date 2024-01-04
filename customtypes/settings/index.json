@@ -68,6 +68,20 @@
           "label": "Serving City",
           "placeholder": ""
         }
+      },
+      "confirmation": {
+        "type": "Text",
+        "config": {
+          "label": "Confirmation",
+          "placeholder": ""
+        }
+      },
+      "confirmation_desc": {
+        "type": "Text",
+        "config": {
+          "label": "Confirmation Desc",
+          "placeholder": ""
+        }
       }
     }
   }
