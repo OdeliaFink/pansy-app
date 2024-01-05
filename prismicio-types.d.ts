@@ -609,6 +609,16 @@ export interface ContactFormSliceDefaultPrimary {
   ouremail: prismic.KeyTextField;
 
   /**
+   * location field in *ContactForm → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact_form.primary.location
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  location: prismic.KeyTextField;
+
+  /**
    * Label field in *ContactForm → Primary*
    *
    * - **Field Type**: Text
