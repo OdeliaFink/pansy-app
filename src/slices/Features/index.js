@@ -52,7 +52,7 @@ const Features = ({ slice }) => {
                     }}
                     field={item.icon_title}
                   />
-                  <div className="md:w-[80%] w-full mx-auto">
+                  <div className="w-[80%] mx-auto">
                     <PrismicRichText
                       components={{
                         paragraph: ({ children }) => (
