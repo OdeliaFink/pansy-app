@@ -1,5 +1,5 @@
 'use client';
-import React, { useRef } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { Bounded } from '@/components/Bounded';
 import { PrismicNextImage } from '@prismicio/next';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -19,15 +19,45 @@ register();
 
 const PhotoGallery = ({ slice }) => {
   const swiperElRef = useRef(null);
+  const [lastHalfSlideIndex, setLastHalfSlideIndex] = useState(0);
+
+  const handleSlideChange = (swiper) => {
+    const slidesInView = Math.floor(
+      swiper.width / swiper.slides[0].offsetWidth
+    );
+    const lastIndexInView = swiper.activeIndex + slidesInView - 1;
+    setLastHalfSlideIndex(lastIndexInView);
+  };
+
+  useEffect(() => {
+    if (slice && slice.primary) {
+      const slides = [
+        slice.primary.image1,
+        slice.primary.image2,
+        slice.primary.image3,
+        slice.primary.image4,
+        slice.primary.image5,
+      ];
+      setLastHalfSlideIndex(slides.length - 1); // Set the last card index initially
+    }
+  }, [slice]);
+
+  const slides = [
+    slice.primary.image1,
+    slice.primary.image2,
+    slice.primary.image3,
+    slice.primary.image4,
+    slice.primary.image5,
+  ];
 
   return (
     <div>
       <section
         data-slice-type={slice.slice_type}
         data-slice-variation={slice.variation}
-        className="flex justify-center flex-row flex-wrap gap-8 py-6 pl-[1rem] overflow-x-hidden"
+        className="flex justify-center flex-row flex-wrap gap-8 py-6 md:pl-[4rem] pl-[1rem] overflow-x-hidden"
       >
-        <div className="pt-10 pb-4 flex md:flex-row flex-col items-center lg:px-[7.5rem] px-2 gap-12">
+        <div className="pt-10 pb-4 flex md:flex-row flex-col items-center lg:px-[4.5rem] px-2 gap-12">
           <h1 className="font-body text-[3rem] text-left leading-none text-mossy-green font-display">
             {slice.primary.header}
           </h1>
@@ -37,6 +67,8 @@ const PhotoGallery = ({ slice }) => {
           </div>
         </div>
         <Swiper
+          onSlideChange={handleSlideChange}
+          runCallbacksOnInit={true}
           slidesPerView={3.5}
           showsButtons={false}
           pagination={{
@@ -61,42 +93,21 @@ const PhotoGallery = ({ slice }) => {
           className="xl:min-h-[36rem] lg:min-h-[26rem] md:min-h-[44rem]  min-h-[25rem]"
         >
           <div>
-            <SwiperSlide>
-              <PrismicNextImage
-                field={slice.primary.image1}
-                className="rounded-p-md"
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <PrismicNextImage
-                field={slice.primary.image2}
-                className="rounded-p-md"
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <PrismicNextImage
-                field={slice.primary.image3}
-                className="rounded-p-md"
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <PrismicNextImage
-                field={slice.primary.image4}
-                className="rounded-p-md"
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <PrismicNextImage
-                field={slice.primary.image5}
-                className="rounded-p-md"
-              />
-            </SwiperSlide>
-            {/* <SwiperSlide>
-              <PrismicNextImage
-                field={slice.primary.image6}
-                className="rounded-p-md"
-              />
-            </SwiperSlide> */}
+            {slides.map((image, index) => (
+              <SwiperSlide key={index}>
+                <div
+                  className={`relative ${
+                    index > lastHalfSlideIndex ? 'opacity-40' : ''
+                  }`}
+                >
+                  <PrismicNextImage field={image} className="rounded-p-md" />
+                  {/* Render overlay only for half-visible cards */}
+                  {index > lastHalfSlideIndex && (
+                    <div className="absolute inset-0 bg-black opacity-50"></div>
+                  )}
+                </div>
+              </SwiperSlide>
+            ))}
           </div>
         </Swiper>
       </section>
