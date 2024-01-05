@@ -102,6 +102,13 @@
             "placeholder": ""
           }
         },
+        "location": {
+          "type": "Text",
+          "config": {
+            "label": "location",
+            "placeholder": ""
+          }
+        },
         "label": {
           "type": "Text",
           "config": {

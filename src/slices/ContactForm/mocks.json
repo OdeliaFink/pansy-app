@@ -92,6 +92,11 @@
 					"__TYPE__": "ExternalLink",
 					"url": "http://google.com"
 				}
+			},
+			"location": {
+				"__TYPE__": "FieldContent",
+				"value": "hollow",
+				"type": "Text"
 			}
 		},
 		"items": [
