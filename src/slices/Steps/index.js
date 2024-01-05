@@ -44,7 +44,7 @@ const Steps = ({ slice }) => {
           data-slice-variation={slice.variation}
           className="bg-medium-beige"
         >
-          <h1 className="leading-tight tracking-tight text-left font-body text-mossy-green md:text-[4rem] text-[3rem]">
+          <h1 className="leading-tight tracking-tight text-left font-body text-mossy-green md:text-[4rem] text-[3rem] font-display">
             {slice.primary.heading}
           </h1>
           <div className="flex lg:flex-row flex-col mx-auto  md:gap-2 gap-4 w-auto pt-[3rem] pb-[2rem]">

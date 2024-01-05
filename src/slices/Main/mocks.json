@@ -42,6 +42,11 @@
 				"alt": null,
 				"__TYPE__": "ImageContent",
 				"thumbnails": {}
+			},
+			"desc": {
+				"__TYPE__": "FieldContent",
+				"value": "thousand",
+				"type": "Text"
 			}
 		},
 		"items": []

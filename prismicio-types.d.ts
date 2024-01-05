@@ -996,6 +996,16 @@ export interface MainSliceDefaultPrimary {
   title: prismic.KeyTextField;
 
   /**
+   * Desc field in *Main → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: main.primary.desc
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  desc: prismic.KeyTextField;
+
+  /**
    * Button Text field in *Main → Primary*
    *
    * - **Field Type**: Text

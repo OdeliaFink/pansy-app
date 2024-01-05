@@ -14,24 +14,32 @@ const Main = ({ slice }) => {
       data-slice-variation={slice.variation}
       className="h-auto static pb-10"
     >
-      <div className="h-auto pt-2">
+      <div className="h-auto pt-2 relative">
         <PrismicNextImage
           field={slice.primary.image}
           className={clsx(
-            'w-full h-[38rem] 2xl:h-[50rem] mx-auto object-cover'
+            'w-full h-[38rem] 2xl:h-[50rem] mx-auto object-cover z-10 opacity-75'
           )}
         />
       </div>
+      <div className="absolute inset-0 z-20"></div>
       <div
-        className={clsx('flex flex-col items-center justify-center inset-0 ')}
+        className={clsx(
+          'flex flex-col items-center justify-center inset-0 relative'
+        )}
       >
-        <div className="mt-[-50rem]">
+        <div className="mt-[-50rem] opacity-1 ">
           {' '}
+          <div className="text-center leading-none">
+            <h1 className="leading-none tracking-widest font-display md:text-[9rem] pb-2 text-[5rem] text-bg-beige">
+              {slice.primary.title}
+            </h1>
+            <p className="font-bold font-body text-[#4A5043] text-[1.5rem] w-[80%] mx-auto">
+              {slice.primary.desc}
+            </p>
+          </div>
           {/* Adjust margin to position title and button */}
-          <h1 className="tracking-widest font-display md:text-[7rem] pb-2 text-[5rem] text-bg-beige">
-            {slice.primary.title}
-          </h1>
-          <div className="text-center">
+          <div className="text-center pt-8">
             <PrismicNextLink
               field={slice.primary.button_link}
               className="display-block w-fit border-solid px-8 py-[.8rem] rounded-p-sm text-bg-beige font-body border-dark-deen bg-mossy-green hover:bg-sage-green ease-in-out duration-500  mb-8 md:mb-0 "

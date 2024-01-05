@@ -19,6 +19,13 @@
             "placeholder": ""
           }
         },
+        "desc": {
+          "type": "Text",
+          "config": {
+            "label": "Desc",
+            "placeholder": ""
+          }
+        },
         "button_text": {
           "type": "Text",
           "config": {

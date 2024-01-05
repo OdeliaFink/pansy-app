@@ -28,7 +28,7 @@ const PhotoGallery = ({ slice }) => {
         className="flex justify-center flex-row flex-wrap gap-8 py-6 pl-[1rem] overflow-x-hidden"
       >
         <div className="pt-10 pb-4 flex md:flex-row flex-col items-center lg:px-[7.5rem] px-2 gap-12">
-          <h1 className="font-body text-[3rem] text-left leading-none text-mossy-green">
+          <h1 className="font-body text-[3rem] text-left leading-none text-mossy-green font-display">
             {slice.primary.header}
           </h1>
           <div className="flex flex-col text-left">
