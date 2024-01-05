@@ -32,7 +32,7 @@ const Features = ({ slice }) => {
     >
       <div className="bg-medium-beige py-2">
         <div className="py-[1rem]">
-          <div className=" flex md:flex-row flex-col justify-center md:gap-[2rem] gap-10  mx-auto sm:place-items-start place-items-center px-6 ">
+          <div className=" flex md:flex-row flex-col justify-center md:gap-[2rem] md:gap-10 gap-2  mx-auto sm:place-items-start place-items-center px-6 ">
             {slice.items.map((item, index) => (
               <div key={index} className="bg-medium-beige py-2 flex flex-col ">
                 <div className="flex flex-col justify-center text-center">
@@ -45,7 +45,7 @@ const Features = ({ slice }) => {
                   <PrismicRichText
                     components={{
                       paragraph: ({ children }) => (
-                        <p className=" font-body text-[1.1rem] font-semibold last:mb-0">
+                        <p className=" font-body text-[1.2rem] font-semibold last:mb-0">
                           {children}
                         </p>
                       ),
@@ -56,7 +56,7 @@ const Features = ({ slice }) => {
                     <PrismicRichText
                       components={{
                         paragraph: ({ children }) => (
-                          <p className="font-light text-[.9rem] last:mb-0">
+                          <p className="font-light text-[1rem] last:mb-0">
                             {children}
                           </p>
                         ),
