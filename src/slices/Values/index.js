@@ -21,7 +21,7 @@ const Values = ({ slice }) => {
         <div className="max-w-[28rem] md:text-left text-center md:pl-[4rem]">
           <div className="flex flex-col justify-center">
             {/* <Flower /> */}
-            <h1 className="lg:text-[4rem] text-[3rem] font-body font-regular">
+            <h1 className="lg:text-[4rem] text-[3rem] font-display font-regular">
               {slice.primary.heading}
             </h1>
           </div>
