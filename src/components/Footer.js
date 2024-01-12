@@ -107,6 +107,11 @@ export function Footer({ settings, navigation }) {
           </div>
         </ul>
       </div>
+      <div>
+        <h2>{settings.data.made_by} </h2>
+
+        {/* <a href="https://www.github.com">Odelia Finkelstein</a> */}
+      </div>
     </div>
   );
 }

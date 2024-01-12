@@ -82,6 +82,13 @@
           "label": "Confirmation Desc",
           "placeholder": ""
         }
+      },
+      "made_by": {
+        "type": "Text",
+        "config": {
+          "label": "Made by",
+          "placeholder": ""
+        }
       }
     }
   }

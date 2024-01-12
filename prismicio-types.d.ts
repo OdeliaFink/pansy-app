@@ -396,6 +396,17 @@ interface SettingsDocumentData {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   confirmation_desc: prismic.KeyTextField;
+
+  /**
+   * Made by field in *Settings*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: settings.made_by
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  made_by: prismic.KeyTextField;
 }
 
 /**
