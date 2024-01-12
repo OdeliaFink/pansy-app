@@ -15,7 +15,7 @@ const Values = ({ slice }) => {
     <Bounded
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
-      className="bg-medium-beige mb-4 "
+      className="bg-medium-beige mt-[6rem] mb-[10rem] "
     >
       <div className="flex md:flex-row flex-col md:items-center md:gap-[11rem]">
         <div className="max-w-[28rem] md:text-left text-center md:pl-[4rem]">
