@@ -407,6 +407,17 @@ interface SettingsDocumentData {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   made_by: prismic.KeyTextField;
+
+  /**
+   * Rights reserved field in *Settings*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: settings.rights_reserved
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  rights_reserved: prismic.KeyTextField;
 }
 
 /**

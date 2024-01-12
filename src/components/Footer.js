@@ -107,10 +107,21 @@ export function Footer({ settings, navigation }) {
           </div>
         </ul>
       </div>
-      <div>
-        <h2>{settings.data.made_by} </h2>
+      <div className="flex items-center text-center flex-col   justify-center pt-7 pb-2 font-body font-light text-[11px]">
+        <div className=" flex flex-row gap-2">
+          <h2>{settings.data.made_by} </h2>
 
-        {/* <a href="https://www.github.com">Odelia Finkelstein</a> */}
+          <a
+            href="https://github.com/OdeliaFink"
+            target="_blank"
+            className="font-body font-light text-[11px] underline"
+          >
+            Odelia Finkelstein
+          </a>
+        </div>
+        <div>
+          <h6>© 2024 Pansy</h6>
+        </div>
       </div>
     </div>
   );

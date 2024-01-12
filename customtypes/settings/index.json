@@ -89,6 +89,13 @@
           "label": "Made by",
           "placeholder": ""
         }
+      },
+      "rights_reserved": {
+        "type": "Text",
+        "config": {
+          "label": "Rights reserved",
+          "placeholder": ""
+        }
       }
     }
   }
