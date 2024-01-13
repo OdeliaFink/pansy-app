@@ -6,6 +6,7 @@ import IgIcon from './IgIcon';
 // import { Bounded } from './Bounded';
 // import { Heading } from './Heading';
 import { PrismicRichText } from './PrismicRichText';
+import { Bounded } from './Bounded';
 
 // function SignUpForm({ settings }) {
 //   return (
@@ -69,8 +70,8 @@ import { PrismicRichText } from './PrismicRichText';
 
 export function Footer({ settings, navigation }) {
   return (
-    <div className="h-auto bg-dark-beige pb-3 py-3">
-      <div className="flex w-[95%] mx-auto lg:flex-row justify-between items-center pt-1">
+    <Bounded className="h-auto bg-dark-beige pb-3 py-3">
+      <div className="flex w-full px-2 mx-auto lg:flex-row justify-between items-center pt-1">
         <ul className="flex flex-col ">
           <PrismicNextLink href="/">
             <h2 className="font-display text-[2rem]">pansy</h2>
@@ -107,7 +108,7 @@ export function Footer({ settings, navigation }) {
           </div>
         </ul>
       </div>
-      <div className="flex items-center text-center flex-col   justify-center pt-7 pb-2 font-body font-light text-[11px]">
+      <div className="flex items-center text-center flex-col px-4  justify-center pt-7 pb-2 font-body font-light text-[11px]">
         <div className=" flex flex-row gap-2">
           <h2>{settings.data.made_by} </h2>
 
@@ -123,6 +124,6 @@ export function Footer({ settings, navigation }) {
           <h6>© 2024 Pansy</h6>
         </div>
       </div>
-    </div>
+    </Bounded>
   );
 }

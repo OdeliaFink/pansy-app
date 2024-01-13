@@ -85,13 +85,15 @@ const ContactForm = ({ slice }) => {
             <div className="font-display font-regular text-[4.5rem] text-mossy-green max-w-[16rem] leading-tight">
               <h2>{slice.primary.where}</h2>
             </div>
-            <div className="font-body font-light text-[1.1rem] max-w-[22rem]">
-              <h6>{slice.primary.address}</h6>
+            <div className="font-body font-light text-[1.1rem] max-w-[26rem]">
+              {/* <h6>{slice.primary.address}</h6> */}
               <h6>{slice.primary.inquiries}</h6>
               <h6>{slice.primary.ouremail}</h6>
             </div>
             <div className="pt-3">
-              <h6 className="font-body">{slice.primary.location}</h6>
+              <h6 className="font-body font-semibold">
+                {slice.primary.location}
+              </h6>
             </div>
           </div>
           <div className="flex-1">
