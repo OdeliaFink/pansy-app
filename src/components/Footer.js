@@ -121,7 +121,7 @@ export function Footer({ settings, navigation }) {
           </a>
         </div>
         <div>
-          <h6>© 2024 Pansy</h6>
+          <h6>© 2024 pansy</h6>
         </div>
       </div>
     </Bounded>
