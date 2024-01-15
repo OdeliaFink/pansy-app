@@ -37,6 +37,9 @@ const PhotoGallery = ({ slice }) => {
         slice.primary.image3,
         slice.primary.image4,
         slice.primary.image5,
+        slice.primary.image6,
+        slice.primary.image7,
+        slice.primary.image8,
       ];
       setLastHalfSlideIndex(slides.length - 1); // Set the last card index initially
     }
@@ -48,6 +51,9 @@ const PhotoGallery = ({ slice }) => {
     slice.primary.image3,
     slice.primary.image4,
     slice.primary.image5,
+    slice.primary.image6,
+    slice.primary.image7,
+    slice.primary.image8,
   ];
 
   return (
