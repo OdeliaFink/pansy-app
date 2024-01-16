@@ -81,7 +81,7 @@ const ContactForm = ({ slice }) => {
         className="bg-medium-beige mt-[1rem] mb-[3rem]"
       >
         <div className="flex md:flex-row flex-col md:px-0 px-4 justify-between md:gap-[8rem] lg:gap-[10rem] gap-[2rem]">
-          <div className="flex flex-1 flex-col text-left gap-3">
+          <div className="flex flex-1 flex-col text-left gap-3 md:pt-0 pt-10 md:order-1   order-2">
             <div className="font-display font-regular text-[4.5rem] text-mossy-green max-w-[16rem] leading-tight">
               <h2>{slice.primary.where}</h2>
             </div>
@@ -96,7 +96,8 @@ const ContactForm = ({ slice }) => {
               </h6>
             </div>
           </div>
-          <div className="flex-1">
+
+          <div className="flex-1 order-1">
             <Formik
               initialValues={{
                 firstName: '',
@@ -117,7 +118,7 @@ const ContactForm = ({ slice }) => {
                       key={input.name}
                       className="flex md:flex-col items-center flex-col gap-2 pt-2"
                     >
-                      <div className="md:text-left text-center w-full">
+                      <div className="md:text-left text-left w-full">
                         <label
                           className="md:pt-2 pt-4 md:text-[14px] text-[12px] flex-1 font-body font-light"
                           htmlFor={input.name}
@@ -134,7 +135,7 @@ const ContactForm = ({ slice }) => {
                     </div>
                   ))}
                   <div className="flex flex-col items-center gap-4">
-                    <div className="w-full md:text-left text-center  pt-3">
+                    <div className="w-full text-left  pt-3">
                       <label
                         className="md:pt-2 pt-4 text-[14px] flex-1 font-body font-light text-right"
                         htmlFor="selectedOption"
@@ -168,7 +169,7 @@ const ContactForm = ({ slice }) => {
                   </div>
                   <div className="flex flex-col pt-3">
                     <label
-                      className="text-[14px] font-body font-light md:text-left text-center pb-4"
+                      className="text-[14px] font-body font-light text-left  pb-4"
                       htmlFor="comments"
                     >
                       {slice.primary.comments}
@@ -182,7 +183,7 @@ const ContactForm = ({ slice }) => {
                     />
                   </div>
 
-                  <div className="w-full md:text-left text-center pt-3">
+                  <div className="w-full md:text-left text-left pt-3">
                     <button
                       field={slice.primary.link}
                       type="submit"
