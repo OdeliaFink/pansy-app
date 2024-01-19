@@ -1,4 +1,5 @@
 'use client';
+
 import React, { useRef, useState, useEffect } from 'react';
 import { Bounded } from '@/components/Bounded';
 import { PrismicNextImage } from '@prismicio/next';
@@ -6,7 +7,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Virtual } from 'swiper/modules';
 import 'swiper/css/bundle';
 import { register } from 'swiper/element/bundle';
-import Flower from '@/components/Flower';
+import { SwiperNavButtons } from '@/components/SwiperNavButton';
 
 register();
 /**
@@ -79,6 +80,7 @@ const PhotoGallery = ({ slice }) => {
           showsButtons={false}
           onSwiper={(swiper) => console.log(swiper)}
           scrollbar={true}
+          mousewheel={true}
           // pagination={{
           //   clickable: true,
           //   renderBullet: (index, className) => {
@@ -117,6 +119,7 @@ const PhotoGallery = ({ slice }) => {
               </SwiperSlide>
             ))}
           </div>
+          <SwiperNavButtons />
         </Swiper>
       </section>
     </div>
