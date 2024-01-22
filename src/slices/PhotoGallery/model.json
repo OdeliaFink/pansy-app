@@ -105,6 +105,22 @@
             "constraint": {},
             "thumbnails": []
           }
+        },
+        "image9": {
+          "type": "Image",
+          "config": {
+            "label": "Image9",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "image10": {
+          "type": "Image",
+          "config": {
+            "label": "Image10",
+            "constraint": {},
+            "thumbnails": []
+          }
         }
       },
       "items": {}

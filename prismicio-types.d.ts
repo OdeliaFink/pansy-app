@@ -1208,6 +1208,26 @@ export interface PhotoGallerySliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#image
    */
   image8: prismic.ImageField<never>;
+
+  /**
+   * Image9 field in *PhotoGallery → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: photo_gallery.primary.image9
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image9: prismic.ImageField<never>;
+
+  /**
+   * Image10 field in *PhotoGallery → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: photo_gallery.primary.image10
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image10: prismic.ImageField<never>;
 }
 
 /**

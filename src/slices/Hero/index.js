@@ -20,7 +20,7 @@ const Hero = ({ slice }) => {
             field={slice.primary.text}
             components={{
               heading1: ({ children }) => (
-                <Heading className="mb-6 last:mb-0 font-display text-slate-grey tracking-widest pt-4">
+                <Heading className="mb-6 last:mb-0 font-display text-mossy-green tracking-widest pt-4">
                   {children}
                 </Heading>
               ),
