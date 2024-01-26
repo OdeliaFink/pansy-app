@@ -1,6 +1,10 @@
 // import { PrismicRichText } from '@prismicio/react';
 import { Heading } from '@/components/Heading';
 import { PrismicRichText } from '@/components/PrismicRichText';
+import Maze from '../../icons/Maze.png';
+import Bird from '../../icons/Bird.png';
+import Hand from '../../icons/Hand.png';
+import House from '../../icons/House.png';
 /**
  * @typedef {import("@prismicio/client").Content.FeaturesSlice} FeaturesSlice
  * @typedef {import("@prismicio/react").SliceComponentProps<FeaturesSlice>} FeaturesProps
@@ -8,10 +12,10 @@ import { PrismicRichText } from '@/components/PrismicRichText';
  */
 
 const icons = {
-  house: <HouseIcon />,
-  lightbulb: <LightBulbIcon />,
-  globe: <GlobeIcon />,
-  leaf: <LeafIcon />,
+  house: <img src={House.src} />,
+  lightbulb: <img src={Maze.src} />,
+  globe: <img src={Bird.src} />,
+  leaf: <img src={Hand.src} />,
 };
 
 // {icons.map((item) => (

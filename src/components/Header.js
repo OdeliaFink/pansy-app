@@ -3,6 +3,8 @@ import { useState, useEffect } from 'react';
 import * as prismic from '@prismicio/client';
 import { PrismicText } from '@prismicio/react';
 import { PrismicNextImage, PrismicNextLink } from '@prismicio/next';
+import logo from '../icons/logo.png';
+console.log('🚀 ~ Logo:', logo.src);
 
 import { Bounded } from './Bounded';
 
@@ -37,16 +39,19 @@ export function Header({ locales = [], navigation }) {
           </p>
         </PrismicNextLink>
       </div>
-      <Bounded
+      <section
         as="header"
         yPadding="sm"
-        className={`sticky top-0 bg-bg-beige z-999 ${
+        className={`sticky top-0 px-12 py-3 bg-bg-beige z-999 ${
           !top && `bg-white shadow-lg`
         }`}
       >
-        <div className="flex flex-wrap items-center md:justify-between justify-center gap-x-6 gap-y-3 leading-none">
-          <PrismicNextLink field={navigation?.data.home_link}>
-            <h2 className="font-display text-[3rem]">pansy</h2>
+        <div className="flex flex-wrap flex-row items-center lg:justify-between justify-center gap-x-6 gap-y-3 leading-none">
+          <PrismicNextLink
+            field={navigation?.data.home_link}
+            className="lg:flex-1"
+          >
+            <img src={logo.src} className="w-[5rem]" />
           </PrismicNextLink>
           <nav className="flex flex-wrap items-center gap-x-3 gap-y-3 md:gap-x-10">
             <ul className="flex flex-wrap gap-6 md:gap-10">
@@ -84,7 +89,7 @@ export function Header({ locales = [], navigation }) {
             </div>
           </nav>
         </div>
-      </Bounded>
+      </section>
     </>
   );
 }
