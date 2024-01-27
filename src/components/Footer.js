@@ -7,6 +7,7 @@ import IgIcon from './IgIcon';
 // import { Heading } from './Heading';
 import { PrismicRichText } from './PrismicRichText';
 import { Bounded } from './Bounded';
+import pLogo from '../icons/p-logo.png';
 
 // function SignUpForm({ settings }) {
 //   return (
@@ -73,8 +74,9 @@ export function Footer({ settings, navigation }) {
     <Bounded className="h-auto bg-dark-beige pb-3 py-3">
       <div className="flex w-full px-2 mx-auto lg:flex-row justify-between items-center pt-1">
         <ul className="flex flex-col ">
-          <PrismicNextLink href="/">
-            <h2 className="font-display text-[2rem]">pansy</h2>
+          <PrismicNextLink href="/" className="pb-3">
+            {/* <h2 className="font-display text-[2rem]">pansy</h2> */}
+            <img src={pLogo.src} className="w-[3rem]" />
           </PrismicNextLink>
           <p className="font-body font-light md:text-[12px] text-[11px]">
             {settings.data.city}
@@ -113,7 +115,7 @@ export function Footer({ settings, navigation }) {
           <h2>{settings.data.made_by} </h2>
 
           <a
-            href="https://github.com/OdeliaFink"
+            href="https://odeliafinkel.com/"
             target="_blank"
             className="font-body font-light text-[11px] underline"
           >
