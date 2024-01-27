@@ -53,7 +53,7 @@ export function Header({ locales = [], navigation }) {
           >
             <img src={logo.src} className="w-[5rem]" />
           </PrismicNextLink>
-          <nav className="flex flex-wrap items-center gap-x-3 gap-y-3 md:gap-x-10">
+          <nav className="flex flex-wrap items-center gap-x-3 gap-y-3 md:gap-x-10 justify-center">
             <ul className="flex flex-wrap gap-6 md:gap-10">
               {navigation.data?.links.map((item) => (
                 <li
