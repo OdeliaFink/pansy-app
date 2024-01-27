@@ -92,6 +92,10 @@ const PhotoGallery = ({ slice }) => {
           //   },
           // }}
           breakpoints={{
+            320: {
+              slidesPerView: 1.5,
+              spaceBetween: 24,
+            },
             370: {
               slidesPerView: 1.5,
               spaceBetween: 24,
@@ -104,7 +108,7 @@ const PhotoGallery = ({ slice }) => {
             },
           }}
           spaceBetween={50}
-          className="xl:min-h-[36rem] lg:min-h-[26rem] md:min-h-[44rem]  min-h-[25rem]"
+          className="xl:min-h-[36rem] lg:min-h-[26rem] md:min-h-[44rem]  sm:min-h-[25rem] min-h-[7rem]"
         >
           <div>
             {slides.map((image, index) => (
@@ -115,7 +119,6 @@ const PhotoGallery = ({ slice }) => {
                   }`}
                 >
                   <PrismicNextImage field={image} className="rounded-p-sm" />
-                  {/* Render overlay only for half-visible cards */}
                   {index > lastHalfSlideIndex && (
                     <div className="absolute inset-0 bg-black opacity-50"></div>
                   )}
