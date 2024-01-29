@@ -12,10 +12,10 @@ import House from '../../icons/House.png';
  */
 
 const icons = {
-  house: <img src={House.src} />,
-  lightbulb: <img src={Maze.src} />,
-  globe: <img src={Bird.src} />,
-  leaf: <img src={Hand.src} />,
+  house: <img src={House.src} className="max-w-[12rem]" />,
+  lightbulb: <img src={Maze.src} className="max-w-[12rem]" />,
+  globe: <img src={Bird.src} className="max-w-[12rem]" />,
+  leaf: <img src={Hand.src} className="max-w-[12rem]" />,
 };
 
 // {icons.map((item) => (
