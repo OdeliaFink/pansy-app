@@ -10,10 +10,10 @@ import House from '../../icons/House.png';
  */
 
 const icons = {
-  house: <img src={House.src} className="max-w-[12rem]" />,
-  lightbulb: <img src={Maze.src} className="max-w-[12rem]" />,
-  globe: <img src={Bird.src} className="max-w-[12rem]" />,
-  leaf: <img src={Hand.src} className="max-w-[12rem]" />,
+  house: <img src={House.src} className="max-w-[12rem]" alt="house-icon" />,
+  lightbulb: <img src={Maze.src} className="max-w-[12rem]" alt="maze-icon" />,
+  globe: <img src={Bird.src} className="max-w-[12rem]" alt="bird-icon" />,
+  leaf: <img src={Hand.src} className="max-w-[12rem]" alt="hand-icon" />,
 };
 
 const Features = ({ slice }) => {
