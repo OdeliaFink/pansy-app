@@ -76,7 +76,7 @@ export function Footer({ settings, navigation }) {
         <ul className="flex flex-col ">
           <PrismicNextLink href="/" className="pb-3">
             {/* <h2 className="font-display text-[2rem]">pansy</h2> */}
-            <img src={pLogo.src} className="w-[3rem]" />
+            <img src={pLogo.src} className="w-[3rem]" alt="logo" />
           </PrismicNextLink>
           <p className="font-body font-light md:text-[12px] text-[11px]">
             {settings.data.city}
