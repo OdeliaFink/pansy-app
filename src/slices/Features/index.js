@@ -1,5 +1,3 @@
-// import { PrismicRichText } from '@prismicio/react';
-import { Heading } from '@/components/Heading';
 import { PrismicRichText } from '@/components/PrismicRichText';
 import Maze from '../../icons/Maze.png';
 import Bird from '../../icons/Bird.png';
@@ -17,15 +15,6 @@ const icons = {
   globe: <img src={Bird.src} className="max-w-[12rem]" />,
   leaf: <img src={Hand.src} className="max-w-[12rem]" />,
 };
-
-// {icons.map((item) => (
-//   <>
-//     <>{item.globe}</>
-//     <>{item.house}</>
-//     <>{item.lightbulb}</>
-//     <>{item.leaf}</>
-//   </>
-// ))}
 
 const Features = ({ slice }) => {
   return (
