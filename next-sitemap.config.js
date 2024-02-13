@@ -7,7 +7,7 @@ let policy = {
 // }
 
 module.exports = {
-  siteUrl: 'https://www.lepansy.com/',
+  siteUrl: 'https://www.lepansy.com/en-us',
   generateRobotsTxt: true,
   robotsTxtOptions: {
     policies: [policy],
