@@ -1,16 +1,30 @@
-let policy = {
-  userAgent: '*',
-};
+// let policy = {
+//   userAgent: '*',
+// };
 
-// if (process.env.environment !== 'production') {
-//   policy.disallow = '/';
-// }
+// // if (process.env.environment !== 'production') {
+// //   policy.disallow = '/';
+// // }
+
+// module.exports = {
+//   siteUrl: 'https://www.lepansy.com/en-us/',
+//   generateRobotsTxt: true,
+//   robotsTxtOptions: {
+//     policies: [policy],
+//   },
+//   outDir: './out',
+// };
+
+const siteUrl = 'https://www.lepansy.com';
 
 module.exports = {
-  siteUrl: 'https://www.lepansy.com/en-us/',
+  siteUrl,
   generateRobotsTxt: true,
   robotsTxtOptions: {
-    policies: [policy],
+    policies: [{ userAgent: '*', allow: '/' }],
+    additionalSitemaps: [
+      `${siteUrl}/sitemap.xml`,
+      `${siteUrl}/server-sitemap.xml`,
+    ],
   },
-  outDir: './out',
 };
