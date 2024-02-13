@@ -2,15 +2,14 @@
 //   policy.disallow = '/';
 // }
 
+let url = 'https://www.lepansy.com/en-us/';
+
 module.exports = {
-  siteUrl: 'https://www.lepansy.com/en-us/',
+  siteUrl: `${url}`,
   generateRobotsTxt: true,
   robotsTxtOptions: {
     policies: [{ userAgent: '*', allow: '/' }],
   },
-  additionalSitemaps: [
-    `${siteUrl}/sitemap.xml`,
-    `${siteUrl}/server-sitemap.xml`,
-  ],
+  additionalSitemaps: [`${url}/sitemap.xml`, `${url}/server-sitemap.xml`],
   outDir: './out',
 };
