@@ -2,7 +2,7 @@
 //   policy.disallow = '/';
 // }
 
-let url = 'https://www.lepansy.com/en-us/';
+let url = 'https://www.lepansy.com/';
 
 module.exports = {
   siteUrl: `${url}`,
