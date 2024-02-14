@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /accounts
+
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+
+Sitemap: https://www.lepansy.com/sitemap.xml
