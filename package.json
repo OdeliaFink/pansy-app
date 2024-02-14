@@ -11,8 +11,7 @@
     "start": "next start",
     "lint": "next lint",
     "slicemachine": "start-slicemachine",
-    "format": "prettier --write .",
-    "postbuild": "next-sitemap"
+    "format": "prettier --write ."
   },
   "dependencies": {
     "@prismicio/client": "^7.3.1",
