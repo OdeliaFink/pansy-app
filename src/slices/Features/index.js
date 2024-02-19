@@ -17,7 +17,7 @@ const icons = {
     <Image
       width={192}
       height={148}
-      src={House.src}
+      src={House}
       className="max-w-[12rem]"
       alt="house-icon"
     />
@@ -26,7 +26,7 @@ const icons = {
     <Image
       width={192}
       height={148}
-      src={Maze.src}
+      src={Maze}
       className="max-w-[12rem]"
       alt="maze-icon"
     />
@@ -35,7 +35,7 @@ const icons = {
     <Image
       width={192}
       height={148}
-      src={Bird.src}
+      src={Bird}
       className="max-w-[12rem]"
       alt="bird-icon"
     />
@@ -44,7 +44,7 @@ const icons = {
     <Image
       width={192}
       height={148}
-      src={Hand.src}
+      src={Hand}
       className="max-w-[12rem]"
       alt="hand-icon"
     />

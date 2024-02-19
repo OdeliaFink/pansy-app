@@ -75,7 +75,7 @@ export function Footer({ settings, navigation }) {
             <Image
               width={48}
               height={49}
-              src={pLogo.src}
+              src={pLogo}
               className="w-[3rem]"
               alt="logo"
             />

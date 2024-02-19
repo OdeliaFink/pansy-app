@@ -48,7 +48,7 @@ export function Header({ locales = [], navigation }) {
             <Image
               width={80}
               height={82}
-              src={logo.src}
+              src={logo}
               className="w-[5rem]"
               alt=""
             />
