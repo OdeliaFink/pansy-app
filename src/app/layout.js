@@ -1,13 +1,11 @@
 'use client';
 
 import './globals.css';
-import { createClient } from '@/prismicio';
 import { Caprasimo, Work_Sans } from 'next/font/google';
 import { PrismicPreview } from '@prismicio/next';
 import clsx from 'clsx';
 import { AnimatePresence } from 'framer-motion';
 import { repositoryName } from '@/prismicio';
-import Banner from '@/slices/Banner';
 
 export const caprasimo = Caprasimo({
   subsets: ['latin'],
@@ -25,9 +23,7 @@ export const workSans = Work_Sans({
 /**
  * @param {{ children: React.ReactNode }}
  */
-export default async function RootLayout({ children }) {
-  const client = createClient();
-  const homePage = await client.getByUID('page', 'home');
+export default function RootLayout({ children }) {
 
   return (
     <AnimatePresence mode="wait" initial={false}>
@@ -36,7 +32,6 @@ export default async function RootLayout({ children }) {
         className={clsx('max-w-full', caprasimo.variable, workSans.variable)}
       >
         <body className="overflow-x-hidden antialiased bg-bg-beige max-w-full">
-          {/* {homePage === 'home' && <Banner />} */}
           {children}
           <PrismicPreview repositoryName={repositoryName} />
         </body>
