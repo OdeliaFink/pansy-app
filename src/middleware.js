@@ -5,7 +5,8 @@ export async function middleware(request) {
   const client = createClient();
   if (
     request.nextUrl.pathname.startsWith("/sitemap") ||
-    request.nextUrl.pathname.startsWith("/robots")
+    request.nextUrl.pathname.startsWith("/robots") ||
+    request.nextUrl.pathname.startsWith("/icons/")
   ) {
     return;
   }
