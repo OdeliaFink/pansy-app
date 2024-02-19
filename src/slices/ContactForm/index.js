@@ -183,7 +183,7 @@ const ContactForm = ({ slice }) => {
                     />
                   </div>
 
-                  <div className="w-full md:text-left text-left pt-3">
+                  <div className="w-full md:text-left text-left py-3">
                     <button
                       field={slice.primary.link}
                       type="submit"

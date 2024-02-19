@@ -1,6 +1,5 @@
 'use client';
 import { Bounded } from '@/components/Bounded';
-import Flower from '@/components/Flower';
 import { useState } from 'react';
 
 const Values = ({ slice }) => {
@@ -20,7 +19,6 @@ const Values = ({ slice }) => {
       <div className="flex md:flex-row flex-col md:items-center md:gap-[11rem]">
         <div className="max-w-[28rem] md:text-left text-center md:pl-[4rem]">
           <div className="flex flex-col justify-center">
-            {/* <Flower /> */}
             <h1 className="lg:text-[4rem] text-[3rem] font-display font-regular">
               {slice.primary.heading}
             </h1>
@@ -46,7 +44,7 @@ const Values = ({ slice }) => {
                   </div>
                 </div>
                 <div
-                  className={`font-light text-[.8rem] md:text-[1rem] w-full mx-auto font-body font-light break-words hyphens-none transition-all ${
+                  className={`font-light text-[.8rem] md:text-[1rem] w-full mx-auto font-body pb-6 break-words hyphens-none transition-all ${
                     activeItem === index
                       ? 'h-auto opacity-100'
                       : 'h-0 opacity-0'

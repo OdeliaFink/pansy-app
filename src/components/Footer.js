@@ -1,13 +1,9 @@
-import { PrismicText } from '@prismicio/react';
-import { PrismicNextLink } from '@prismicio/next';
-import * as prismic from '@prismicio/client';
-import Link from 'next/link';
-import IgIcon from './IgIcon';
-// import { Bounded } from './Bounded';
-// import { Heading } from './Heading';
-import { PrismicRichText } from './PrismicRichText';
-import { Bounded } from './Bounded';
-import pLogo from '../icons/p-logo.png';
+import { PrismicText } from "@prismicio/react";
+import { PrismicNextLink } from "@prismicio/next";
+import IgIcon from "./IgIcon";
+import { Bounded } from "./Bounded";
+import pLogo from "../icons/p-logo.png";
+import Image from "next/image";
 
 // function SignUpForm({ settings }) {
 //   return (
@@ -76,7 +72,13 @@ export function Footer({ settings, navigation }) {
         <ul className="flex flex-col ">
           <PrismicNextLink href="/" className="pb-3">
             {/* <h2 className="font-display text-[2rem]">pansy</h2> */}
-            <img src={pLogo.src} className="w-[3rem]" alt="logo" />
+            <Image
+              width={48}
+              height={49}
+              src={pLogo.src}
+              className="w-[3rem]"
+              alt="logo"
+            />
           </PrismicNextLink>
           <p className="font-body font-light md:text-[12px] text-[11px]">
             {settings.data.city}
@@ -93,8 +95,7 @@ export function Footer({ settings, navigation }) {
             <PrismicNextLink
               key={index}
               field={item.link}
-              className="font-body font-light text-[14px]"
-            >
+              className="font-body font-light text-[14px]">
               <PrismicText field={item.label} />
             </PrismicNextLink>
           ))}
@@ -104,8 +105,7 @@ export function Footer({ settings, navigation }) {
             <a
               href="https://www.instagram.com/pansy.gardens/"
               target="_blank"
-              alt="ig-logo"
-            >
+              alt="ig-logo">
               <IgIcon />
             </a>
             <p className="font-body font-light text-right md:text-[12px] text-[10px]">
@@ -121,8 +121,7 @@ export function Footer({ settings, navigation }) {
           <a
             href="https://odeliafinkel.com/"
             target="_blank"
-            className="font-body font-light text-[11px] underline"
-          >
+            className="font-body font-light text-[11px] underline">
             Odelia Finkelstein
           </a>
         </div>

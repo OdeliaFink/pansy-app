@@ -3,6 +3,9 @@ import { createClient } from "@/prismicio";
 
 export async function middleware(request) {
   const client = createClient();
+  if (request.nextUrl.pathname.startsWith('/sitemap')) {
+    return;
+  }
   const redirect = await createLocaleRedirect({ client, request });
 
   if (redirect) {

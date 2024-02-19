@@ -5,7 +5,7 @@ export async function POST(request) {
 
   // Optional logging to see the responses in the command line where the
   // Next.js app is running.
-  console.log(formData);
+  // console.log(formData);
 
   // Guard clause checks for email and returns early if it is not found.
   if (!formData.email) {
