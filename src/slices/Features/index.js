@@ -1,8 +1,11 @@
-import { PrismicRichText } from '@/components/PrismicRichText';
-import Maze from '../../icons/Maze.png';
-import Bird from '../../icons/Bird.png';
-import Hand from '../../icons/Hand.png';
-import House from '../../icons/House.png';
+import { PrismicRichText } from "@/components/PrismicRichText";
+import Maze from "../../icons/Maze.png";
+import Bird from "../../icons/Bird.png";
+import Hand from "../../icons/Hand.png";
+import House from "../../icons/House.png";
+import React from "react";
+import Image from "next/image";
+
 /**
  * @typedef {import("@prismicio/client").Content.FeaturesSlice} FeaturesSlice
  * @typedef {import("@prismicio/react").SliceComponentProps<FeaturesSlice>} FeaturesProps
@@ -10,10 +13,42 @@ import House from '../../icons/House.png';
  */
 
 const icons = {
-  house: <img src={House.src} className="max-w-[12rem]" alt="house-icon" />,
-  lightbulb: <img src={Maze.src} className="max-w-[12rem]" alt="maze-icon" />,
-  globe: <img src={Bird.src} className="max-w-[12rem]" alt="bird-icon" />,
-  leaf: <img src={Hand.src} className="max-w-[12rem]" alt="hand-icon" />,
+  house: (
+    <Image
+      width={192}
+      height={148}
+      src={House.src}
+      className="max-w-[12rem]"
+      alt="house-icon"
+    />
+  ),
+  lightbulb: (
+    <Image
+      width={192}
+      height={148}
+      src={Maze.src}
+      className="max-w-[12rem]"
+      alt="maze-icon"
+    />
+  ),
+  globe: (
+    <Image
+      width={192}
+      height={148}
+      src={Bird.src}
+      className="max-w-[12rem]"
+      alt="bird-icon"
+    />
+  ),
+  leaf: (
+    <Image
+      width={192}
+      height={148}
+      src={Hand.src}
+      className="max-w-[12rem]"
+      alt="hand-icon"
+    />
+  ),
 };
 
 const Features = ({ slice }) => {
@@ -21,8 +56,7 @@ const Features = ({ slice }) => {
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
-      className="py-8"
-    >
+      className="py-8">
       <div className="bg-medium-beige py-2">
         <div className="py-[1rem]">
           <div className=" flex md:flex-row flex-col justify-center md:gap-[2rem] md:gap-10 gap-2  mx-auto sm:place-items-start place-items-center px-6 ">
@@ -68,5 +102,3 @@ const Features = ({ slice }) => {
 };
 
 export default Features;
-
-import React from 'react';
