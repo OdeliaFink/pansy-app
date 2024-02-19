@@ -4,7 +4,6 @@ import * as prismic from "@prismicio/client";
 import { PrismicText } from "@prismicio/react";
 import { PrismicNextLink } from "@prismicio/next";
 import Image from "next/image";
-import logo from "../icons/logo.png";
 
 const localeLabels = {
   "en-us": "EN",
@@ -48,7 +47,7 @@ export function Header({ locales = [], navigation }) {
             <Image
               width={80}
               height={82}
-              src={logo}
+              src={'/icons/logo.png'}
               className="w-[5rem]"
               alt=""
             />

@@ -2,7 +2,6 @@ import { PrismicText } from "@prismicio/react";
 import { PrismicNextLink } from "@prismicio/next";
 import IgIcon from "./IgIcon";
 import { Bounded } from "./Bounded";
-import pLogo from "../icons/p-logo.png";
 import Image from "next/image";
 
 // function SignUpForm({ settings }) {
@@ -75,7 +74,7 @@ export function Footer({ settings, navigation }) {
             <Image
               width={48}
               height={49}
-              src={pLogo}
+              src={'/icons/p-logo.png'}
               className="w-[3rem]"
               alt="logo"
             />

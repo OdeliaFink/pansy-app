@@ -1,8 +1,4 @@
 import { PrismicRichText } from "@/components/PrismicRichText";
-import Maze from "../../icons/Maze.png";
-import Bird from "../../icons/Bird.png";
-import Hand from "../../icons/Hand.png";
-import House from "../../icons/House.png";
 import React from "react";
 import Image from "next/image";
 
@@ -17,7 +13,7 @@ const icons = {
     <Image
       width={192}
       height={148}
-      src={House}
+      src={'/icons/House.png'}
       className="max-w-[12rem]"
       alt="house-icon"
     />
@@ -26,7 +22,7 @@ const icons = {
     <Image
       width={192}
       height={148}
-      src={Maze}
+      src={'/icons/Maze.png'}
       className="max-w-[12rem]"
       alt="maze-icon"
     />
@@ -35,7 +31,7 @@ const icons = {
     <Image
       width={192}
       height={148}
-      src={Bird}
+      src={'/icons/Bird.png'}
       className="max-w-[12rem]"
       alt="bird-icon"
     />
@@ -44,7 +40,7 @@ const icons = {
     <Image
       width={192}
       height={148}
-      src={Hand}
+      src={'/icons/Hand.png'}
       className="max-w-[12rem]"
       alt="hand-icon"
     />
