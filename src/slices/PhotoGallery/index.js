@@ -81,8 +81,8 @@ const PhotoGallery = ({ slice }) => {
           onSlideChange={handleSlideChange}
           runCallbacksOnInit={true}
           slidesPerView={3.5}
-          showsButtons={false}
-          onSwiper={(swiper) => console.log(swiper)}
+          // showsButtons={false}
+          // onSwiper={(swiper) => console.log(swiper)}
           scrollbar={true}
           mousewheel={true}
           // pagination={{

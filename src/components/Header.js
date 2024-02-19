@@ -4,7 +4,6 @@ import * as prismic from '@prismicio/client';
 import { PrismicText } from '@prismicio/react';
 import { PrismicNextImage, PrismicNextLink } from '@prismicio/next';
 import logo from '../icons/logo.png';
-console.log('🚀 ~ Logo:', logo.src);
 
 import { Bounded } from './Bounded';
 
@@ -41,7 +40,6 @@ export function Header({ locales = [], navigation }) {
       </div>
       <section
         as="header"
-        yPadding="sm"
         className={`sticky top-0 px-12 py-3 bg-bg-beige z-999 ${
           !top && `bg-white shadow-lg`
         }`}
@@ -51,7 +49,7 @@ export function Header({ locales = [], navigation }) {
             field={navigation?.data.home_link}
             className="lg:flex-1"
           >
-            <img src={logo.src} className="w-[5rem]" alt="logo" />
+            <img src={logo.src} className="w-[5rem]" alt="" />
           </PrismicNextLink>
           <nav className="flex flex-wrap items-center gap-x-3 gap-y-3 md:gap-x-10 justify-center">
             <ul className="flex flex-wrap gap-6 md:gap-10">
