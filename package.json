@@ -11,7 +11,8 @@
     "start": "next start",
     "lint": "next lint",
     "slicemachine": "start-slicemachine",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "postbuild": "next-sitemap"
   },
   "dependencies": {
     "@prismicio/client": "^7.3.1",
@@ -28,7 +29,7 @@
     "react-dom": "^18.2.0",
     "react-fast-marquee": "^1.6.2",
     "react-router-dom": "^6.20.0",
-    "swiper": "^10.3.1",
+    "swiper": "^11.0.6",
     "yup": "^1.3.2"
   },
   "devDependencies": {
