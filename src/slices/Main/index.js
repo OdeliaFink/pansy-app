@@ -18,7 +18,7 @@ const Main = ({ slice }) => {
         <PrismicNextImage
           field={slice.primary.image}
           className={clsx(
-            'w-full h-[38rem] 2xl:h-[50rem] mx-auto object-cover z-10 opacity-75'
+            'w-full h-[38rem] 2xl:h-[50rem] mx-auto object-cover z-10 '
           )}
         />
       </div>
@@ -34,7 +34,8 @@ const Main = ({ slice }) => {
             <h1 className="leading-none tracking-widest font-display md:text-[9rem] pb-2 text-[5rem] text-bg-beige">
               {slice.primary.title}
             </h1>
-            <p className="font-light font-body text-[#4A5043] text-[1.5rem] md:w-[50%] w-[80%] mx-auto">
+
+            <p className="font-light font-body text-pansy-white [text-shadow:_3px_3px_2px_rgb(0_0_0_/_90%)] text-[2.4rem] w-full mx-auto">
               {slice.primary.desc}
             </p>
           </div>

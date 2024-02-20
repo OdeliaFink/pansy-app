@@ -1,6 +1,6 @@
-import { PrismicRichText } from "@/components/PrismicRichText";
-import React from "react";
-import Image from "next/image";
+import { PrismicRichText } from '@/components/PrismicRichText';
+import React from 'react';
+import Image from 'next/image';
 
 /**
  * @typedef {import("@prismicio/client").Content.FeaturesSlice} FeaturesSlice
@@ -52,10 +52,11 @@ const Features = ({ slice }) => {
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
-      className="py-8">
+      className="py-8"
+    >
       <div className="bg-medium-beige py-2">
         <div className="py-[1rem]">
-          <div className=" flex md:flex-row flex-col justify-center md:gap-[2rem] md:gap-10 gap-2  mx-auto sm:place-items-start place-items-center px-6 ">
+          <div className=" flex md:flex-row flex-col justify-center   mx-auto sm:place-items-start place-items-center px-6 ">
             {slice.items.map((item, index) => (
               <div key={index} className="bg-medium-beige py-2 flex flex-col ">
                 <div className="flex flex-col justify-center text-center">
