@@ -1,13 +1,13 @@
-"use client";
-import { useState, useEffect } from "react";
-import * as prismic from "@prismicio/client";
-import { PrismicText } from "@prismicio/react";
-import { PrismicNextLink } from "@prismicio/next";
-import Image from "next/image";
+'use client';
+import { useState, useEffect } from 'react';
+import * as prismic from '@prismicio/client';
+import { PrismicText } from '@prismicio/react';
+import { PrismicNextLink } from '@prismicio/next';
+import Image from 'next/image';
 
 const localeLabels = {
-  "en-us": "EN",
-  "fr-ca": "FR",
+  'en-us': 'EN',
+  'fr-ca': 'FR',
 };
 
 export function Header({ locales = [], navigation }) {
@@ -17,8 +17,8 @@ export function Header({ locales = [], navigation }) {
     const scrollHandler = () => {
       window.scrollY > 10 ? setTop(false) : setTop(true);
     };
-    window.addEventListener("scroll", scrollHandler);
-    return () => window.removeEventListener("scroll", scrollHandler);
+    window.addEventListener('scroll', scrollHandler);
+    return () => window.removeEventListener('scroll', scrollHandler);
   }, [top]);
 
   return (
@@ -29,7 +29,8 @@ export function Header({ locales = [], navigation }) {
         </p>
         <PrismicNextLink
           field={navigation?.data.welcome_banner[0].button_link}
-          className=" decoration-1 font-semibold">
+          className=" decoration-1 font-semibold"
+        >
           <p className="hover:text-sage-green hover:ease-in-out duration-500">
             {navigation?.data.welcome_banner[0].button_label}
           </p>
@@ -39,11 +40,13 @@ export function Header({ locales = [], navigation }) {
         as="header"
         className={`sticky top-0 px-12 py-3 bg-bg-beige z-999 ${
           !top && `bg-white shadow-lg`
-        }`}>
-        <div className="flex flex-wrap flex-row items-center lg:justify-between justify-center gap-x-6 gap-y-3 leading-none">
+        }`}
+      >
+        <div className="flex flex-wrap flex-row items-center md:justify-between justify-center gap-x-6 gap-y-3 leading-none">
           <PrismicNextLink
             field={navigation?.data.home_link}
-            className="lg:flex-1">
+            className="lg:flex-1"
+          >
             <Image
               width={80}
               height={82}
@@ -57,10 +60,12 @@ export function Header({ locales = [], navigation }) {
               {navigation.data?.links.map((item) => (
                 <li
                   key={prismic.asText(item.label)}
-                  className="font-semibold tracking-tight text-slate-800">
+                  className="font-semibold tracking-tight text-slate-800"
+                >
                   <PrismicNextLink
                     field={item.link}
-                    className="font-body font-light hover:text-sage-green">
+                    className="font-body font-light hover:text-sage-green"
+                  >
                     <PrismicText field={item.label} />
                   </PrismicNextLink>
                 </li>
@@ -71,11 +76,13 @@ export function Header({ locales = [], navigation }) {
                 {locales.map((locale) => (
                   <li
                     key={locale.lang}
-                    className="first:font-bold first:text-mossy-green text-lg font-light">
+                    className="first:font-bold first:text-mossy-green text-lg font-light"
+                  >
                     <PrismicNextLink
                       href={locale.url}
                       locale={locale.lang}
-                      aria-label={`Change language to ${locale.lang_name}`}>
+                      aria-label={`Change language to ${locale.lang_name}`}
+                    >
                       {localeLabels[locale.lang] || locale.lang}
                     </PrismicNextLink>
                   </li>

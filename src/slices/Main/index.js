@@ -31,11 +31,11 @@ const Main = ({ slice }) => {
         <div className="mt-[-50rem] opacity-1 ">
           {' '}
           <div className="text-center leading-none">
-            <h1 className="leading-none tracking-widest font-display md:text-[9rem] pb-2 text-[5rem] text-bg-beige">
+            <h1 className="leading-none tracking-widest font-display md:text-[9rem] pb-2 text-[6rem] text-bg-beige">
               {slice.primary.title}
             </h1>
 
-            <p className="font-light font-body text-pansy-white [text-shadow:_3px_3px_2px_rgb(0_0_0_/_90%)] text-[2.4rem] w-full mx-auto">
+            <p className="font-light font-body text-bg-beige [text-shadow:_0px_1px_5px_rgb(0_0_0_/_90%)] md:text-[2.4rem] text-[2rem] w-full mx-auto">
               {slice.primary.desc}
             </p>
           </div>
