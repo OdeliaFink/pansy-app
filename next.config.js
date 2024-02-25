@@ -5,4 +5,17 @@ const nextConfig = async () => {
   };
 };
 
-module.exports = nextConfig;
+const redirects = async () => {
+  return [
+    {
+      source: '/',
+      destination: '/fr-ca',
+      permanent: true,
+    },
+  ];
+};
+
+module.exports = {
+  ...nextConfig,
+  redirects,
+};
