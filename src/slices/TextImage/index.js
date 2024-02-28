@@ -16,7 +16,7 @@ const TextImage = ({ slice }) => {
     <Bounded
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
-      className="py-1"
+      className="py-1 pb-4"
     >
       <div className="grid lg:gap-15 md:gap-10 gap:1 md:grid-cols-2 place-items-center md:py-8 py-6 first:pt-0">
         <PrismicNextImage
