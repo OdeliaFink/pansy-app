@@ -35,7 +35,7 @@ const Main = ({ slice }) => {
               {slice.primary.title}
             </h1>
 
-            <p className="font-light font-body text-bg-beige [text-shadow:_0px_1px_5px_rgb(0_0_0_/_90%)] md:text-[2.4rem] text-[2rem] w-full mx-auto">
+            <p className="font-light font-body text-bg-beige [text-shadow:_0px_1px_5px_rgb(0_0_0_/_90%)] md:text-[2.2rem] text-[1.5rem] w-full mx-auto">
               {slice.primary.desc}
             </p>
           </div>
