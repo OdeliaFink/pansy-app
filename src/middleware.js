@@ -3,6 +3,8 @@ import { createClient } from "@/prismicio";
 
 export async function middleware(request) {
   const client = createClient();
+  
+  // Bypass locale redirect for these paths
   if (
     request.nextUrl.pathname.startsWith("/sitemap") ||
     request.nextUrl.pathname.startsWith("/robots") ||
@@ -10,6 +12,16 @@ export async function middleware(request) {
   ) {
     return;
   }
+  
+  // Default to French if the path is root ("/") and no locale is present
+  const { pathname } = request.nextUrl;
+  if (pathname === "/") {
+    const url = request.nextUrl.clone();
+    url.pathname = "/fr-ca";
+    return Response.redirect(url, 302);  // Temporary redirect to /fr-ca
+  }
+  
+  // Otherwise, rely on Prismic's locale redirect logic
   const redirect = await createLocaleRedirect({ client, request });
 
   if (redirect) {
