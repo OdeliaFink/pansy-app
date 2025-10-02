@@ -121,6 +121,22 @@
             "constraint": {},
             "thumbnails": []
           }
+        },
+        "image11": {
+          "type": "Image",
+          "config": {
+            "label": "Image11",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "image12": {
+          "type": "Image",
+          "config": {
+            "label": "Image12",
+            "constraint": {},
+            "thumbnails": []
+          }
         }
       },
       "items": {}

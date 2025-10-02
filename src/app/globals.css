@@ -9,6 +9,34 @@
 }
 
 @layer utilities {
+  /* Main tint overlay: transparent top → heavy bottom */
+  .hero-overlay {
+    background-image: linear-gradient(
+      to bottom,
+      rgba(176,158,141,0) 0%,
+      rgba(176,158,141,0.03) 18%,
+      rgba(176,158,141,0.08) 30%,
+      rgba(176,158,141,0.18) 45%,
+      rgba(176,158,141,0.32) 60%,
+      rgba(176,158,141,0.56) 80%,
+      rgba(176,158,141,0.90) 100%
+    );
+  }
+
+  /* Feather strip to hide any seam at the first visible stop */
+  .hero-feather {
+    /* ~96px tall soft fade; adjust as needed */
+    background-image: linear-gradient(
+      to bottom,
+      rgba(176,158,141,0.10) 0%,
+      rgba(176,158,141,0.05) 60%,
+      rgba(176,158,141,0) 100%
+    );
+  }
+}
+
+
+@layer utilities {
   @layer utilities {
     .paused {
       animation-play-state: paused;

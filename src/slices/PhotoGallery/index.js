@@ -68,64 +68,39 @@ const PhotoGallery = ({ slice }) => {
         data-slice-variation={slice.variation}
         className="flex justify-center flex-row flex-wrap gap-8 py-6 md:px-[2rem] pl-[1rem] overflow-x-hidden"
       >
-        {/* <div className="pt-10 pb-4 flex md:flex-row flex-col items-center lg:px-[4.5rem] px-2 gap-12">
-          <h1 className="font-body text-[3rem] text-left leading-none text-mossy-green font-display">
-            {slice.primary.header}
-          </h1>
-          <div className="flex flex-col text-left">
-            <p>{slice.primary.desc}</p>
-            <p>{slice.primary.desc2}</p>
-          </div>
-        </div> */}
         <Swiper
           onSlideChange={handleSlideChange}
           runCallbacksOnInit={true}
           slidesPerView={3.5}
-          // showsButtons={false}
-          // onSwiper={(swiper) => console.log(swiper)}
           scrollbar={true}
           mousewheel={true}
-          // pagination={{
-          //   clickable: true,
-          //   renderBullet: (index, className) => {
-          //     return `<span class="${className}" style="background-color: #737F51;"></span>`;
-          //   },
-          // }}
           breakpoints={{
-            320: {
-              slidesPerView: 1.5,
-              spaceBetween: 24,
-            },
-            370: {
-              slidesPerView: 1.5,
-              spaceBetween: 24,
-            },
-            770: {
-              slidesPerView: 3.5,
-            },
-            1000: {
-              slidesPerView: 3.5,
-            },
+            320:  { slidesPerView: 1.5, spaceBetween: 24 },
+            370:  { slidesPerView: 1.5, spaceBetween: 24 },
+            770:  { slidesPerView: 3.5 },
+            1000: { slidesPerView: 3.5 },
           }}
           spaceBetween={50}
-          className="xl:min-h-[36rem] lg:min-h-[26rem] md:min-h-[44rem]  sm:min-h-[25rem] min-h-[7rem]"
+          className="h-auto" 
         >
           <div>
             {slides.map((image, index) => (
               <SwiperSlide key={index}>
+                {/* SIZED + ROUNDED WRAPPER → image fills & clips to radius */}
                 <div
-                  className={`relative ${
-                    index > lastHalfSlideIndex ? 'opacity-40' : ''
-                  }`}
+                  className="relative h-80 md:h-96 w-full overflow-hidden rounded-p-sm"
+                  // Uncomment next line if iOS/Safari ever shows square corners:
+                  // style={{ WebkitMaskImage: '-webkit-radial-gradient(white, black)' }}
                 >
-                  <PrismicNextImage field={image} className="rounded-p-sm" />
+                  <PrismicNextImage field={image} fill className="object-cover" />
                   {index > lastHalfSlideIndex && (
-                    <div className="absolute inset-0 bg-black opacity-50"></div>
+                    <div className="absolute inset-0 bg-black/50" />
                   )}
                 </div>
               </SwiperSlide>
             ))}
           </div>
+
           <SwiperNavButtons />
         </Swiper>
       </section>
