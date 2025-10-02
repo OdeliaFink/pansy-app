@@ -16,7 +16,8 @@ const Main = ({ slice }) => {
     >
      
 
-    <div className="relative isolate w-full h-[40rem] 2xl:h-[50rem] overflow-hidden">
+   <div className="relative isolate w-full h-[30rem] sm:h-[28rem] md:h-[32rem] lg:h-[36rem] xl:h-[40rem] 2xl:h-[50rem] overflow-hidden">
+
   {/* Base image */}
  <PrismicNextImage field={slice.primary.image} className="w-full h-full object-cover" />
 
