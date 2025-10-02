@@ -24,12 +24,12 @@ export function Header({ locales = [], navigation }) {
   return (
     <>
       <div className="bg-medium-beige flex md:text-left text-center justify-center font-light py-2 md:flex-row flex-col">
-        <p className="font-body mr-1 md:text-[16px] text-[8px] items-center">
+        <p className="font-body mr-1 md:text-[16px] text-[12px] items-center">
           {navigation?.data.welcome_banner[0].header}
         </p>
         <PrismicNextLink
           field={navigation?.data.welcome_banner[0].button_link}
-          className=" decoration-1 font-semibold md:text-[16px] text-[10px]"
+          className=" decoration-1 font-semibold md:text-[16px] text-[12px]"
         >
           <p className="hover:text-sage-green hover:ease-in-out duration-500">
             {navigation?.data.welcome_banner[0].button_label}
@@ -55,7 +55,7 @@ export function Header({ locales = [], navigation }) {
               alt=""
             />
           </PrismicNextLink>
-          <nav className="flex flex-wrap items-center gap-x-3 gap-y-3 md:gap-x-10 justify-center md:text-[16px] text-[13px]">
+          <nav className="flex flex-wrap items-center gap-x-3 gap-y-3 md:gap-x-10 justify-center md:text-[16px] text-[15px]">
             <ul className="flex flex-wrap gap-6 md:gap-10">
               {navigation.data?.links.map((item) => (
                 <li
