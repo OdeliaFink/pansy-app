@@ -11,7 +11,15 @@ import clsx from 'clsx';
  * @typedef {import("@prismicio/react").SliceComponentProps<TextImageSlice>} TextImageProps
  * @param {TextImageProps}
  */
+const nnbsp = '\u202F'; // narrow non-breaking space (French spacing)
+const keepFrenchQuotes = (s) =>
+  typeof s === 'string'
+    ? s.replace(/«\s*/g, `«${nnbsp}`).replace(/\s*»/g, `${nnbsp}»`)
+    : s;
+
+
 const TextImage = ({ slice }) => {
+  
   return (
     <Bounded
       data-slice-type={slice.slice_type}
@@ -36,13 +44,13 @@ const TextImage = ({ slice }) => {
           )}
         >
           <h2 className="leading-tight tracking-tight font-display text-mossy-green lg:text-[4rem] text-[3rem] pt-6">
-            {slice.primary.heading}
+             {keepFrenchQuotes(slice.primary.heading)}
           </h2>
           <p className='className="lg:text-[15px] font-body text-slate-600"'>
-            {slice.primary.body}
+  {keepFrenchQuotes(slice.primary.body)}
           </p>
           <h2 className="font-semibold font-body lg:text-[15px] text-[13px]">
-            {slice.primary.body_2}
+            {keepFrenchQuotes(slice.primary.body_2)}
           </h2>
 
           {slice?.primary?.label && (
