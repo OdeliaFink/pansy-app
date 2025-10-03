@@ -61,7 +61,7 @@ export function Footer({ settings, navigation }) {
           <h2>{settings.data.made_by} </h2>
 
           <a
-            href="https://odeliafinkel.com/"
+            href="https://www.linkedin.com/in/odeliafink/"
             target="_blank"
             className="font-body font-light text-[11px] underline"
           >
@@ -69,7 +69,7 @@ export function Footer({ settings, navigation }) {
           </a>
         </div>
         <div>
-          <h6>© 2024 pansy</h6>
+          <h6>© 2025 pansy</h6>
         </div>
       </div>
     </Bounded>
