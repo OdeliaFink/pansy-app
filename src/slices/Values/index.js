@@ -14,12 +14,12 @@ const Values = ({ slice }) => {
     <Bounded
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
-      className="bg-medium-beige my-[6rem]"
+      className="bg-medium-beige"
     >
-      <div className="flex md:flex-row flex-col md:items-center md:gap-[11rem]">
-        <div className="max-w-[28rem] md:text-left text-center md:pl-[4rem]">
+      <div className="flex md:flex-row flex-col md:items-center md:gap-[11rem] mb-[3rem]">
+        <div className="max-w-[28rem] md:text-left text-center md:pl-[4rem] mt-[4rem]">
           <div className="flex flex-col justify-center">
-            <h1 className="lg:text-[4rem] text-[3rem] font-display font-regular">
+            <h1 className="lg:text-[4rem] text-[3rem] font-display font-regular leading-none">
               {slice.primary.heading}
             </h1>
           </div>
@@ -27,9 +27,9 @@ const Values = ({ slice }) => {
             {slice.primary.subheading}
           </p>
         </div>
-        <div className="flex flex-col md:w-full">
+        <div className="flex flex-col md:w-full leading-none">
           {slice.items.map((item, index) => (
-            <div key={index} className="flex flex-col md:text-left ml-auto ">
+            <div key={index} className="flex flex-col md:text-left ml-auto leading-none ">
               <div className="my-6 border-gray-300" />
               <div className="flex flex-col gap-3 hover:pointer">
                 <div
