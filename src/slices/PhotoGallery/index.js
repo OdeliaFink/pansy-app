@@ -83,6 +83,12 @@ const PhotoGallery = ({ slice }) => {
           770:  { slidesPerView: 3.5, spaceBetween: 40 },
           1000: { slidesPerView: 3.5, spaceBetween: 50 },
         }}
+       style={{
+    '--swiper-navigation-color': '#ffffff',      // white color
+    '--swiper-navigation-size': '42px',          // ⬅️ makes arrows larger
+    '--swiper-navigation-sides-offset': '20px',  // optional: moves them further from edges
+    fontWeight: '700',                           // adds thickness if font-based icon
+  }}
         className="h-auto"
       >
           <div>
