@@ -34,7 +34,7 @@ const Main = ({ slice }) => {
       <h1 className="leading-none tracking-normal pb-4 font-display md:text-[12rem] text-[6rem] text-bg-beige">
         {slice.primary.title}
       </h1>
-      <p className="uppercase font-body text-pansy-white md:text-xl text-xs w-full mx-auto">
+      <p className="uppercase font-body text-pansy-white md:text-2xl w-full mx-auto">
         {slice.primary.desc}
       </p>
       <div className="pt-[4rem]">
