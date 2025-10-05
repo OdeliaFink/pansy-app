@@ -4,7 +4,7 @@ import React, { useRef, useState, useEffect } from 'react';
 import { Bounded } from '@/components/Bounded';
 import { PrismicNextImage } from '@prismicio/next';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Virtual } from 'swiper/modules';
+import { Navigation, Scrollbar, Mousewheel, Virtual } from 'swiper/modules';
 import 'swiper/css/bundle';
 import { register } from 'swiper/element/bundle';
 import { SwiperNavButtons } from '@/components/SwiperNavButton';
@@ -68,21 +68,23 @@ const PhotoGallery = ({ slice }) => {
         data-slice-variation={slice.variation}
         className="flex justify-center flex-row flex-wrap gap-8 py-6 md:px-[2rem] pl-[1rem] overflow-x-hidden"
       >
-        <Swiper
-          onSlideChange={handleSlideChange}
-          runCallbacksOnInit={true}
-          slidesPerView={3.5}
-          scrollbar={true}
-          mousewheel={true}
-          breakpoints={{
-            320:  { slidesPerView: 1.5, spaceBetween: 24 },
-            370:  { slidesPerView: 1.5, spaceBetween: 24 },
-            770:  { slidesPerView: 3.5 },
-            1000: { slidesPerView: 3.5 },
-          }}
-          spaceBetween={50}
-          className="h-auto" 
-        >
+      <Swiper
+        modules={[Navigation, Scrollbar, Mousewheel, Virtual]}
+        onSlideChange={handleSlideChange}
+        runCallbacksOnInit
+        slidesPerView={3.5}
+        spaceBetween={50}
+        navigation
+        scrollbar={{ draggable: true }}
+        mousewheel={{ forceToAxis: true, releaseOnEdges: true, thresholdDelta: 50 }}
+        breakpoints={{
+          320:  { slidesPerView: 1.5, spaceBetween: 24 },
+          370:  { slidesPerView: 1.5, spaceBetween: 24 },
+          770:  { slidesPerView: 3.5, spaceBetween: 40 },
+          1000: { slidesPerView: 3.5, spaceBetween: 50 },
+        }}
+        className="h-auto"
+      >
           <div>
             {slides.map((image, index) => (
               <SwiperSlide key={index}>

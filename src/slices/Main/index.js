@@ -37,7 +37,7 @@ const Main = ({ slice }) => {
       <p className="uppercase font-body text-pansy-white md:text-xl text-xs w-full mx-auto">
         {slice.primary.desc}
       </p>
-      <div className="pt-8">
+      <div className="pt-[4rem]">
         <PrismicNextLink
           field={slice.primary.button_link}
           className="display-block w-fit border-solid px-8 py-[.8rem] rounded-p-sm text-pansy-white font-body border-dark-deen bg-mossy-green hover:bg-sage-green ease-in-out duration-500"
