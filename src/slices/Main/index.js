@@ -12,14 +12,14 @@ const Main = ({ slice }) => {
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
-      className="h-auto static pb-4"
+      className="h-auto static pb-4 mb-[1rem]"
     >
      
 
    <div className="relative isolate w-full h-[30rem] sm:h-[28rem] md:h-[32rem] lg:h-[36rem] xl:h-[40rem] 2xl:h-[50rem] overflow-hidden">
 
   {/* Base image */}
- <PrismicNextImage field={slice.primary.image} className="w-full h-full object-cover" />
+ <PrismicNextImage field={slice.primary.image} className="w-full h-full object-cover object-left md:object-[30%_center]"/>
 
 
   {/* 30% white overlay (#fff @ 0.3) */}

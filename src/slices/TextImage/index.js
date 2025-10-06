@@ -26,24 +26,19 @@ const TextImage = ({ slice }) => {
       data-slice-variation={slice.variation}
       className="py-1 pb-4"
     >
-      <div className="grid lg:gap-15 md:gap-10 gap:1 md:grid-cols-2 place-items-center md:py-8 py-6 first:pt-0">
+<div className="grid lg:gap-15 md:gap-10 gap:1 md:grid-cols-2 items-center justify-items-center md:py-8 py-6 first:pt-0">
         <PrismicNextImage
           field={slice.primary.image}
           className={clsx(
-            'rounded-p-md object-cover  w-[450px]',
+             'rounded-p-md object-cover w-[450px] self-center justify-self-center',
             slice.variation === 'longImage' ? 'h-[500px]' : 'h-[350px]',
             slice.variation === 'imageRight' && 'md:order-2',
             slice.variation === 'default' && 'xl:mr-[7rem]',
             slice.variation === 'imageRight' && 'sm:ml-[0rem] xl:ml-[10rem]'
           )}
         />
-        <div
-          className={clsx(
-            'grid gap-3',
-            slice.variation === 'imageRight' && 'text-left'
-          )}
-        >
-          <h2 className="leading-tight tracking-tight font-display text-mossy-green lg:text-[4rem] text-[3rem] pt-6">
+       <div className={clsx('grid gap-3 self-center', slice.variation === 'imageRight' && 'text-left')}>
+          <h2 className="leading-tight tracking-tight font-display text-mossy-green lg:text-[4rem] text-[3rem] pt-6 md:pt-0">
              {keepFrenchQuotes(slice.primary.heading)}
           </h2>
           <p className='className="lg:text-[15px] font-body text-slate-600"'>
