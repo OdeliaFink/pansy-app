@@ -23,7 +23,7 @@ export function Header({ locales = [], navigation }) {
 
   return (
     <>
-      <div className="bg-medium-beige flex md:text-left text-center justify-center font-light py-2 md:flex-row flex-col">
+      {/* <div className="bg-medium-beige flex md:text-left text-center justify-center font-light py-2 md:flex-row flex-col">
         <p className="font-body mr-1 md:text-[16px] text-[12px] items-center">
           {navigation?.data.welcome_banner[0].header}
         </p>
@@ -35,7 +35,7 @@ export function Header({ locales = [], navigation }) {
             {navigation?.data.welcome_banner[0].button_label}
           </p>
         </PrismicNextLink>
-      </div>
+      </div> */}
       <section
         as="header"
         className={`sticky top-0 px-12 py-3 bg-bg-beige z-999 ${
