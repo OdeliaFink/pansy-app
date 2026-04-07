@@ -15,8 +15,8 @@ export async function generateMetadata({ params: { uid, lang } }) {
   const page = await client.getByUID('page', uid, { lang });
 
   return {
-    title: prismic.asText(page.data.meta_title) || prismic.asText(page.data.title),
-    description: prismic.asText(page.data.meta_description),
+    title: page.data.meta_title || prismic.asText(page.data.title),
+    description: page.data.meta_description,
   };
 }
 
