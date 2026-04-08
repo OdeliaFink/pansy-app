@@ -47,6 +47,11 @@ const ContactForm = ({ slice }) => {
       );
 
       if (response.status === 200) {
+        if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
+          window.gtag("event", "conversion", {
+            send_to: "AW-11482903768/1ud8CJG6rowZENjpvOMq",
+          });
+        }
         setShowModal(true);
       } else {
         console.error('form fail', response.data);
