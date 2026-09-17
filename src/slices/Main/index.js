@@ -30,8 +30,8 @@ const Main = ({ slice }) => {
 />
 
   <div className="absolute inset-0 z-[20] ml-4 flex justify-start">
-    <div className="text-left relative top-[16rem] leading-none px-4">
-      <h1 className="leading-none tracking-normal pb-4 font-display md:text-[10rem] text-[6rem] text-bg-beige">
+    <div className="text-left relative top-[14rem] leading-none px-4">
+      <h1 className="leading-none tracking-normal pb-4 font-display md:text-[12rem] text-[6rem] text-bg-beige">
         {slice.primary.title}
       </h1>
       <p className="uppercase font-body text-pansy-white md:text-2xl w-full mx-auto">
